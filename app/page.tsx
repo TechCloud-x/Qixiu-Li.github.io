@@ -4,6 +4,10 @@ import { useEffect, useState } from "react";
 
 type Locale = "zh" | "en" | "fr";
 
+type ThemeTransitionDocument = Document & {
+  startViewTransition?: (update: () => void) => { finished: Promise<void> };
+};
+
 const locales: { id: Locale; label: string; short: string }[] = [
   { id: "zh", label: "中文", short: "中" },
   { id: "en", label: "English", short: "EN" },
@@ -419,6 +423,31 @@ export default function Home() {
     setMenuOpen(false);
   };
 
+  const toggleTheme = () => {
+    const nextDark = !dark;
+    const root = document.documentElement;
+    const transitionDocument = document as ThemeTransitionDocument;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const applyTheme = () => {
+      root.dataset.theme = nextDark ? "dark" : "light";
+      setDark(nextDark);
+    };
+
+    root.dataset.themeSwitching = "true";
+    if (transitionDocument.startViewTransition && !reducedMotion) {
+      const transition = transitionDocument.startViewTransition(applyTheme);
+      transition.finished.finally(() => {
+        delete root.dataset.themeSwitching;
+      });
+      return;
+    }
+
+    applyTheme();
+    window.setTimeout(() => {
+      delete root.dataset.themeSwitching;
+    }, 720);
+  };
+
   const navItems = [
     ["about", t.nav.about],
     ["projects", t.nav.projects],
@@ -469,8 +498,8 @@ export default function Home() {
             ))}
           </div>
           <button
-            className="theme-toggle"
-            onClick={() => setDark((value) => !value)}
+            className={`theme-toggle ${dark ? "is-dark" : "is-light"}`}
+            onClick={toggleTheme}
             aria-label={dark ? t.themeDark : t.themeLight}
             title={dark ? t.themeDark : t.themeLight}
           >
