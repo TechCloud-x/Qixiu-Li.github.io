@@ -85,7 +85,6 @@ const content = {
     newsKicker: "03 / 新闻动态",
     newsTitle: "近期进展",
     news: [
-      ["2026.08.22", "个人学术主页完成首次发布，支持三语访问与明暗主题。"],
       ["2026.08.14", "公开 ICASSP 2025–2026 强化学习论文综述与可复核目录。"],
       ["2026.08.14", "发布 2026 强化学习顶会论文索引，覆盖 CVPR、AAAI 与 ACL。"],
     ],
@@ -116,6 +115,7 @@ const content = {
     contactTitle: "下一项研究，\n一起开始？",
     contactBody:
       "如果你正在研究强化学习、智能体或可靠 AI，欢迎分享问题、想法与合作机会。",
+    emailAction: "发送邮件",
     contactAction: "在 GitHub 上联系我",
     footerLine: "为开放研究与好奇心而构建。",
     lastUpdated: "最近更新 · 2026 年 8 月",
@@ -190,7 +190,6 @@ const content = {
     newsKicker: "03 / NEWS",
     newsTitle: "Recent signals",
     news: [
-      ["2026.08.22", "Launched this trilingual academic homepage with light and dark themes."],
       ["2026.08.14", "Published the reproducible ICASSP 2025–2026 reinforcement-learning review."],
       ["2026.08.14", "Released a 2026 top-conference RL index covering CVPR, AAAI, and ACL."],
     ],
@@ -221,6 +220,7 @@ const content = {
     contactTitle: "The next question—\nshall we start?",
     contactBody:
       "If you work on reinforcement learning, agents, or reliable AI, I’d be glad to hear about your questions, ideas, and collaboration opportunities.",
+    emailAction: "Email me",
     contactAction: "Connect on GitHub",
     footerLine: "Built for open research and curiosity.",
     lastUpdated: "Last updated · August 2026",
@@ -295,7 +295,6 @@ const content = {
     newsKicker: "03 / ACTUALITÉS",
     newsTitle: "Signaux récents",
     news: [
-      ["22.08.2026", "Mise en ligne de ce site académique trilingue avec thèmes clair et sombre."],
       ["14.08.2026", "Publication de la revue reproductible ICASSP 2025–2026 sur le RL."],
       ["14.08.2026", "Publication d’un index RL 2026 couvrant CVPR, AAAI et ACL."],
     ],
@@ -326,6 +325,7 @@ const content = {
     contactTitle: "La prochaine question—\non commence ?",
     contactBody:
       "Vous travaillez sur le renforcement, les agents ou l’IA fiable ? Partageons questions, idées et possibilités de collaboration.",
+    emailAction: "M’écrire",
     contactAction: "Me contacter sur GitHub",
     footerLine: "Conçu pour la recherche ouverte et la curiosité.",
     lastUpdated: "Dernière mise à jour · août 2026",
@@ -348,6 +348,18 @@ function AssetIcon({
 
 function Arrow() {
   return <AssetIcon name="external" className="link-icon" />;
+}
+
+function GitHubIcon({ className = "github-icon" }: { className?: string }) {
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      className={className}
+      src="https://github.githubassets.com/favicons/favicon.svg"
+      alt=""
+      aria-hidden="true"
+    />
+  );
 }
 
 export default function Home() {
@@ -556,7 +568,7 @@ export default function Home() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    {t.github} <Arrow />
+                    {t.github} <GitHubIcon />
                   </a>
                 </div>
               </div>
@@ -648,7 +660,7 @@ export default function Home() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    {project.action} <Arrow />
+                    {project.action} <GitHubIcon />
                   </a>
                 </div>
               </article>
@@ -758,9 +770,24 @@ export default function Home() {
             <h2 className="multiline">{t.contactTitle}</h2>
             <div className="contact-lower">
               <p>{t.contactBody}</p>
-              <a href="https://github.com/TechCloud-x" target="_blank" rel="noreferrer">
-                {t.contactAction} <Arrow />
-              </a>
+              <div className="contact-actions">
+                <a className="contact-email" href="mailto:lqx@nudt.edu.cn">
+                  <span className="email-symbol" aria-hidden="true">@</span>
+                  <span className="contact-link-copy">
+                    <small>{t.emailAction}</small>
+                    <strong>lqx@nudt.edu.cn</strong>
+                  </span>
+                </a>
+                <a
+                  className="contact-github"
+                  href="https://github.com/TechCloud-x"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>{t.contactAction}</span>
+                  <GitHubIcon />
+                </a>
+              </div>
             </div>
           </div>
         </section>
