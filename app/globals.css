@@ -915,29 +915,18 @@ a:hover .link-icon {
 .project-visual {
   position: relative;
   min-height: 0;
-  aspect-ratio: 2.35 / 1;
+  aspect-ratio: 3 / 1;
   overflow: hidden;
   background: #101015;
 }
 
 .project-visual > img {
   width: 100%;
-  height: calc(100% + 100px);
-  object-fit: cover;
-  transform: translate3d(0, var(--parallax-y, 0), 0) scale(1.03);
-  will-change: transform;
-}
-
-.repository-banner-1 {
-  object-position: 52% 50%;
-}
-
-.repository-banner-2 {
-  object-position: 51% 50%;
-}
-
-.repository-banner-3 {
-  object-position: 56% 50%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transform: none;
+  will-change: auto;
 }
 
 .project-visual::after {
@@ -1028,6 +1017,27 @@ a:hover .link-icon {
 .news-item p {
   margin: 0;
   font-size: clamp(16px, 1.5vw, 22px);
+}
+
+.venue-highlight {
+  display: inline-block;
+  margin: 0 0.1em;
+  padding: 0.05em 0.42em 0.09em;
+  border-radius: 0.38em;
+  background: linear-gradient(105deg, var(--violet), var(--magenta) 56%, var(--orange));
+  box-shadow: 0 7px 20px rgba(123, 53, 242, 0.18);
+  color: #fff;
+  font-size: 0.84em;
+  font-weight: 850;
+  letter-spacing: 0.02em;
+  line-height: 1.45;
+  white-space: nowrap;
+}
+
+:root[data-theme="dark"] .venue-highlight {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 8px 24px rgba(123, 53, 242, 0.28);
 }
 
 .news-arrow {
@@ -2060,7 +2070,7 @@ footer {
 
   .project-visual {
     min-height: 0;
-    aspect-ratio: 2.35 / 1;
+    aspect-ratio: 3 / 1;
   }
 
   .news-item {

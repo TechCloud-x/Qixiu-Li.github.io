@@ -565,6 +565,21 @@ function GiteeIcon({ className = "gitee-icon" }: { className?: string }) {
   );
 }
 
+const highlightedVenues = new Set(["SIGKDD 2026", "CVPR 2026", "ISPA 2026", "UIC 2025"]);
+const venuePattern = /(SIGKDD 2026|CVPR 2026|ISPA 2026|UIC 2025)/g;
+
+function HighlightedNewsText({ text }: { text: string }) {
+  return text.split(venuePattern).map((part, index) =>
+    highlightedVenues.has(part) ? (
+      <mark className="venue-highlight" key={`${part}-${index}`}>
+        {part}
+      </mark>
+    ) : (
+      part
+    ),
+  );
+}
+
 export default function Home() {
   const [locale, setLocale] = useState<Locale>("zh");
   const [dark, setDark] = useState(false);
@@ -892,7 +907,9 @@ export default function Home() {
             {t.news.map(([date, item], index) => (
               <article className="news-item" key={`${date}-${index}`}>
                 <time>{date}</time>
-                <p>{item}</p>
+                <p>
+                  <HighlightedNewsText text={item} />
+                </p>
                 <AssetIcon name="external" className="news-arrow" />
               </article>
             ))}
