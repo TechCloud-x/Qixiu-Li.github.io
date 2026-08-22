@@ -471,7 +471,9 @@ main {
 .gradient-text {
   width: max-content;
   max-width: 100%;
+  margin-bottom: -0.1em;
   padding-right: 0.08em;
+  padding-bottom: 0.1em;
   background: linear-gradient(96deg, var(--violet), var(--magenta) 42%, var(--orange) 80%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -531,7 +533,8 @@ main {
   transition: transform 180ms ease;
 }
 
-.github-icon {
+.github-icon,
+.gitee-icon {
   flex: 0 0 auto;
   width: 29px;
   height: 29px;
@@ -543,7 +546,8 @@ main {
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
-a:hover .github-icon {
+a:hover .github-icon,
+a:hover .gitee-icon {
   transform: translateY(-2px) scale(1.04);
   box-shadow: 0 9px 23px rgba(0, 0, 0, 0.2);
 }

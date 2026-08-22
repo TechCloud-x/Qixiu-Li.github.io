@@ -87,6 +87,10 @@ const content = {
     news: [
       ["2026.08.14", "公开 ICASSP 2025–2026 强化学习论文综述与可复核目录。"],
       ["2026.08.14", "发布 2026 强化学习顶会论文索引，覆盖 CVPR、AAAI 与 ACL。"],
+      ["2026.05.17", "一篇论文（Slow-OCast）被 SIGKDD 2026 接收！感谢所有合作者！"],
+      ["2026.02.21", "一篇论文（PhyOceanCast）被 CVPR 2026 接收！感谢所有合作者！"],
+      ["2025.08.31", "一篇论文（DOLPHIN）被 ISPA 2026 接收！感谢所有合作者！"],
+      ["2025.06.10", "一篇论文（IFG-Net）被 UIC 2025 接收！感谢所有合作者！"],
     ],
     publicationsKicker: "04 / 论文发表",
     publicationsTitle: "Selected Publications",
@@ -248,6 +252,10 @@ const content = {
     news: [
       ["2026.08.14", "Published the reproducible ICASSP 2025–2026 reinforcement-learning review."],
       ["2026.08.14", "Released a 2026 top-conference RL index covering CVPR, AAAI, and ACL."],
+      ["2026.05.17", "Our paper Slow-OCast was accepted by SIGKDD 2026. Many thanks to all collaborators!"],
+      ["2026.02.21", "Our paper PhyOceanCast was accepted by CVPR 2026. Many thanks to all collaborators!"],
+      ["2025.08.31", "Our paper DOLPHIN was accepted by ISPA 2026. Many thanks to all collaborators!"],
+      ["2025.06.10", "Our paper IFG-Net was accepted by UIC 2025. Many thanks to all collaborators!"],
     ],
     publicationsKicker: "04 / PUBLICATIONS",
     publicationsTitle: "Selected Publications",
@@ -417,6 +425,10 @@ const content = {
     news: [
       ["14.08.2026", "Publication de la revue reproductible ICASSP 2025–2026 sur le RL."],
       ["14.08.2026", "Publication d’un index RL 2026 couvrant CVPR, AAAI et ACL."],
+      ["17.05.2026", "Notre article Slow-OCast a été accepté à SIGKDD 2026. Merci à toutes les personnes ayant collaboré !"],
+      ["21.02.2026", "Notre article PhyOceanCast a été accepté à CVPR 2026. Merci à toutes les personnes ayant collaboré !"],
+      ["31.08.2025", "Notre article DOLPHIN a été accepté à ISPA 2026. Merci à toutes les personnes ayant collaboré !"],
+      ["10.06.2025", "Notre article IFG-Net a été accepté à UIC 2025. Merci à toutes les personnes ayant collaboré !"],
     ],
     publicationsKicker: "04 / PUBLICATIONS",
     publicationsTitle: "Publications sélectionnées",
@@ -543,6 +555,13 @@ function GitHubIcon({ className = "github-icon" }: { className?: string }) {
       alt=""
       aria-hidden="true"
     />
+  );
+}
+
+function GiteeIcon({ className = "gitee-icon" }: { className?: string }) {
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img className={className} src={visual("gitee-icon.ico")} alt="" aria-hidden="true" />
   );
 }
 
@@ -850,7 +869,13 @@ export default function Home() {
                     rel="noreferrer"
                   >
                     {project.action}{" "}
-                    {project.href.includes("github.com") ? <GitHubIcon /> : <Arrow />}
+                    {project.href.includes("github.com") ? (
+                      <GitHubIcon />
+                    ) : project.href.includes("gitee.com") ? (
+                      <GiteeIcon />
+                    ) : (
+                      <Arrow />
+                    )}
                   </a>
                 </div>
               </article>
