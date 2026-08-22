@@ -374,6 +374,11 @@ main {
   background: var(--canvas);
 }
 
+.hero-light-grid,
+.hero-light-orb {
+  display: none;
+}
+
 .hero-media {
   position: absolute;
   top: -7%;
@@ -1324,14 +1329,12 @@ footer {
 }
 
 :root[data-theme="light"] .hero-sticky {
-  background:
-    radial-gradient(circle at 75% 18%, rgba(121, 52, 239, 0.12), transparent 26%),
-    radial-gradient(circle at 82% 77%, rgba(255, 89, 39, 0.1), transparent 24%),
-    linear-gradient(180deg, #ffffff 0%, #faf8f4 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #fbfaf7 100%);
 }
 
 :root[data-theme="light"] .hero-sticky::before,
 :root[data-theme="light"] .hero-sticky::after {
+  display: none;
   position: absolute;
   z-index: 0;
   border: 1px solid rgba(123, 53, 242, 0.2);
@@ -1375,6 +1378,54 @@ footer {
   mask-image: none;
 }
 
+:root[data-theme="light"] .hero-media-dark {
+  display: none;
+}
+
+:root[data-theme="light"] .hero-light-grid {
+  position: absolute;
+  inset: 74px 0 0;
+  z-index: 0;
+  display: block;
+  opacity: 0.2;
+  background-image:
+    linear-gradient(to right, rgba(20, 20, 22, 0.14) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(20, 20, 22, 0.14) 1px, transparent 1px);
+  background-size: 80px 80px;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 18%, transparent 78%);
+  mask-image: linear-gradient(to bottom, transparent, #000 18%, transparent 78%);
+  pointer-events: none;
+}
+
+:root[data-theme="light"] .hero-light-orb {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  border-radius: 50%;
+  filter: blur(2px);
+  transform: translate3d(0, var(--parallax-y, 0), 0);
+  will-change: transform;
+  pointer-events: none;
+}
+
+:root[data-theme="light"] .hero-light-orb-primary {
+  top: 4%;
+  right: -11%;
+  width: clamp(280px, 34vw, 560px);
+  height: clamp(280px, 34vw, 560px);
+  opacity: 0.8;
+  background: radial-gradient(circle at 34% 32%, #ffda3e 0 8%, #ff5f00 34%, #f60077 64%, transparent 67%);
+}
+
+:root[data-theme="light"] .hero-light-orb-secondary {
+  bottom: 7%;
+  left: -170px;
+  width: 260px;
+  height: 260px;
+  opacity: 0.34;
+  background: radial-gradient(circle at 70% 42%, #28d8ef, #7b35f2 58%, transparent 60%);
+}
+
 :root[data-theme="light"] .hero-media::after {
   position: absolute;
   inset: 0;
@@ -1386,9 +1437,7 @@ footer {
 }
 
 :root[data-theme="light"] .hero-shade {
-  background:
-    linear-gradient(90deg, #fbfaf7 0%, rgba(251, 250, 247, 0.98) 27%, rgba(251, 250, 247, 0.7) 45%, transparent 67%),
-    linear-gradient(0deg, #fbfaf7 0%, transparent 22%);
+  background: linear-gradient(0deg, #fbfaf7 0%, transparent 20%);
 }
 
 :root[data-theme="light"] .gradient-text {
@@ -1408,15 +1457,27 @@ footer {
 }
 
 :root[data-theme="light"] .profile-frame {
-  border-color: rgba(255, 255, 255, 0.62);
-  box-shadow:
-    0 24px 70px rgba(50, 19, 70, 0.3),
-    0 0 0 5px rgba(255, 255, 255, 0.16);
+  border: 0;
+  border-radius: 0;
+  background: #6c3df1;
+  box-shadow: 18px 18px 0 #b7ed35;
 }
 
 :root[data-theme="light"] .availability {
-  border-color: rgba(123, 53, 242, 0.2);
-  background: rgba(255, 255, 255, 0.9);
+  margin-top: 30px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  font-size: 12px;
+  backdrop-filter: none;
+}
+
+:root[data-theme="light"] .hero-profile {
+  top: 50%;
+  bottom: auto;
+  width: clamp(250px, 21vw, 330px);
+  transform: translate3d(0, calc(-50% + var(--parallax-y, 0px)), 0);
 }
 
 :root[data-theme="light"] .section-aura {
@@ -1632,9 +1693,7 @@ footer {
   }
 
   :root[data-theme="light"] .hero-shade {
-    background:
-      linear-gradient(90deg, #fbfaf7 0%, rgba(251, 250, 247, 0.9) 46%, rgba(251, 250, 247, 0.26) 100%),
-      linear-gradient(0deg, #fbfaf7 0%, transparent 30%);
+    background: linear-gradient(0deg, #fbfaf7 0%, transparent 30%);
   }
 
   .hero-content {
@@ -1757,9 +1816,7 @@ footer {
   }
 
   :root[data-theme="light"] .hero-shade {
-    background:
-      linear-gradient(90deg, #fbfaf7 0%, rgba(251, 250, 247, 0.86) 52%, rgba(251, 250, 247, 0.16) 100%),
-      linear-gradient(0deg, #fbfaf7 0%, transparent 31%);
+    background: linear-gradient(0deg, #fbfaf7 0%, transparent 31%);
   }
 
   .hero h1 {

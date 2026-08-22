@@ -520,10 +520,23 @@ export default function Home() {
       <main id="main">
         <section className="hero" id="top">
           <div className="hero-sticky">
-            <div className="hero-media" data-parallax-global="-0.05" aria-hidden="true">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={visual("hero-orbit-4k.jpg")} alt="" />
-            </div>
+            <div className="hero-light-grid" aria-hidden="true" />
+            <div
+              className="hero-light-orb hero-light-orb-primary"
+              data-parallax-global="-0.045"
+              aria-hidden="true"
+            />
+            <div
+              className="hero-light-orb hero-light-orb-secondary"
+              data-parallax-global="0.026"
+              aria-hidden="true"
+            />
+            {dark && (
+              <div className="hero-media hero-media-dark" data-parallax-global="-0.05" aria-hidden="true">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={visual("hero-orbit-4k.jpg")} alt="" />
+              </div>
+            )}
             <div className="hero-shade" aria-hidden="true" />
             <div className="hero-content">
               <p className="eyebrow hero-eyebrow">{t.heroEyebrow}</p>
