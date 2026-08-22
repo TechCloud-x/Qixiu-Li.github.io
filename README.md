@@ -1,4 +1,4 @@
-# Qixiu Li · Personal Research Homepage
+# LQX · Qixiu Li Personal Research Homepage
 
 A trilingual personal research homepage for 李奇烋 / Qixiu Li, focused on reinforcement learning, intelligent agents, and open research.
 
@@ -7,7 +7,8 @@ A trilingual personal research homepage for 李奇烋 / Qixiu Li, focused on rei
 - Chinese, English, and French interface
 - Light and dark themes, with a light first-visit default
 - Responsive navigation and mobile layout
-- Scroll-linked parallax accents with reduced-motion support
+- True multi-layer vertical parallax, a sticky hero scene, and reduced-motion support
+- Generated 4K visual system for the hero, research map, publication graphic, social card, and UI icons
 - Sections for projects, news, publications, patents, honors, education, and services
 - Static export for GitHub Pages
 
@@ -26,7 +27,7 @@ Open <http://localhost:3000>.
 npm run build
 ```
 
-The static site is generated in `out/`. A GitHub Actions workflow deploys it to GitHub Pages when `main` is updated.
+The static site is generated in `out/`. A GitHub Actions workflow deploys it to [techcloud-x.github.io/Qixiu-Li.github.io](https://techcloud-x.github.io/Qixiu-Li.github.io/) when `main` is updated.
 
 ## Personal information
 

@@ -328,8 +328,22 @@ const content = {
   },
 } as const;
 
-function Arrow({ diagonal = false }: { diagonal?: boolean }) {
-  return <span aria-hidden="true">{diagonal ? "↗" : "→"}</span>;
+const visual = (name: string) => `visuals/${name}`;
+
+function AssetIcon({
+  name,
+  className = "asset-icon",
+}: {
+  name: "external" | "language" | "network" | "publication" | "scroll" | "theme";
+  className?: string;
+}) {
+  // Every interface icon is cropped from the generated 4K icon atlas.
+  // eslint-disable-next-line @next/next/no-img-element
+  return <img className={className} src={visual(`icon-${name}-4k.png`)} alt="" aria-hidden="true" />;
+}
+
+function Arrow() {
+  return <AssetIcon name="external" className="link-icon" />;
 }
 
 export default function Home() {
@@ -360,19 +374,44 @@ export default function Home() {
   useEffect(() => {
     let ticking = false;
     const update = () => {
-      document.documentElement.style.setProperty("--parallax-near", `${window.scrollY * -0.055}px`);
-      document.documentElement.style.setProperty("--parallax-far", `${window.scrollY * 0.025}px`);
+      const viewportHeight = window.innerHeight;
+      const scrollRange = Math.max(document.documentElement.scrollHeight - viewportHeight, 1);
+      const localLayers = document.querySelectorAll<HTMLElement>("[data-parallax]");
+      const globalLayers = document.querySelectorAll<HTMLElement>("[data-parallax-global]");
+
+      localLayers.forEach((layer) => {
+        const rect = layer.getBoundingClientRect();
+        const speed = Number(layer.dataset.parallax ?? 0.08);
+        const distance = rect.top + rect.height / 2 - viewportHeight / 2;
+        const offset = Math.max(-150, Math.min(150, distance * speed * -1));
+        layer.style.setProperty("--parallax-y", `${offset.toFixed(2)}px`);
+      });
+
+      globalLayers.forEach((layer) => {
+        const speed = Number(layer.dataset.parallaxGlobal ?? -0.05);
+        const offset = Math.max(-110, Math.min(110, window.scrollY * speed));
+        layer.style.setProperty("--parallax-y", `${offset.toFixed(2)}px`);
+      });
+
+      document.documentElement.style.setProperty(
+        "--scroll-progress",
+        `${Math.min(window.scrollY / scrollRange, 1)}`,
+      );
       ticking = false;
     };
-    const onScroll = () => {
+    const requestUpdate = () => {
       if (!ticking) {
         window.requestAnimationFrame(update);
         ticking = true;
       }
     };
     update();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate);
+    return () => {
+      window.removeEventListener("scroll", requestUpdate);
+      window.removeEventListener("resize", requestUpdate);
+    };
   }, []);
 
   const chooseLocale = (next: Locale) => {
@@ -395,9 +434,13 @@ export default function Home() {
         {t.skip}
       </a>
 
+      <div className="scroll-progress" aria-hidden="true">
+        <span />
+      </div>
+
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="Qixiu Li — Home">
-          <span className="brand-mark">LQ</span>
+        <a className="brand" href="#top" aria-label="LQX — Qixiu Li home">
+          <span className="brand-mark" aria-hidden="true">LQX</span>
           <span className="brand-name">Qixiu Li</span>
         </a>
 
@@ -411,6 +454,7 @@ export default function Home() {
 
         <div className="header-actions">
           <div className="language-switch" aria-label="Language">
+            <AssetIcon name="language" className="control-icon language-control-icon" />
             {locales.map((item) => (
               <button
                 key={item.id}
@@ -430,9 +474,7 @@ export default function Home() {
             aria-label={dark ? t.themeDark : t.themeLight}
             title={dark ? t.themeDark : t.themeLight}
           >
-            <span className="theme-icon" aria-hidden="true">
-              {dark ? "☀" : "◐"}
-            </span>
+            <AssetIcon name="theme" className="control-icon" />
           </button>
           <button
             className="menu-toggle"
@@ -448,53 +490,58 @@ export default function Home() {
 
       <main id="main">
         <section className="hero" id="top">
-          <div className="hero-orb hero-orb-one" aria-hidden="true" />
-          <div className="hero-orb hero-orb-two" aria-hidden="true" />
-          <div className="hero-grid" aria-hidden="true" />
-          <div className="hero-content">
-            <p className="eyebrow hero-eyebrow">{t.heroEyebrow}</p>
-            <h1>
-              <span>{t.heroTitleA}</span>
-              <span className="gradient-text">{t.heroTitleB}</span>
-            </h1>
-            <div className="hero-lower">
-              <p>{t.heroBody}</p>
-              <div className="hero-actions">
-                <a className="button button-primary" href="#projects">
-                  {t.explore} <Arrow />
-                </a>
-                <a
-                  className="button button-ghost"
-                  href="https://github.com/TechCloud-x"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {t.github} <Arrow diagonal />
-                </a>
+          <div className="hero-sticky">
+            <div className="hero-media" data-parallax-global="-0.05" aria-hidden="true">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={visual("hero-orbit-4k.jpg")} alt="" />
+            </div>
+            <div className="hero-shade" aria-hidden="true" />
+            <div className="hero-content">
+              <p className="eyebrow hero-eyebrow">{t.heroEyebrow}</p>
+              <h1>
+                <span>{t.heroTitleA}</span>
+                <span className="gradient-text">{t.heroTitleB}</span>
+              </h1>
+              <div className="hero-lower">
+                <p>{t.heroBody}</p>
+                <div className="hero-actions">
+                  <a className="button button-primary" href="#projects">
+                    {t.explore} <Arrow />
+                  </a>
+                  <a
+                    className="button button-ghost"
+                    href="https://github.com/TechCloud-x"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {t.github} <Arrow />
+                  </a>
+                </div>
               </div>
             </div>
+
+            <aside className="hero-profile" data-parallax-global="0.035">
+              <div className="profile-frame">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="https://github.com/TechCloud-x.png?size=640" alt={t.portraitAlt} />
+                <span className="profile-number">001</span>
+                <span className="profile-caption">LQX / TECHCLOUD-X</span>
+              </div>
+              <div className="availability">
+                <span className="status-dot" />
+                {t.available}
+              </div>
+            </aside>
+
+            <a className="scroll-cue" href="#about">
+              <span>{t.scroll}</span>
+              <AssetIcon name="scroll" className="scroll-icon" />
+            </a>
           </div>
-
-          <aside className="hero-profile">
-            <div className="profile-frame">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="https://github.com/TechCloud-x.png?size=640" alt={t.portraitAlt} />
-              <span className="profile-number">001</span>
-              <span className="profile-caption">TECHCLOUD-X</span>
-            </div>
-            <div className="availability">
-              <span className="status-dot" />
-              {t.available}
-            </div>
-          </aside>
-
-          <a className="scroll-cue" href="#about">
-            <span>{t.scroll}</span>
-            <span className="scroll-line" />
-          </a>
         </section>
 
         <section className="section about" id="about">
+          <div className="section-aura aura-violet" data-parallax="0.04" aria-hidden="true" />
           <div className="section-heading">
             <p className="eyebrow">{t.aboutKicker}</p>
             <h2 className="multiline">{t.aboutTitle}</h2>
@@ -503,8 +550,8 @@ export default function Home() {
             <div className="about-copy">
               <p>{t.aboutBody}</p>
             </div>
-            <div className="focus-card">
-              <div className="focus-shape" aria-hidden="true" />
+            <div className="focus-card" data-parallax="0.055">
+              <AssetIcon name="network" className="focus-icon" />
               <p className="card-label">{t.focusTitle}</p>
               <ul>
                 {t.focus.map((item, index) => (
@@ -527,8 +574,11 @@ export default function Home() {
         </section>
 
         <section className="section projects" id="projects">
-          <div className="project-backdrop" aria-hidden="true">RL</div>
-          <div className="section-heading light-heading">
+          <div className="project-panorama" data-parallax="0.07" aria-hidden="true">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={visual("research-map-4k.jpg")} alt="" />
+          </div>
+          <div className="section-heading">
             <p className="eyebrow">{t.projectsKicker}</p>
             <h2 className="multiline">{t.projectsTitle}</h2>
             <p className="section-intro">{t.projectsIntro}</p>
@@ -537,20 +587,26 @@ export default function Home() {
             {t.projects.map((project, index) => (
               <article className={`project-card project-${index + 1}`} key={project.title}>
                 <div className="project-visual" aria-hidden="true">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={visual(
+                      ["research-map-4k.jpg", "hero-orbit-4k.jpg", "learning-signal-4k.jpg"][index],
+                    )}
+                    alt=""
+                    data-parallax={index % 2 === 0 ? "0.065" : "-0.05"}
+                  />
                   <span className="project-index">{project.index}</span>
-                  <div className="project-ring" />
-                  <div className="project-code">
-                    <span>POLICY</span>
-                    <span>REWARD</span>
-                    <span>LEARN</span>
-                  </div>
                 </div>
                 <div className="project-content">
                   <p className="project-meta">{project.meta}</p>
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
-                  <a href={project.href} target="_blank" rel="noreferrer">
-                    {project.action} <Arrow diagonal />
+                  <a
+                    href={index === 2 ? "https://github.com/TechCloud-x/Qixiu-Li.github.io" : project.href}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {project.action} <Arrow />
                   </a>
                 </div>
               </article>
@@ -568,7 +624,7 @@ export default function Home() {
               <article className="news-item" key={`${date}-${index}`}>
                 <time>{date}</time>
                 <p>{item}</p>
-                <span className="news-arrow" aria-hidden="true">↗</span>
+                <AssetIcon name="external" className="news-arrow" />
               </article>
             ))}
           </div>
@@ -582,14 +638,9 @@ export default function Home() {
           </div>
           <article className="publication-card publication-empty">
             <div className="publication-visual" aria-hidden="true">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={visual("learning-signal-4k.jpg")} alt="" data-parallax="0.07" />
               <span className="paper-grid-label">PAPER / 00</span>
-              <div className="paper-signal">
-                <i />
-                <i />
-                <i />
-                <i />
-                <i />
-              </div>
               <span className="paper-venue">TBA</span>
             </div>
             <div className="publication-copy">
@@ -604,7 +655,7 @@ export default function Home() {
         </section>
 
         <section className="section experience" id="experience">
-          <div className="experience-orb" aria-hidden="true" />
+          <div className="section-aura aura-orange" data-parallax="-0.035" aria-hidden="true" />
           <div className="section-heading">
             <p className="eyebrow">{t.experienceKicker}</p>
             <h2 className="multiline">{t.experienceTitle}</h2>
@@ -612,6 +663,7 @@ export default function Home() {
           <div className="experience-grid">
             <article className="experience-card compact-card">
               <div className="experience-card-title">
+                <AssetIcon name="publication" className="experience-icon" />
                 <span>01</span>
                 <h3>{t.patents}</h3>
               </div>
@@ -620,6 +672,7 @@ export default function Home() {
             </article>
             <article className="experience-card compact-card accent-card">
               <div className="experience-card-title">
+                <AssetIcon name="external" className="experience-icon" />
                 <span>02</span>
                 <h3>{t.honors}</h3>
               </div>
@@ -628,6 +681,7 @@ export default function Home() {
             </article>
             <article className="experience-card compact-card">
               <div className="experience-card-title">
+                <AssetIcon name="language" className="experience-icon" />
                 <span>03</span>
                 <h3>{t.education}</h3>
               </div>
@@ -636,6 +690,7 @@ export default function Home() {
             </article>
             <article className="experience-card services-card">
               <div className="experience-card-title">
+                <AssetIcon name="network" className="experience-icon" />
                 <span>04</span>
                 <h3>{t.services}</h3>
               </div>
@@ -652,21 +707,26 @@ export default function Home() {
         </section>
 
         <section className="contact" id="contact">
-          <div className="contact-noise" aria-hidden="true" />
-          <p className="eyebrow">{t.contactKicker}</p>
-          <h2 className="multiline">{t.contactTitle}</h2>
-          <div className="contact-lower">
-            <p>{t.contactBody}</p>
-            <a href="https://github.com/TechCloud-x" target="_blank" rel="noreferrer">
-              {t.contactAction} <Arrow diagonal />
-            </a>
+          <div className="contact-media" data-parallax="0.08" aria-hidden="true">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={visual("hero-orbit-4k.jpg")} alt="" />
+          </div>
+          <div className="contact-inner">
+            <p className="eyebrow">{t.contactKicker}</p>
+            <h2 className="multiline">{t.contactTitle}</h2>
+            <div className="contact-lower">
+              <p>{t.contactBody}</p>
+              <a href="https://github.com/TechCloud-x" target="_blank" rel="noreferrer">
+                {t.contactAction} <Arrow />
+              </a>
+            </div>
           </div>
         </section>
       </main>
 
       <footer>
         <div className="footer-brand">
-          <span className="brand-mark">LQ</span>
+          <span className="brand-mark" aria-hidden="true">LQX</span>
           <span>{t.footerLine}</span>
         </div>
         <div className="footer-meta">
