@@ -712,20 +712,23 @@ export default function Home() {
         </nav>
 
         <div className="header-actions">
-          <div className="language-switch" aria-label="Language">
+          <div className="language-switch" role="group" aria-label="Language">
             <AssetIcon name="language" className="control-icon language-control-icon" />
-            {locales.map((item) => (
-              <button
-                key={item.id}
-                className={locale === item.id ? "active" : ""}
-                onClick={() => chooseLocale(item.id)}
-                aria-pressed={locale === item.id}
-                title={item.label}
-              >
-                <span className="language-full">{item.label}</span>
-                <span className="language-short">{item.short}</span>
-              </button>
-            ))}
+            <div className="language-options" data-locale={locale}>
+              <span className="language-slider" aria-hidden="true" />
+              {locales.map((item) => (
+                <button
+                  key={item.id}
+                  className={locale === item.id ? "active" : ""}
+                  onClick={() => chooseLocale(item.id)}
+                  aria-pressed={locale === item.id}
+                  title={item.label}
+                >
+                  <span className="language-full">{item.label}</span>
+                  <span className="language-short">{item.short}</span>
+                </button>
+              ))}
+            </div>
           </div>
           <button
             className={`theme-toggle ${dark ? "is-dark" : "is-light"}`}
