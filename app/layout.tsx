@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://techcloud-x.github.io/Qixiu-Li.github.io/"),
-  title: "李奇烋 · Qixiu Li — Reinforcement Learning & Intelligent Agents",
+  title: "李奇烋 · Qixiu Li",
   description:
     "The trilingual research homepage of Qixiu Li (李奇烋), focused on reinforcement learning, intelligent agents, and reliable AI.",
   keywords: [
