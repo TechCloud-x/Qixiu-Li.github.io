@@ -140,6 +140,11 @@ img {
 }
 
 ::selection {
+  background: var(--lime);
+  color: #090909;
+}
+
+:root[data-theme="dark"] ::selection {
   background: var(--violet);
   color: #fff;
 }
