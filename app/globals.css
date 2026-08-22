@@ -884,9 +884,9 @@ a:hover .link-icon {
 
 .project-card {
   display: grid;
-  grid-template-rows: minmax(280px, 1fr) auto;
+  grid-template-rows: auto 1fr;
   overflow: hidden;
-  min-height: 670px;
+  min-height: 620px;
   border: 1px solid var(--line);
   border-radius: 27px;
   background: var(--surface);
@@ -910,17 +910,30 @@ a:hover .link-icon {
 
 .project-visual {
   position: relative;
-  min-height: 320px;
+  min-height: 0;
+  aspect-ratio: 2.35 / 1;
   overflow: hidden;
   background: #101015;
 }
 
 .project-visual > img {
   width: 100%;
-  height: calc(100% + 120px);
+  height: calc(100% + 100px);
   object-fit: cover;
-  transform: translate3d(0, var(--parallax-y, 0), 0) scale(1.1);
+  transform: translate3d(0, var(--parallax-y, 0), 0) scale(1.03);
   will-change: transform;
+}
+
+.repository-banner-1 {
+  object-position: 52% 50%;
+}
+
+.repository-banner-2 {
+  object-position: 51% 50%;
+}
+
+.repository-banner-3 {
+  object-position: 56% 50%;
 }
 
 .project-visual::after {
@@ -1253,6 +1266,12 @@ a:hover .link-icon {
   font-weight: 800;
   letter-spacing: 0.04em;
   text-decoration: none;
+}
+
+.honor-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 16px;
 }
 
 .honor-list a .asset-icon {
@@ -2036,7 +2055,8 @@ footer {
   }
 
   .project-visual {
-    min-height: 260px;
+    min-height: 0;
+    aspect-ratio: 2.35 / 1;
   }
 
   .news-item {

@@ -74,12 +74,12 @@ const content = {
       },
       {
         index: "03",
-        title: "Personal Research Homepage",
+        title: "吉林省文旅汇总平台",
         description:
-          "一个支持中文、英文与法文、明暗主题以及滚动视差的开放学术主页，也是一份持续更新的数字简历。",
-        meta: "Next.js · GitHub Pages · 2026",
-        href: "https://github.com/TechCloud-x",
-        action: "查看源码",
+          "面向吉林省文化和旅游资源的数据汇总与管理平台，支持文旅数据采集、信息管理、统计分析与可视化展示。",
+        meta: "文旅数据 · 管理平台 · 开源项目",
+        href: "https://gitee.com/custhitachi/tourismwms",
+        action: "查看项目",
       },
     ],
     newsKicker: "03 / 新闻动态",
@@ -131,13 +131,22 @@ const content = {
       },
     ],
     honorItems: [
+      { date: "2025", title: "2025 全球校园人工智能算法精英大赛", detail: "国家级一等奖" },
       { date: "2024.09", title: "新生奖学金" },
       {
         date: "2023.10",
         title: "国家奖学金",
         detail: "前 0.4%",
-        href: "https://mp.weixin.qq.com/s?__biz=MzA5MDYwMTY2OA==&mid=2656728441&idx=1&sn=ddbb3e95905b25c6a125dced68610db5&chksm=8ba7f4d2bcd07dc4f9f54109db4c3d2a701994eac04491f0781152b8b511548c8d980a89e11c&scene=27",
-        linkLabel: "相关新闻报道",
+        links: [
+          {
+            href: "https://mp.weixin.qq.com/s?__biz=MzA5MDYwMTY2OA==&mid=2656728441&idx=1&sn=ddbb3e95905b25c6a125dced68610db5&chksm=8ba7f4d2bcd07dc4f9f54109db4c3d2a701994eac04491f0781152b8b511548c8d980a89e11c&scene=27",
+            label: "新闻报道 01",
+          },
+          {
+            href: "https://mp.weixin.qq.com/s?__biz=MzA5MDYwMTY2OA==&mid=2656727657&idx=1&sn=77229a854bde3eb18bafe50837d7f97e&chksm=8ba7f3c2bcd07ad41b75cb76d8fa745112fccb46310927af21924793bfb438bc69d030ad64aa&scene=27",
+            label: "新闻报道 02",
+          },
+        ],
       },
       { date: "2022.12", title: "舜宇奖学金", detail: "每届 20 人，前 1%" },
     ],
@@ -155,9 +164,8 @@ const content = {
     ],
     serviceItems: [
       ["AAAI 2026 审稿人", "学术同行评审服务"],
+      ["ICML 2026 审稿人", "学术同行评审服务"],
       ["开放研究", "维护可复核的文献目录与研究地图"],
-      ["知识整理", "将分散的论文、代码与元数据连接起来"],
-      ["社区协作", "欢迎围绕强化学习与智能体开展交流"],
     ],
     contactKicker: "06 / 联系",
     contactTitle: "下一项研究，\n一起开始？",
@@ -227,12 +235,12 @@ const content = {
       },
       {
         index: "03",
-        title: "Personal Research Homepage",
+        title: "Jilin Cultural Tourism Aggregation Platform",
         description:
-          "A trilingual, theme-aware, parallax research profile—and a living digital résumé built in the open.",
-        meta: "Next.js · GitHub Pages · 2026",
-        href: "https://github.com/TechCloud-x",
-        action: "View source",
+          "An open platform for aggregating and managing cultural-tourism resources across Jilin Province, with data collection, administration, analytics, and visualization.",
+        meta: "Cultural tourism · Management platform · Open source",
+        href: "https://gitee.com/custhitachi/tourismwms",
+        action: "View project",
       },
     ],
     newsKicker: "03 / NEWS",
@@ -284,13 +292,26 @@ const content = {
       },
     ],
     honorItems: [
+      {
+        date: "2025",
+        title: "2025 Global Campus AI Algorithm Elite Competition",
+        detail: "National First Prize",
+      },
       { date: "2024.09", title: "New Student Scholarship" },
       {
         date: "2023.10",
         title: "National Scholarship",
         detail: "Top 0.4%",
-        href: "https://mp.weixin.qq.com/s?__biz=MzA5MDYwMTY2OA==&mid=2656728441&idx=1&sn=ddbb3e95905b25c6a125dced68610db5&chksm=8ba7f4d2bcd07dc4f9f54109db4c3d2a701994eac04491f0781152b8b511548c8d980a89e11c&scene=27",
-        linkLabel: "News report",
+        links: [
+          {
+            href: "https://mp.weixin.qq.com/s?__biz=MzA5MDYwMTY2OA==&mid=2656728441&idx=1&sn=ddbb3e95905b25c6a125dced68610db5&chksm=8ba7f4d2bcd07dc4f9f54109db4c3d2a701994eac04491f0781152b8b511548c8d980a89e11c&scene=27",
+            label: "News report 01",
+          },
+          {
+            href: "https://mp.weixin.qq.com/s?__biz=MzA5MDYwMTY2OA==&mid=2656727657&idx=1&sn=77229a854bde3eb18bafe50837d7f97e&chksm=8ba7f3c2bcd07ad41b75cb76d8fa745112fccb46310927af21924793bfb438bc69d030ad64aa&scene=27",
+            label: "News report 02",
+          },
+        ],
       },
       {
         date: "2022.12",
@@ -312,9 +333,8 @@ const content = {
     ],
     serviceItems: [
       ["AAAI 2026 Reviewer", "Academic peer-review service"],
+      ["ICML 2026 Reviewer", "Academic peer-review service"],
       ["Open research", "Maintaining traceable literature catalogs and research maps"],
-      ["Knowledge curation", "Connecting papers, code, and structured metadata"],
-      ["Community", "Open to conversations around RL and intelligent agents"],
     ],
     contactKicker: "06 / CONTACT",
     contactTitle: "The next question—\nshall we start?",
@@ -384,12 +404,12 @@ const content = {
       },
       {
         index: "03",
-        title: "Page personnelle de recherche",
+        title: "Plateforme culturelle et touristique du Jilin",
         description:
-          "Un profil trilingue avec thèmes clair et sombre, parallaxe et CV numérique vivant, développé ouvertement.",
-        meta: "Next.js · GitHub Pages · 2026",
-        href: "https://github.com/TechCloud-x",
-        action: "Voir le code",
+          "Une plateforme ouverte d’agrégation et de gestion des ressources culturelles et touristiques du Jilin, avec collecte, administration, analyse et visualisation des données.",
+        meta: "Tourisme culturel · Gestion · Open source",
+        href: "https://gitee.com/custhitachi/tourismwms",
+        action: "Voir le projet",
       },
     ],
     newsKicker: "03 / ACTUALITÉS",
@@ -441,13 +461,26 @@ const content = {
       },
     ],
     honorItems: [
+      {
+        date: "2025",
+        title: "Concours mondial universitaire d’élite en algorithmes d’IA 2025",
+        detail: "Premier prix national",
+      },
       { date: "09.2024", title: "Bourse des nouveaux étudiants" },
       {
         date: "10.2023",
         title: "Bourse nationale",
         detail: "Top 0,4 %",
-        href: "https://mp.weixin.qq.com/s?__biz=MzA5MDYwMTY2OA==&mid=2656728441&idx=1&sn=ddbb3e95905b25c6a125dced68610db5&chksm=8ba7f4d2bcd07dc4f9f54109db4c3d2a701994eac04491f0781152b8b511548c8d980a89e11c&scene=27",
-        linkLabel: "Article associé",
+        links: [
+          {
+            href: "https://mp.weixin.qq.com/s?__biz=MzA5MDYwMTY2OA==&mid=2656728441&idx=1&sn=ddbb3e95905b25c6a125dced68610db5&chksm=8ba7f4d2bcd07dc4f9f54109db4c3d2a701994eac04491f0781152b8b511548c8d980a89e11c&scene=27",
+            label: "Article 01",
+          },
+          {
+            href: "https://mp.weixin.qq.com/s?__biz=MzA5MDYwMTY2OA==&mid=2656727657&idx=1&sn=77229a854bde3eb18bafe50837d7f97e&chksm=8ba7f3c2bcd07ad41b75cb76d8fa745112fccb46310927af21924793bfb438bc69d030ad64aa&scene=27",
+            label: "Article 02",
+          },
+        ],
       },
       {
         date: "12.2022",
@@ -469,9 +502,8 @@ const content = {
     ],
     serviceItems: [
       ["Évaluateur AAAI 2026", "Service d’évaluation scientifique par les pairs"],
+      ["Évaluateur ICML 2026", "Service d’évaluation scientifique par les pairs"],
       ["Recherche ouverte", "Maintien de catalogues traçables et de cartes scientifiques"],
-      ["Curation du savoir", "Connexion des articles, du code et des métadonnées"],
-      ["Communauté", "Échanges ouverts autour du RL et des agents intelligents"],
     ],
     contactKicker: "06 / CONTACT",
     contactTitle: "La prochaine question—\non commence ?",
@@ -795,8 +827,13 @@ export default function Home() {
                 <div className="project-visual" aria-hidden="true">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
+                    className={`repository-banner repository-banner-${index + 1}`}
                     src={visual(
-                      ["research-map-4k.jpg", "hero-orbit-4k.jpg", "learning-signal-4k.jpg"][index],
+                      [
+                        "repository-icassp-banner.png",
+                        "repository-rl-top-banner.png",
+                        "repository-tourismwms-banner.png",
+                      ][index],
                     )}
                     alt=""
                     data-parallax={index % 2 === 0 ? "0.065" : "-0.05"}
@@ -808,11 +845,12 @@ export default function Home() {
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
                   <a
-                    href={index === 2 ? "https://github.com/TechCloud-x/Qixiu-Li.github.io" : project.href}
+                    href={project.href}
                     target="_blank"
                     rel="noreferrer"
                   >
-                    {project.action} <GitHubIcon />
+                    {project.action}{" "}
+                    {project.href.includes("github.com") ? <GitHubIcon /> : <Arrow />}
                   </a>
                 </div>
               </article>
@@ -900,11 +938,20 @@ export default function Home() {
                     <div>
                       <strong>{item.title}</strong>
                       {"detail" in item && item.detail ? <span>{item.detail}</span> : null}
-                      {"href" in item && item.href ? (
-                        <a href={item.href} target="_blank" rel="noreferrer">
-                          {item.linkLabel}
-                          <AssetIcon name="external" />
-                        </a>
+                      {"links" in item && item.links ? (
+                        <div className="honor-links">
+                          {item.links.map((link) => (
+                            <a
+                              href={link.href}
+                              target="_blank"
+                              rel="noreferrer"
+                              key={link.href}
+                            >
+                              {link.label}
+                              <AssetIcon name="external" />
+                            </a>
+                          ))}
+                        </div>
                       ) : null}
                     </div>
                   </li>
