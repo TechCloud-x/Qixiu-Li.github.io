@@ -103,10 +103,58 @@ const content = {
     honors: "荣誉",
     education: "教育经历",
     services: "Services",
-    pendingPatent: "暂无可核验的公开专利记录",
-    pendingHonor: "暂无可核验的公开荣誉记录",
-    pendingEducation: "院校、学位与时间信息待补充",
+    patentItems: [
+      {
+        title: "一种多变量球面信息融合方法和系统",
+        numberLabel: "专利号",
+        number: "ZL 2025 1 1716023.7",
+      },
+      {
+        title: "一种基于时空相干的海洋变量预测方法和系统",
+        numberLabel: "专利号",
+        number: "ZL 2025 1 1726905.1",
+      },
+      {
+        title: "一种基于特征工程和兄长指导机制的有效波高预测方法",
+        numberLabel: "专利号",
+        number: "ZL 2025 1 0781011.6",
+      },
+      {
+        title: "一种预报数据的偏差订正方法和偏差订正系统",
+        numberLabel: "专利号",
+        number: "ZL 2025 1 1030042.4",
+      },
+      {
+        title: "一种基于物理约束的温度中期预测方法",
+        numberLabel: "公告号",
+        number: "CN 121559636 B",
+      },
+    ],
+    honorItems: [
+      { date: "2024.09", title: "新生奖学金" },
+      {
+        date: "2023.10",
+        title: "国家奖学金",
+        detail: "前 0.4%",
+        href: "https://mp.weixin.qq.com/s?__biz=MzA5MDYwMTY2OA==&mid=2656728441&idx=1&sn=ddbb3e95905b25c6a125dced68610db5&chksm=8ba7f4d2bcd07dc4f9f54109db4c3d2a701994eac04491f0781152b8b511548c8d980a89e11c&scene=27",
+        linkLabel: "相关新闻报道",
+      },
+      { date: "2022.12", title: "舜宇奖学金", detail: "每届 20 人，前 1%" },
+    ],
+    educationItems: [
+      {
+        date: "2020–2024",
+        institution: "长春理工大学",
+        degree: "数据科学与大数据技术 · 学士",
+      },
+      {
+        date: "2024–至今",
+        institution: "国防科技大学",
+        degree: "硕士在读",
+      },
+    ],
     serviceItems: [
+      ["AAAI 2026 审稿人", "学术同行评审服务"],
       ["开放研究", "维护可复核的文献目录与研究地图"],
       ["知识整理", "将分散的论文、代码与元数据连接起来"],
       ["社区协作", "欢迎围绕强化学习与智能体开展交流"],
@@ -208,10 +256,62 @@ const content = {
     honors: "Honors",
     education: "Education",
     services: "Services",
-    pendingPatent: "No publicly verifiable patent record yet",
-    pendingHonor: "No publicly verifiable honor record yet",
-    pendingEducation: "Institution, degree, and dates to be added",
+    patentItems: [
+      {
+        title: "A Multivariable Spherical Information Fusion Method and System",
+        numberLabel: "Patent No.",
+        number: "ZL 2025 1 1716023.7",
+      },
+      {
+        title: "A Spatiotemporal Coherence-Based Method and System for Ocean Variable Prediction",
+        numberLabel: "Patent No.",
+        number: "ZL 2025 1 1726905.1",
+      },
+      {
+        title: "An Effective Wave Height Prediction Method Based on Feature Engineering and a Senior Guidance Mechanism",
+        numberLabel: "Patent No.",
+        number: "ZL 2025 1 0781011.6",
+      },
+      {
+        title: "A Forecast Data Bias Correction Method and Bias Correction System",
+        numberLabel: "Patent No.",
+        number: "ZL 2025 1 1030042.4",
+      },
+      {
+        title: "A Physics-Constrained Medium-Range Temperature Prediction Method",
+        numberLabel: "Publication No.",
+        number: "CN 121559636 B",
+      },
+    ],
+    honorItems: [
+      { date: "2024.09", title: "New Student Scholarship" },
+      {
+        date: "2023.10",
+        title: "National Scholarship",
+        detail: "Top 0.4%",
+        href: "https://mp.weixin.qq.com/s?__biz=MzA5MDYwMTY2OA==&mid=2656728441&idx=1&sn=ddbb3e95905b25c6a125dced68610db5&chksm=8ba7f4d2bcd07dc4f9f54109db4c3d2a701994eac04491f0781152b8b511548c8d980a89e11c&scene=27",
+        linkLabel: "News report",
+      },
+      {
+        date: "2022.12",
+        title: "Sunny Optical Scholarship",
+        detail: "20 recipients per cohort · Top 1%",
+      },
+    ],
+    educationItems: [
+      {
+        date: "2020–2024",
+        institution: "Changchun University of Science and Technology",
+        degree: "B.Sc. in Data Science and Big Data Technology",
+      },
+      {
+        date: "2024–Present",
+        institution: "National University of Defense Technology",
+        degree: "Master’s student",
+      },
+    ],
     serviceItems: [
+      ["AAAI 2026 Reviewer", "Academic peer-review service"],
       ["Open research", "Maintaining traceable literature catalogs and research maps"],
       ["Knowledge curation", "Connecting papers, code, and structured metadata"],
       ["Community", "Open to conversations around RL and intelligent agents"],
@@ -313,10 +413,62 @@ const content = {
     honors: "Distinctions",
     education: "Formation",
     services: "Services",
-    pendingPatent: "Aucun brevet public vérifiable pour le moment",
-    pendingHonor: "Aucune distinction publique vérifiable pour le moment",
-    pendingEducation: "Établissement, diplôme et dates à compléter",
+    patentItems: [
+      {
+        title: "Méthode et système de fusion d’informations multivariées sur une sphère",
+        numberLabel: "N° de brevet",
+        number: "ZL 2025 1 1716023.7",
+      },
+      {
+        title: "Méthode et système de prévision de variables océaniques fondés sur la cohérence spatio-temporelle",
+        numberLabel: "N° de brevet",
+        number: "ZL 2025 1 1726905.1",
+      },
+      {
+        title: "Méthode de prévision de la hauteur significative des vagues fondée sur l’ingénierie des caractéristiques et un mécanisme de guidage expert",
+        numberLabel: "N° de brevet",
+        number: "ZL 2025 1 0781011.6",
+      },
+      {
+        title: "Méthode de correction des biais de données prévisionnelles et système de correction des biais",
+        numberLabel: "N° de brevet",
+        number: "ZL 2025 1 1030042.4",
+      },
+      {
+        title: "Méthode de prévision de température à moyen terme fondée sur des contraintes physiques",
+        numberLabel: "N° de publication",
+        number: "CN 121559636 B",
+      },
+    ],
+    honorItems: [
+      { date: "09.2024", title: "Bourse des nouveaux étudiants" },
+      {
+        date: "10.2023",
+        title: "Bourse nationale",
+        detail: "Top 0,4 %",
+        href: "https://mp.weixin.qq.com/s?__biz=MzA5MDYwMTY2OA==&mid=2656728441&idx=1&sn=ddbb3e95905b25c6a125dced68610db5&chksm=8ba7f4d2bcd07dc4f9f54109db4c3d2a701994eac04491f0781152b8b511548c8d980a89e11c&scene=27",
+        linkLabel: "Article associé",
+      },
+      {
+        date: "12.2022",
+        title: "Bourse Sunny Optical",
+        detail: "20 lauréats par promotion · Top 1 %",
+      },
+    ],
+    educationItems: [
+      {
+        date: "2020–2024",
+        institution: "Université des sciences et technologies de Changchun",
+        degree: "Licence en science des données et technologies du big data",
+      },
+      {
+        date: "2024–Présent",
+        institution: "Université nationale de technologie de défense",
+        degree: "Master en cours",
+      },
+    ],
     serviceItems: [
+      ["Évaluateur AAAI 2026", "Service d’évaluation scientifique par les pairs"],
       ["Recherche ouverte", "Maintien de catalogues traçables et de cartes scientifiques"],
       ["Curation du savoir", "Connexion des articles, du code et des métadonnées"],
       ["Communauté", "Échanges ouverts autour du RL et des agents intelligents"],
@@ -715,32 +867,67 @@ export default function Home() {
             <h2 className="multiline">{t.experienceTitle}</h2>
           </div>
           <div className="experience-grid">
-            <article className="experience-card compact-card">
+            <article className="experience-card records-card patents-card">
               <div className="experience-card-title">
                 <AssetIcon name="publication" className="experience-icon" />
                 <span>01</span>
                 <h3>{t.patents}</h3>
               </div>
-              <p>{t.pendingPatent}</p>
-              <span className="pending-line" />
+              <ol className="record-list patent-list">
+                {t.patentItems.map((item, index) => (
+                  <li key={item.number}>
+                    <span className="record-index">{String(index + 1).padStart(2, "0")}</span>
+                    <div>
+                      <strong>{item.title}</strong>
+                      <span>
+                        {item.numberLabel} · {item.number}
+                      </span>
+                    </div>
+                  </li>
+                ))}
+              </ol>
             </article>
-            <article className="experience-card compact-card accent-card">
+            <article className="experience-card records-card honors-card accent-card">
               <div className="experience-card-title">
                 <AssetIcon name="external" className="experience-icon" />
                 <span>02</span>
                 <h3>{t.honors}</h3>
               </div>
-              <p>{t.pendingHonor}</p>
-              <span className="pending-line" />
+              <ul className="record-list honor-list">
+                {t.honorItems.map((item) => (
+                  <li key={`${item.date}-${item.title}`}>
+                    <time>{item.date}</time>
+                    <div>
+                      <strong>{item.title}</strong>
+                      {"detail" in item && item.detail ? <span>{item.detail}</span> : null}
+                      {"href" in item && item.href ? (
+                        <a href={item.href} target="_blank" rel="noreferrer">
+                          {item.linkLabel}
+                          <AssetIcon name="external" />
+                        </a>
+                      ) : null}
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </article>
-            <article className="experience-card compact-card">
+            <article className="experience-card records-card education-card">
               <div className="experience-card-title">
                 <AssetIcon name="language" className="experience-icon" />
                 <span>03</span>
                 <h3>{t.education}</h3>
               </div>
-              <p>{t.pendingEducation}</p>
-              <span className="pending-line" />
+              <ul className="record-list education-list">
+                {t.educationItems.map((item) => (
+                  <li key={`${item.date}-${item.institution}`}>
+                    <time>{item.date}</time>
+                    <div>
+                      <strong>{item.institution}</strong>
+                      <span>{item.degree}</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </article>
             <article className="experience-card services-card">
               <div className="experience-card-title">

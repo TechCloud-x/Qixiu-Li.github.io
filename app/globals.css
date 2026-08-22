@@ -457,10 +457,15 @@ main {
 .hero h1 {
   max-width: 920px;
   font-size: clamp(58px, 8.7vw, 132px);
+  line-height: 0.9;
 }
 
 .hero h1 > span {
   display: block;
+}
+
+.hero h1 > span + span {
+  margin-top: clamp(18px, 2.2vw, 36px);
 }
 
 .gradient-text {
@@ -1141,14 +1146,24 @@ a:hover .link-icon {
   backdrop-filter: blur(14px);
 }
 
-.compact-card {
-  grid-column: span 4;
+.patents-card {
+  grid-column: span 7;
+  min-height: 620px;
+}
+
+.honors-card {
+  grid-column: span 5;
+  min-height: 620px;
+}
+
+.education-card {
+  grid-column: span 5;
+  min-height: 400px;
 }
 
 .services-card {
-  grid-column: 2 / span 10;
+  grid-column: span 7;
   min-height: 400px;
-  margin-top: 4px;
 }
 
 .accent-card {
@@ -1182,18 +1197,71 @@ a:hover .link-icon {
   letter-spacing: -0.04em;
 }
 
-.experience-card > p {
-  margin: 60px 0 0;
-  color: var(--ink-soft);
+.record-list {
+  margin: 42px 0 0;
+  padding: 0;
+  list-style: none;
 }
 
-.pending-line {
-  position: absolute;
-  right: 34px;
-  bottom: 32px;
-  left: 34px;
-  height: 1px;
-  background: linear-gradient(90deg, var(--line-strong), transparent);
+.record-list li {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 18px;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+}
+
+.record-list .record-index,
+.record-list time {
+  padding-top: 2px;
+  color: var(--violet);
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.record-list li > div {
+  display: grid;
+  gap: 7px;
+}
+
+.record-list strong {
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.record-list li > div > span {
+  color: var(--ink-soft);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.honor-list li,
+.education-list li {
+  grid-template-columns: 82px minmax(0, 1fr);
+}
+
+.honor-list a {
+  display: inline-flex;
+  width: max-content;
+  align-items: center;
+  gap: 7px;
+  margin-top: 3px;
+  color: var(--violet);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.honor-list a .asset-icon {
+  width: 13px;
+  height: 13px;
+}
+
+.honor-list a:hover {
+  color: var(--magenta);
 }
 
 .services-card ul {
@@ -1826,12 +1894,17 @@ footer {
     min-height: 430px;
   }
 
-  .compact-card {
-    grid-column: span 6;
-  }
-
+  .patents-card,
+  .honors-card,
+  .education-card,
   .services-card {
     grid-column: 1 / -1;
+  }
+
+  .patents-card,
+  .honors-card,
+  .education-card {
+    min-height: 0;
   }
 
   .contact-lower {
@@ -1902,6 +1975,10 @@ footer {
 
   .hero h1 {
     font-size: clamp(50px, 17vw, 82px);
+  }
+
+  .hero h1 > span + span {
+    margin-top: clamp(12px, 4vw, 20px);
   }
 
   .hero-lower {
@@ -1984,9 +2061,23 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .compact-card,
+  .patents-card,
+  .honors-card,
+  .education-card,
   .services-card {
     grid-column: 1;
+  }
+
+  .patents-card,
+  .honors-card,
+  .education-card {
+    min-height: 0;
+  }
+
+  .honor-list li,
+  .education-list li {
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
 
   .services-card li {
