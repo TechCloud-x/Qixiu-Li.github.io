@@ -879,6 +879,10 @@ a:hover .link-icon {
   line-height: 1.55;
 }
 
+.about-copy p + p {
+  margin-top: 18px;
+}
+
 .focus-card {
   position: relative;
   min-height: 510px;

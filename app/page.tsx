@@ -82,13 +82,15 @@ const content = {
     scroll: "向下滚动",
     aboutKicker: "01 / 关于我",
     aboutTitle: "研究复杂问题，\n构建清晰答案。",
-    aboutBody:
-      "我的兴趣位于强化学习、大模型智能体与智能决策的交叉点。我关心的不只是模型能否得到高分，更关心研究是否可靠、系统是否可复现，以及知识能否被更多人真正使用。",
+    aboutBody: [
+      "我的兴趣围绕大模型后训练、多模态智能体与计算机视觉，同时也关注 AI4Science 相关工作。我重点关注 Coding Agent、大模型强化学习算法、视觉嵌入的高效表征与多模态意图理解。",
+      "除学术论文外，我也积极参与开源研究与产业级系统研发。作为省科技厅医疗辅助合作项目成员，我参与构建颅底卵圆孔穿刺引导辅助机器人系统，负责优化卵圆孔靶点和皮肤入针点定位方法；该项目已通过吉林大学白求恩第二医院验收。作为省级项目“文旅汇总平台”的核心全栈开发人员，我参与政府部门数据审核、月报与年报数据统计汇总等全栈代码逻辑编写；该项目目前服务吉林省数千家旅游景点和服务公司。我也曾获得舜宇企业奖学金、国家奖学金等荣誉。",
+    ],
     focusTitle: "研究方向",
-    focus: ["强化学习", "大模型智能体", "多模态推理", "可靠与可复现 AI"],
+    focus: ["大模型后训练", "多模态智能体", "计算机视觉高效表征", "AI4Science 与可靠 AI"],
     stats: [
-      ["122", "篇 ICASSP 论文完成可复核筛选"],
-      ["03", "种语言访问这份主页"],
+      ["10+", "发表、投稿顶级会议论文"],
+      ["5W+", "累计奖学金"],
       ["∞", "持续探索的开放问题"],
     ],
     projectsKicker: "02 / 精选项目",
@@ -260,13 +262,15 @@ const content = {
     scroll: "Scroll to explore",
     aboutKicker: "01 / ABOUT",
     aboutTitle: "Complex questions.\nClear answers.",
-    aboutBody:
-      "My interests sit at the intersection of reinforcement learning, LLM agents, and intelligent decision-making. I care not only about model scores, but whether research is reliable, systems are reproducible, and knowledge becomes genuinely useful.",
+    aboutBody: [
+      "My interests center on post-training for large language models, multimodal agents, and computer vision, while also extending to selected AI for Science problems. I focus on coding agents, reinforcement-learning algorithms for LLMs, efficient representations for visual embeddings, and multimodal intent understanding.",
+      "Beyond academic papers, I actively contribute to open research and production-grade systems. As a member of a provincial science and technology department medical-assistance collaboration, I helped build a robotic guidance system for skull-base foramen ovale puncture, optimizing methods for locating the foramen ovale target and skin entry point. The system passed acceptance testing at the Second Bethune Hospital of Jilin University. As a core full-stack developer for the provincial Cultural Tourism Aggregation Platform, I implemented end-to-end logic for government data review and monthly and annual statistical reporting. The platform now serves thousands of tourist attractions and service companies across Jilin Province. I have also received the Sunny Optical Enterprise Scholarship and the National Scholarship.",
+    ],
     focusTitle: "Research focus",
-    focus: ["Reinforcement learning", "LLM agents", "Multimodal reasoning", "Reliable & reproducible AI"],
+    focus: ["LLM post-training", "Multimodal agents", "Efficient computer-vision representations", "AI for Science & reliable AI"],
     stats: [
-      ["122", "ICASSP papers screened with traceable sources"],
-      ["03", "languages available on this homepage"],
+      ["10+", "papers published at or submitted to top-tier conferences"],
+      ["¥50K+", "cumulative scholarships"],
       ["∞", "open questions left to explore"],
     ],
     projectsKicker: "02 / SELECTED PROJECTS",
@@ -446,13 +450,15 @@ const content = {
     scroll: "Faire défiler",
     aboutKicker: "01 / À PROPOS",
     aboutTitle: "Questions complexes.\nRéponses claires.",
-    aboutBody:
-      "Mes intérêts se situent au croisement de l’apprentissage par renforcement, des agents LLM et de la décision intelligente. Au-delà des scores, je m’intéresse à la fiabilité, à la reproductibilité et à l’utilité réelle des connaissances.",
+    aboutBody: [
+      "Mes recherches portent sur le post-entraînement des grands modèles de langage, les agents multimodaux et la vision par ordinateur, avec également un intérêt pour certains travaux d’IA pour les sciences. Je m’intéresse en particulier aux agents de programmation, aux algorithmes d’apprentissage par renforcement pour les LLM, à la représentation efficace des plongements visuels et à la compréhension multimodale des intentions.",
+      "Au-delà des articles scientifiques, je contribue activement à la recherche ouverte et au développement de systèmes de niveau industriel. Dans le cadre d’une collaboration d’assistance médicale du département provincial des sciences et technologies, j’ai participé à la construction d’un système robotisé de guidage pour la ponction du foramen ovale à la base du crâne, en optimisant la localisation de la cible et du point d’entrée cutané. Le système a été validé par le Second Bethune Hospital de l’Université de Jilin. En tant que développeur full-stack principal de la plateforme provinciale d’agrégation touristique, j’ai conçu la logique complète de contrôle des données administratives et de synthèse statistique mensuelle et annuelle. La plateforme dessert aujourd’hui des milliers de sites touristiques et d’entreprises de services dans la province du Jilin. J’ai également reçu la bourse d’entreprise Sunny Optical et la Bourse nationale.",
+    ],
     focusTitle: "Axes de recherche",
-    focus: ["Apprentissage par renforcement", "Agents LLM", "Raisonnement multimodal", "IA fiable et reproductible"],
+    focus: ["Post-entraînement des LLM", "Agents multimodaux", "Représentations visuelles efficaces", "IA pour les sciences et IA fiable"],
     stats: [
-      ["122", "articles ICASSP vérifiés à partir de sources traçables"],
-      ["03", "langues disponibles sur ce site"],
+      ["10+", "articles publiés ou soumis à des conférences majeures"],
+      ["¥50 k+", "montant cumulé des bourses"],
       ["∞", "questions ouvertes à explorer"],
     ],
     projectsKicker: "02 / PROJETS SÉLECTIONNÉS",
@@ -912,7 +918,9 @@ export default function Home() {
           </div>
           <div className="about-layout">
             <div className="about-copy">
-              <p>{t.aboutBody}</p>
+              {t.aboutBody.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
             </div>
             <div className="focus-card" data-parallax="0.055">
               <AssetIcon name="network" className="focus-icon" />
