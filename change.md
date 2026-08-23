@@ -1,5 +1,10 @@
 # 修改记录
 
+## 2026-08-23 · Recent signals 展示栏加宽
+
+- 收窄 03 / NEWS 的桌面标题列并减少列间距，横向拉长 Recent signals 滑动展示栏。
+- 保留原有一屏高度、纵向滚动和小于 900px 时的单列响应式布局。
+
 ## 2026-08-23 · 01–05 板块标题字号统一
 
 - 将 02 / PROJECTS、03 / NEWS、04 / PUBLICATIONS 与 05 / PROFILE & SERVICE 的大标题字号统一为 01 / ABOUT 的响应式字号规则。

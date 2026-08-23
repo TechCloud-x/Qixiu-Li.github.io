@@ -1165,8 +1165,8 @@ a:hover .link-icon {
 
 .news {
   display: grid;
-  grid-template-columns: 0.45fr 1fr;
-  gap: clamp(40px, 8vw, 130px);
+  grid-template-columns: minmax(240px, 0.32fr) minmax(0, 1.35fr);
+  gap: clamp(32px, 4vw, 72px);
   min-height: 100svh;
   align-items: center;
 }
