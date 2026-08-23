@@ -189,7 +189,7 @@ const content = {
       },
     ],
     honorItems: [
-      { date: "2025", title: "2025 全球校园人工智能算法精英大赛", detail: "国家级一等奖" },
+      { date: "2025.12", title: "2025 全球校园人工智能算法精英大赛", detail: "国家级一等奖" },
       { date: "2024.09", title: "新生奖学金" },
       {
         date: "2023.10",
@@ -368,7 +368,7 @@ const content = {
     ],
     honorItems: [
       {
-        date: "2025",
+        date: "2025.12",
         title: "2025 Global Campus AI Algorithm Elite Competition",
         detail: "National First Prize",
       },
@@ -554,7 +554,7 @@ const content = {
     ],
     honorItems: [
       {
-        date: "2025",
+        date: "12.2025",
         title: "Concours mondial universitaire d’élite en algorithmes d’IA 2025",
         detail: "Premier prix national",
       },
