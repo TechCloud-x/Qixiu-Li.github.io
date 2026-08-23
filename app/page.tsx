@@ -50,7 +50,7 @@ const publicationRecords = [
     venue: "UIC 2025",
     venueName: "IEEE International Conference on Ubiquitous Intelligence and Computing (UIC 2025)",
     authors: ["Qixiu Li", "Xiang Zhu", "Xiaoyong Li", "Chengcheng Shao", "Xiaoli Ren"],
-    image: "publication-architecture-ifg-net.webp",
+    image: "publication-architecture-ifg-net-v2.webp",
     href: "https://ieeexplore.ieee.org/abstract/document/11394978",
   },
 ] as const;
@@ -115,7 +115,7 @@ const content = {
       },
       {
         index: "03",
-        title: "吉林省文旅汇总平台",
+        title: "吉林省文旅厅专项-文旅汇总平台",
         description:
           "面向吉林省文化和旅游资源的数据汇总与管理平台，支持文旅数据采集、信息管理、统计分析与可视化展示。",
         meta: "文旅数据 · 管理平台 · 开源项目",
@@ -293,7 +293,7 @@ const content = {
       },
       {
         index: "03",
-        title: "Jilin Cultural Tourism Aggregation Platform",
+        title: "Jilin Provincial Department of Culture and Tourism Special Project — Cultural Tourism Aggregation Platform",
         description:
           "An open platform for aggregating and managing cultural-tourism resources across Jilin Province, with data collection, administration, analytics, and visualization.",
         meta: "Cultural tourism · Management platform · Open source",
@@ -479,7 +479,7 @@ const content = {
       },
       {
         index: "03",
-        title: "Plateforme culturelle et touristique du Jilin",
+        title: "Projet spécial du Département de la culture et du tourisme du Jilin — Plateforme d’agrégation touristique",
         description:
           "Une plateforme ouverte d’agrégation et de gestion des ressources culturelles et touristiques du Jilin, avec collecte, administration, analyse et visualisation des données.",
         meta: "Tourisme culturel · Gestion · Open source",
@@ -792,6 +792,16 @@ export default function Home() {
         </nav>
 
         <div className="header-actions">
+          <a
+            className="email-shortcut"
+            href="mailto:lqx@nudt.edu.cn"
+            aria-label={t.emailAction}
+            title="lqx@nudt.edu.cn"
+          >
+            {/* Generated as a standalone 4K raster asset for consistent rendering. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={visual("email-icon-4k.png")} alt="" aria-hidden="true" />
+          </a>
           <div className="language-switch" role="group" aria-label="Language">
             <AssetIcon name="language" className="control-icon language-control-icon" />
             <div className="language-options" data-locale={locale}>
@@ -937,46 +947,48 @@ export default function Home() {
             <h2 className="multiline">{t.projectsTitle}</h2>
             <p className="section-intro">{t.projectsIntro}</p>
           </div>
-          <div className="project-grid">
-            {t.projects.map((project, index) => (
-              <article className={`project-card project-${index + 1}`} key={project.title}>
-                <div className="project-visual" aria-hidden="true">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    className={`repository-banner repository-banner-${index + 1}`}
-                    src={visual(
-                      [
-                        "repository-icassp-banner.png",
-                        "repository-rl-top-banner.png",
-                        "repository-tourismwms-banner.png",
-                      ][index],
-                    )}
-                    alt=""
-                    data-parallax={index % 2 === 0 ? "0.065" : "-0.05"}
-                  />
-                  <span className="project-index">{project.index}</span>
-                </div>
-                <div className="project-content">
-                  <p className="project-meta">{project.meta}</p>
-                  <h3>{project.title}</h3>
-                  <p>{project.description}</p>
-                  <a
-                    href={project.href}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {project.action}{" "}
-                    {project.href.includes("github.com") ? (
-                      <GitHubIcon />
-                    ) : project.href.includes("gitee.com") ? (
-                      <GiteeIcon />
-                    ) : (
-                      <Arrow />
-                    )}
-                  </a>
-                </div>
-              </article>
-            ))}
+          <div
+            className="scroll-frame project-scroll-frame"
+            role="region"
+            aria-label={t.projectsTitle.replace("\n", " ")}
+            tabIndex={0}
+          >
+            <div className="project-grid">
+              {t.projects.map((project, index) => (
+                <article className={`project-card project-${index + 1}`} key={project.title}>
+                  <div className="project-visual" aria-hidden="true">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      className={`repository-banner repository-banner-${index + 1}`}
+                      src={visual(
+                        [
+                          "repository-icassp-banner.png",
+                          "repository-rl-top-banner.png",
+                          "repository-tourismwms-banner.png",
+                        ][index],
+                      )}
+                      alt=""
+                    />
+                    <span className="project-index">{project.index}</span>
+                  </div>
+                  <div className="project-content">
+                    <p className="project-meta">{project.meta}</p>
+                    <h3>{project.title}</h3>
+                    <p>{project.description}</p>
+                    <a href={project.href} target="_blank" rel="noreferrer">
+                      {project.action}{" "}
+                      {project.href.includes("github.com") ? (
+                        <GitHubIcon />
+                      ) : project.href.includes("gitee.com") ? (
+                        <GiteeIcon />
+                      ) : (
+                        <Arrow />
+                      )}
+                    </a>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -985,16 +997,23 @@ export default function Home() {
             <p className="eyebrow">{t.newsKicker}</p>
             <h2>{t.newsTitle}</h2>
           </div>
-          <div className="news-list">
-            {t.news.map(([date, item], index) => (
-              <article className="news-item" key={`${date}-${index}`}>
-                <time>{date}</time>
-                <p>
-                  <HighlightedNewsText text={item} />
-                </p>
-                <AssetIcon name="external" className="news-arrow" />
-              </article>
-            ))}
+          <div
+            className="scroll-frame news-scroll-frame"
+            role="region"
+            aria-label={t.newsTitle}
+            tabIndex={0}
+          >
+            <div className="news-list">
+              {t.news.map(([date, item], index) => (
+                <article className="news-item" key={`${date}-${index}`}>
+                  <time>{date}</time>
+                  <p>
+                    <HighlightedNewsText text={item} />
+                  </p>
+                  <AssetIcon name="external" className="news-arrow" />
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -1054,7 +1073,7 @@ export default function Home() {
                 <span>01</span>
                 <h3>{t.patents}</h3>
               </div>
-              <ol className="record-list patent-list">
+              <ol className="record-list patent-list card-scroll-frame" tabIndex={0} aria-label={t.patents}>
                 {t.patentItems.map((item, index) => (
                   <li key={item.number}>
                     <span className="record-index">{String(index + 1).padStart(2, "0")}</span>
@@ -1087,26 +1106,25 @@ export default function Home() {
                 <span>02</span>
                 <h3>{t.honors}</h3>
               </div>
-              <ul className="record-list honor-list">
+              <ul className="record-list honor-list card-scroll-frame" tabIndex={0} aria-label={t.honors}>
                 {t.honorItems.map((item) => (
                   <li key={`${item.date}-${item.title}`}>
                     <time>{item.date}</time>
                     <div>
                       <strong>{item.title}</strong>
-                      {"detail" in item && item.detail ? <span>{item.detail}</span> : null}
-                      {"links" in item && item.links ? (
-                        <div className="honor-links">
-                          {item.links.map((link) => (
-                            <a
-                              href={link.href}
-                              target="_blank"
-                              rel="noreferrer"
-                              key={link.href}
-                            >
-                              {link.label}
-                              <AssetIcon name="external" />
-                            </a>
-                          ))}
+                      {"detail" in item && item.detail ? (
+                        <div className="honor-detail-row">
+                          <span>{item.detail}</span>
+                          {"links" in item && item.links ? (
+                            <div className="honor-links">
+                              {item.links.map((link) => (
+                                <a href={link.href} target="_blank" rel="noreferrer" key={link.href}>
+                                  {link.label}
+                                  <AssetIcon name="external" />
+                                </a>
+                              ))}
+                            </div>
+                          ) : null}
                         </div>
                       ) : null}
                     </div>
@@ -1138,7 +1156,7 @@ export default function Home() {
                 <span>04</span>
                 <h3>{t.services}</h3>
               </div>
-              <ul>
+              <ul className="service-list card-scroll-frame" tabIndex={0} aria-label={t.services}>
                 {t.serviceItems.map(([title, body]) => (
                   <li key={title}>
                     <strong>{title}</strong>
