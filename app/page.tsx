@@ -87,7 +87,7 @@ const content = {
       "除学术论文外，我也积极参与开源研究与产业级系统研发。作为省科技厅医疗辅助合作项目成员，我参与构建颅底卵圆孔穿刺引导辅助机器人系统，负责优化卵圆孔靶点和皮肤入针点定位方法；该项目已通过吉林大学白求恩第二医院验收。作为省级项目“文旅汇总平台”的核心全栈开发人员，我参与政府部门数据审核、月报与年报数据统计汇总等全栈代码逻辑编写；该项目目前服务吉林省数千家旅游景点和服务公司。我也曾获得舜宇企业奖学金、国家奖学金等荣誉。",
     ],
     focusTitle: "研究方向",
-    focus: ["大模型后训练", "多模态智能体", "计算机视觉高效表征", "AI4Science 与可靠 AI"],
+    focus: ["大模型强化学习后训练", "多模态智能体", "计算机视觉高效表征", "AI4Science 与可靠 AI"],
     stats: [
       ["10+", "发表、投稿顶级会议论文"],
       ["5W+", "累计奖学金"],
@@ -267,7 +267,7 @@ const content = {
       "Beyond academic papers, I actively contribute to open research and production-grade systems. As a member of a provincial science and technology department medical-assistance collaboration, I helped build a robotic guidance system for skull-base foramen ovale puncture, optimizing methods for locating the foramen ovale target and skin entry point. The system passed acceptance testing at the Second Bethune Hospital of Jilin University. As a core full-stack developer for the provincial Cultural Tourism Aggregation Platform, I implemented end-to-end logic for government data review and monthly and annual statistical reporting. The platform now serves thousands of tourist attractions and service companies across Jilin Province. I have also received the Sunny Optical Enterprise Scholarship and the National Scholarship.",
     ],
     focusTitle: "Research focus",
-    focus: ["LLM post-training", "Multimodal agents", "Efficient computer-vision representations", "AI for Science & reliable AI"],
+    focus: ["LLM reinforcement-learning post-training", "Multimodal agents", "Efficient computer-vision representations", "AI for Science & reliable AI"],
     stats: [
       ["10+", "papers published at or submitted to top-tier conferences"],
       ["¥50K+", "cumulative scholarships"],
@@ -455,7 +455,7 @@ const content = {
       "Au-delà des articles scientifiques, je contribue activement à la recherche ouverte et au développement de systèmes de niveau industriel. Dans le cadre d’une collaboration d’assistance médicale du département provincial des sciences et technologies, j’ai participé à la construction d’un système robotisé de guidage pour la ponction du foramen ovale à la base du crâne, en optimisant la localisation de la cible et du point d’entrée cutané. Le système a été validé par le Second Bethune Hospital de l’Université de Jilin. En tant que développeur full-stack principal de la plateforme provinciale d’agrégation touristique, j’ai conçu la logique complète de contrôle des données administratives et de synthèse statistique mensuelle et annuelle. La plateforme dessert aujourd’hui des milliers de sites touristiques et d’entreprises de services dans la province du Jilin. J’ai également reçu la bourse d’entreprise Sunny Optical et la Bourse nationale.",
     ],
     focusTitle: "Axes de recherche",
-    focus: ["Post-entraînement des LLM", "Agents multimodaux", "Représentations visuelles efficaces", "IA pour les sciences et IA fiable"],
+    focus: ["Post-entraînement par renforcement des LLM", "Agents multimodaux", "Représentations visuelles efficaces", "IA pour les sciences et IA fiable"],
     stats: [
       ["10+", "articles publiés ou soumis à des conférences majeures"],
       ["¥50 k+", "montant cumulé des bourses"],
