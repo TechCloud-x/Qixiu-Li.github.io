@@ -126,7 +126,7 @@ const content = {
       },
     ],
     newsKicker: "03 / 新闻动态",
-    newsTitle: "近期进展",
+    newsTitle: "近期\n进展",
     news: [
       ["2026.08.14", "公开 ICASSP 2025–2026 强化学习论文综述与可复核目录。"],
       ["2026.08.14", "发布 2026 强化学习顶会论文索引，覆盖 CVPR、AAAI 与 ACL。"],
@@ -137,8 +137,6 @@ const content = {
     ],
     publicationsKicker: "04 / 论文发表",
     publicationsTitle: "Selected Publications",
-    publicationsIntro:
-      "精选展示四篇已接收论文，包含论文架构图、会议信息、作者与原文链接。",
     publicationTag: "精选论文",
     paperLinkLabel: "查看论文",
     paperAuthorsLabel: "作者",
@@ -306,7 +304,7 @@ const content = {
       },
     ],
     newsKicker: "03 / NEWS",
-    newsTitle: "Recent signals",
+    newsTitle: "Recent\nsignals",
     news: [
       ["2026.08.14", "Published the reproducible ICASSP 2025–2026 reinforcement-learning review."],
       ["2026.08.14", "Released a 2026 top-conference RL index covering CVPR, AAAI, and ACL."],
@@ -317,8 +315,6 @@ const content = {
     ],
     publicationsKicker: "04 / PUBLICATIONS",
     publicationsTitle: "Selected Publications",
-    publicationsIntro:
-      "Four accepted papers with architecture diagrams, venue details, verified author lists, and links to the original publications.",
     publicationTag: "SELECTED PUBLICATION",
     paperLinkLabel: "Paper",
     paperAuthorsLabel: "Authors",
@@ -494,7 +490,7 @@ const content = {
       },
     ],
     newsKicker: "03 / ACTUALITÉS",
-    newsTitle: "Signaux récents",
+    newsTitle: "Signaux\nrécents",
     news: [
       ["14.08.2026", "Publication de la revue reproductible ICASSP 2025–2026 sur le RL."],
       ["14.08.2026", "Publication d’un index RL 2026 couvrant CVPR, AAAI et ACL."],
@@ -505,8 +501,6 @@ const content = {
     ],
     publicationsKicker: "04 / PUBLICATIONS",
     publicationsTitle: "Publications sélectionnées",
-    publicationsIntro:
-      "Quatre articles acceptés avec schémas d’architecture, conférences, listes d’auteurs vérifiées et liens vers les publications originales.",
     publicationTag: "PUBLICATION SÉLECTIONNÉE",
     paperLinkLabel: "Article",
     paperAuthorsLabel: "Auteurs",
@@ -1003,7 +997,7 @@ export default function Home() {
         <section className="section news" id="news">
           <div className="news-heading">
             <p className="eyebrow">{t.newsKicker}</p>
-            <h2>{t.newsTitle}</h2>
+            <h2 className="multiline">{t.newsTitle}</h2>
           </div>
           <div
             className="scroll-frame news-scroll-frame"
@@ -1029,7 +1023,6 @@ export default function Home() {
           <div className="section-heading publications-heading">
             <p className="eyebrow">{t.publicationsKicker}</p>
             <h2>{t.publicationsTitle}</h2>
-            <p className="section-intro">{t.publicationsIntro}</p>
           </div>
           <div className="publication-list">
             {publicationRecords.map((paper, index) => (
@@ -1041,12 +1034,14 @@ export default function Home() {
                 <div className="publication-visual">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={visual(paper.image)} alt={`${paper.title} ${t.architectureAlt}`} />
-                  <span className="paper-grid-label">PAPER / {String(index + 1).padStart(2, "0")}</span>
+                  <span className="paper-grid-label">
+                    PAPER / {String(publicationRecords.length - index).padStart(2, "0")}
+                  </span>
                   <span className="paper-venue">{paper.venue}</span>
                 </div>
                 <div className="publication-copy">
                   <span className="publication-tag">
-                    {t.publicationTag} / {String(index + 1).padStart(2, "0")}
+                    {t.publicationTag} / {String(publicationRecords.length - index).padStart(2, "0")}
                   </span>
                   <h3>{paper.title}</h3>
                   <p className="publication-venue-name">{paper.venueName}</p>
