@@ -1155,71 +1155,82 @@ a:hover .link-icon {
   grid-template-columns: minmax(170px, 0.42fr) 1fr;
 }
 
+.publication-list {
+  display: grid;
+  gap: clamp(24px, 3.4vw, 48px);
+  margin-top: clamp(70px, 9vw, 135px);
+}
+
 .publication-card {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(350px, 0.95fr);
-  min-height: 560px;
-  margin-top: clamp(70px, 9vw, 135px);
+  grid-template-columns: minmax(390px, 0.95fr) minmax(0, 1.2fr);
+  min-height: 390px;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 28px;
   background: var(--surface);
   box-shadow: var(--shadow);
+  transform: translate3d(0, var(--parallax-y, 0), 0);
+  transition:
+    background-color var(--theme-duration) var(--theme-ease),
+    border-color var(--theme-duration) var(--theme-ease),
+    box-shadow 260ms ease;
+  will-change: transform;
+}
+
+.publication-card:hover {
+  box-shadow: 0 30px 90px rgba(26, 20, 42, 0.14);
 }
 
 .publication-visual {
   position: relative;
-  min-height: 520px;
+  display: grid;
+  min-height: 390px;
+  place-items: center;
   overflow: hidden;
-  background: #0d0d11;
+  padding: 58px 26px 26px;
+  border-right: 1px solid rgba(23, 31, 52, 0.09);
+  background: #f7f8fb;
 }
 
 .publication-visual > img {
   width: 100%;
-  height: calc(100% + 140px);
-  object-fit: cover;
-  transform: translate3d(0, var(--parallax-y, 0), 0) scale(1.08);
-}
-
-.publication-visual::after {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(12, 12, 16, 0.1), rgba(12, 12, 16, 0.68));
-  content: "";
+  height: 100%;
+  max-height: 320px;
+  object-fit: contain;
 }
 
 .paper-grid-label,
 .paper-venue {
   position: absolute;
   z-index: 2;
-  color: rgba(255, 255, 255, 0.82);
   font-size: 10px;
   font-weight: 800;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.12em;
 }
 
 .paper-grid-label {
-  top: 24px;
-  left: 24px;
+  top: 22px;
+  right: 24px;
+  color: #667085;
 }
 
 .paper-venue {
-  right: 24px;
-  bottom: 24px;
-  display: grid;
-  place-items: center;
-  width: 74px;
-  height: 74px;
-  border: 1px solid rgba(255, 255, 255, 0.36);
-  border-radius: 50%;
-  backdrop-filter: blur(8px);
+  top: 17px;
+  left: 18px;
+  padding: 9px 13px;
+  border-radius: 999px;
+  background: linear-gradient(115deg, var(--violet), var(--magenta) 58%, var(--orange));
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(255, 35, 139, 0.22);
+  letter-spacing: 0.035em;
 }
 
 .publication-copy {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: clamp(34px, 5vw, 76px);
+  padding: clamp(32px, 4.4vw, 66px);
 }
 
 .publication-tag {
@@ -1230,10 +1241,10 @@ a:hover .link-icon {
 }
 
 .publication-copy h3 {
-  margin: 28px 0 20px;
-  font-size: clamp(34px, 4vw, 61px);
-  letter-spacing: -0.06em;
-  line-height: 1;
+  margin: 24px 0 15px;
+  font-size: clamp(25px, 2.5vw, 39px);
+  letter-spacing: -0.045em;
+  line-height: 1.12;
 }
 
 .publication-copy > p {
@@ -1241,16 +1252,54 @@ a:hover .link-icon {
   color: var(--ink-soft);
 }
 
-.publication-status {
-  display: flex;
+.publication-venue-name {
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 650;
+  line-height: 1.55;
+}
+
+.publication-authors {
+  margin-top: 18px !important;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.author-self {
+  color: var(--ink);
+  font-weight: 850;
+}
+
+.publication-link {
+  display: inline-flex;
+  width: fit-content;
   align-items: center;
-  gap: 10px;
-  margin-top: 44px;
-  color: var(--ink-soft);
+  gap: 8px;
+  margin-top: 26px;
+  padding: 11px 16px;
+  border: 1px solid rgba(123, 53, 242, 0.35);
+  border-radius: 999px;
+  background: linear-gradient(115deg, rgba(123, 53, 242, 0.12), rgba(255, 35, 139, 0.1));
+  color: var(--ink);
   font-size: 11px;
   font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition:
+    color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.publication-link .asset-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.publication-link:hover {
+  border-color: var(--magenta);
+  color: var(--magenta);
+  transform: translateY(-2px);
 }
 
 .experience-grid {
@@ -1847,6 +1896,12 @@ footer {
     0 0 0 1px rgba(240, 45, 130, 0.08);
 }
 
+:root[data-theme="light"] .publication-card:hover {
+  box-shadow:
+    0 34px 88px rgba(96, 35, 134, 0.17),
+    0 0 0 1px rgba(240, 45, 130, 0.08);
+}
+
 :root[data-theme="light"] .project-visual > img,
 :root[data-theme="light"] .publication-visual > img {
   filter: saturate(1.1) contrast(1.015);
@@ -2044,7 +2099,9 @@ footer {
   }
 
   .publication-visual {
-    min-height: 430px;
+    min-height: 360px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(23, 31, 52, 0.09);
   }
 
   .patents-card,
@@ -2214,6 +2271,15 @@ footer {
 
   .publication-visual {
     min-height: 310px;
+    padding: 54px 14px 18px;
+  }
+
+  .publication-copy {
+    padding: 28px 22px 32px;
+  }
+
+  .publication-copy h3 {
+    font-size: clamp(24px, 8vw, 32px);
   }
 
   .experience-grid {

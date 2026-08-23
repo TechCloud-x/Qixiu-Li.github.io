@@ -14,6 +14,47 @@ const locales: { id: Locale; label: string }[] = [
   { id: "fr", label: "Français" },
 ];
 
+const publicationRecords = [
+  {
+    id: "slow-ocast",
+    title:
+      "Slow-OCast: Slow-Varying Motion Inspired Transfer Learning for Regional High-Resolution Ocean Environmental Forecasting",
+    venue: "SIGKDD 2026",
+    venueName: "32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining (SIGKDD 2026)",
+    authors: ["Qixiu Li", "Xiang Zhu", "Xiaoyong Li", "Haolong Xiang", "Xiaolong Xu"],
+    image: "publication-architecture-slow-ocast.webp",
+    href: "https://dl.acm.org/doi/abs/10.1145/3770855.3819036",
+  },
+  {
+    id: "phyoceancast",
+    title: "PhyOceanCast: Global Ocean Forecasting with Physics-Informed Diffusion",
+    venue: "CVPR 2026",
+    venueName: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2026)",
+    authors: ["Qixiu Li", "Xiang Zhu", "Xiaoyong Li", "Xiaolong Xu"],
+    image: "publication-architecture-phyoceancast.webp",
+    href:
+      "https://openaccess.thecvf.com/content/CVPR2026/html/Li_PhyOceanCast_Global_Ocean_Forecasting_with_Physics-Informed_Diffusion_CVPR_2026_paper.html",
+  },
+  {
+    id: "dolphin",
+    title: "DOLPHIN: Diffusion Model-Based Approach for Coastal Sea Temperature Forecast Bias Correction",
+    venue: "ISPA 2025",
+    venueName: "IEEE International Symposium on Parallel and Distributed Processing with Applications (ISPA 2025)",
+    authors: ["Qixiu Li", "Xiang Zhu", "Junxing Zhu", "Xiaoyong Li", "Xiaoli Ren", "Jingnan Wang", "Ruiqing Qi"],
+    image: "publication-architecture-dolphin.webp",
+    href: "https://ieeexplore.ieee.org/abstract/document/11245387",
+  },
+  {
+    id: "ifg-net",
+    title: "IFG-Net: Channel Info Fusion Guidance for Retinal Vessel Segmentation",
+    venue: "UIC 2025",
+    venueName: "IEEE International Conference on Ubiquitous Intelligence and Computing (UIC 2025)",
+    authors: ["Qixiu Li", "Xiang Zhu", "Xiaoyong Li", "Chengcheng Shao", "Xiaoli Ren"],
+    image: "publication-architecture-ifg-net.webp",
+    href: "https://ieeexplore.ieee.org/abstract/document/11394978",
+  },
+] as const;
+
 const content = {
   zh: {
     skip: "跳到主要内容",
@@ -89,18 +130,17 @@ const content = {
       ["2026.08.14", "发布 2026 强化学习顶会论文索引，覆盖 CVPR、AAAI 与 ACL。"],
       ["2026.05.17", "一篇论文（Slow-OCast）被 SIGKDD 2026 接收！感谢所有合作者！"],
       ["2026.02.21", "一篇论文（PhyOceanCast）被 CVPR 2026 接收！感谢所有合作者！"],
-      ["2025.08.31", "一篇论文（DOLPHIN）被 ISPA 2026 接收！感谢所有合作者！"],
+      ["2025.08.31", "一篇论文（DOLPHIN）被 ISPA 2025 接收！感谢所有合作者！"],
       ["2025.06.10", "一篇论文（IFG-Net）被 UIC 2025 接收！感谢所有合作者！"],
     ],
     publicationsKicker: "04 / 论文发表",
     publicationsTitle: "Selected Publications",
     publicationsIntro:
-      "论文条目将以精选卡片呈现，包括会议信息、作者、摘要以及论文、项目和代码链接。",
-    publicationEmptyTitle: "作者论文信息待补充",
-    publicationEmptyBody:
-      "这里仅展示经核验的作者论文。当前公开资料不足，因此暂不将文献整理项目误列为本人发表成果。",
-    publicationEmptyTag: "VERIFIED RECORDS ONLY",
-    update: "等待更新",
+      "精选展示四篇已接收论文，包含论文架构图、会议信息、作者与原文链接。",
+    publicationTag: "精选论文",
+    paperLinkLabel: "查看论文",
+    paperAuthorsLabel: "作者",
+    architectureAlt: "论文架构图",
     experienceKicker: "05 / 履历与贡献",
     experienceTitle: "研究之外，\n保持长期投入。",
     patents: "专利",
@@ -268,18 +308,17 @@ const content = {
       ["2026.08.14", "Released a 2026 top-conference RL index covering CVPR, AAAI, and ACL."],
       ["2026.05.17", "Our paper Slow-OCast was accepted by SIGKDD 2026. Many thanks to all collaborators!"],
       ["2026.02.21", "Our paper PhyOceanCast was accepted by CVPR 2026. Many thanks to all collaborators!"],
-      ["2025.08.31", "Our paper DOLPHIN was accepted by ISPA 2026. Many thanks to all collaborators!"],
+      ["2025.08.31", "Our paper DOLPHIN was accepted by ISPA 2025. Many thanks to all collaborators!"],
       ["2025.06.10", "Our paper IFG-Net was accepted by UIC 2025. Many thanks to all collaborators!"],
     ],
     publicationsKicker: "04 / PUBLICATIONS",
     publicationsTitle: "Selected Publications",
     publicationsIntro:
-      "Verified papers will appear as editorial cards with venue, authors, abstract, paper, project, and code links.",
-    publicationEmptyTitle: "Author publications to be added",
-    publicationEmptyBody:
-      "Only verified author records belong here. Public information is currently insufficient, so literature-curation projects are not misrepresented as authored papers.",
-    publicationEmptyTag: "VERIFIED RECORDS ONLY",
-    update: "Awaiting update",
+      "Four accepted papers with architecture diagrams, venue details, verified author lists, and links to the original publications.",
+    publicationTag: "SELECTED PUBLICATION",
+    paperLinkLabel: "Paper",
+    paperAuthorsLabel: "Authors",
+    architectureAlt: "paper architecture diagram",
     experienceKicker: "05 / PROFILE & SERVICE",
     experienceTitle: "Beyond research,\nstay invested.",
     patents: "Patents",
@@ -455,18 +494,17 @@ const content = {
       ["14.08.2026", "Publication d’un index RL 2026 couvrant CVPR, AAAI et ACL."],
       ["17.05.2026", "Notre article Slow-OCast a été accepté à SIGKDD 2026. Merci à toutes les personnes ayant collaboré !"],
       ["21.02.2026", "Notre article PhyOceanCast a été accepté à CVPR 2026. Merci à toutes les personnes ayant collaboré !"],
-      ["31.08.2025", "Notre article DOLPHIN a été accepté à ISPA 2026. Merci à toutes les personnes ayant collaboré !"],
+      ["31.08.2025", "Notre article DOLPHIN a été accepté à ISPA 2025. Merci à toutes les personnes ayant collaboré !"],
       ["10.06.2025", "Notre article IFG-Net a été accepté à UIC 2025. Merci à toutes les personnes ayant collaboré !"],
     ],
     publicationsKicker: "04 / PUBLICATIONS",
     publicationsTitle: "Publications sélectionnées",
     publicationsIntro:
-      "Les articles vérifiés apparaîtront sous forme de cartes avec conférence, auteurs, résumé et liens vers l’article, le projet et le code.",
-    publicationEmptyTitle: "Publications de l’auteur à compléter",
-    publicationEmptyBody:
-      "Seules les publications vérifiées figurent ici. Les informations publiques étant insuffisantes, les projets de curation ne sont pas présentés comme des articles de l’auteur.",
-    publicationEmptyTag: "DONNÉES VÉRIFIÉES UNIQUEMENT",
-    update: "Mise à jour à venir",
+      "Quatre articles acceptés avec schémas d’architecture, conférences, listes d’auteurs vérifiées et liens vers les publications originales.",
+    publicationTag: "PUBLICATION SÉLECTIONNÉE",
+    paperLinkLabel: "Article",
+    paperAuthorsLabel: "Auteurs",
+    architectureAlt: "schéma d’architecture de l’article",
     experienceKicker: "05 / PARCOURS & SERVICE",
     experienceTitle: "Au-delà de la recherche,\ns’investir dans la durée.",
     patents: "Brevets",
@@ -607,8 +645,8 @@ function GiteeIcon({ className = "gitee-icon" }: { className?: string }) {
   );
 }
 
-const highlightedVenues = new Set(["SIGKDD 2026", "CVPR 2026", "ISPA 2026", "UIC 2025"]);
-const venuePattern = /(SIGKDD 2026|CVPR 2026|ISPA 2026|UIC 2025)/g;
+const highlightedVenues = new Set(["SIGKDD 2026", "CVPR 2026", "ISPA 2025", "UIC 2025"]);
+const venuePattern = /(SIGKDD 2026|CVPR 2026|ISPA 2025|UIC 2025)/g;
 
 function HighlightedNewsText({ text }: { text: string }) {
   return text.split(venuePattern).map((part, index) =>
@@ -966,22 +1004,41 @@ export default function Home() {
             <h2>{t.publicationsTitle}</h2>
             <p className="section-intro">{t.publicationsIntro}</p>
           </div>
-          <article className="publication-card publication-empty">
-            <div className="publication-visual" aria-hidden="true">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={visual("learning-signal-4k.jpg")} alt="" data-parallax="0.07" />
-              <span className="paper-grid-label">PAPER / 00</span>
-              <span className="paper-venue">TBA</span>
-            </div>
-            <div className="publication-copy">
-              <span className="publication-tag">{t.publicationEmptyTag}</span>
-              <h3>{t.publicationEmptyTitle}</h3>
-              <p>{t.publicationEmptyBody}</p>
-              <span className="publication-status">
-                <span className="status-dot" /> {t.update}
-              </span>
-            </div>
-          </article>
+          <div className="publication-list">
+            {publicationRecords.map((paper, index) => (
+              <article
+                className="publication-card"
+                data-parallax={index % 2 === 0 ? "0.018" : "-0.014"}
+                key={paper.id}
+              >
+                <div className="publication-visual">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={visual(paper.image)} alt={`${paper.title} ${t.architectureAlt}`} />
+                  <span className="paper-grid-label">PAPER / {String(index + 1).padStart(2, "0")}</span>
+                  <span className="paper-venue">{paper.venue}</span>
+                </div>
+                <div className="publication-copy">
+                  <span className="publication-tag">
+                    {t.publicationTag} / {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <h3>{paper.title}</h3>
+                  <p className="publication-venue-name">{paper.venueName}</p>
+                  <p className="publication-authors" aria-label={t.paperAuthorsLabel}>
+                    {paper.authors.map((author, authorIndex) => (
+                      <span className={author === "Qixiu Li" ? "author-self" : undefined} key={author}>
+                        {author}
+                        {authorIndex < paper.authors.length - 1 ? ", " : ""}
+                      </span>
+                    ))}
+                  </p>
+                  <a className="publication-link" href={paper.href} target="_blank" rel="noreferrer">
+                    {t.paperLinkLabel}
+                    <AssetIcon name="external" />
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
         </section>
 
         <section className="section experience" id="experience">
