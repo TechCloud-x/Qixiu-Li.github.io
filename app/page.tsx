@@ -104,6 +104,7 @@ const content = {
     experienceKicker: "05 / 履历与贡献",
     experienceTitle: "研究之外，\n保持长期投入。",
     patents: "专利",
+    patentLinkLabel: "查看专利",
     honors: "荣誉",
     education: "教育经历",
     services: "Services",
@@ -112,26 +113,39 @@ const content = {
         title: "一种多变量球面信息融合方法和系统",
         numberLabel: "专利号",
         number: "ZL 2025 1 1716023.7",
+        publicationLabel: "公告号",
+        publicationNumber: "CN121188717B",
+        href: "https://www.patentguru.com/cn/search?q=CN121188717B",
       },
       {
         title: "一种基于时空相干的海洋变量预测方法和系统",
         numberLabel: "专利号",
         number: "ZL 2025 1 1726905.1",
+        publicationLabel: "公告号",
+        publicationNumber: "CN121188438B",
+        href: "https://www.patentguru.com/cn/search?q=CN121188438B",
       },
       {
         title: "一种基于特征工程和兄长指导机制的有效波高预测方法",
         numberLabel: "专利号",
         number: "ZL 2025 1 0781011.6",
+        publicationLabel: "公告号",
+        publicationNumber: "CN120296702B",
+        href: "https://www.patentguru.com/cn/search?q=CN120296702B",
       },
       {
         title: "一种预报数据的偏差订正方法和偏差订正系统",
         numberLabel: "专利号",
         number: "ZL 2025 1 1030042.4",
+        publicationLabel: "公告号",
+        publicationNumber: "CN120541441A",
+        href: "https://www.patentguru.com/cn/search?q=CN120541441A",
       },
       {
         title: "一种基于物理约束的温度中期预测方法",
         numberLabel: "公告号",
         number: "CN 121559636 B",
+        href: "https://www.patentguru.com/cn/search?q=CN121559636B",
       },
     ],
     honorItems: [
@@ -269,6 +283,7 @@ const content = {
     experienceKicker: "05 / PROFILE & SERVICE",
     experienceTitle: "Beyond research,\nstay invested.",
     patents: "Patents",
+    patentLinkLabel: "View patent record",
     honors: "Honors",
     education: "Education",
     services: "Services",
@@ -277,26 +292,39 @@ const content = {
         title: "A Multivariable Spherical Information Fusion Method and System",
         numberLabel: "Patent No.",
         number: "ZL 2025 1 1716023.7",
+        publicationLabel: "Publication No.",
+        publicationNumber: "CN121188717B",
+        href: "https://www.patentguru.com/cn/search?q=CN121188717B",
       },
       {
         title: "A Spatiotemporal Coherence-Based Method and System for Ocean Variable Prediction",
         numberLabel: "Patent No.",
         number: "ZL 2025 1 1726905.1",
+        publicationLabel: "Publication No.",
+        publicationNumber: "CN121188438B",
+        href: "https://www.patentguru.com/cn/search?q=CN121188438B",
       },
       {
         title: "An Effective Wave Height Prediction Method Based on Feature Engineering and a Senior Guidance Mechanism",
         numberLabel: "Patent No.",
         number: "ZL 2025 1 0781011.6",
+        publicationLabel: "Publication No.",
+        publicationNumber: "CN120296702B",
+        href: "https://www.patentguru.com/cn/search?q=CN120296702B",
       },
       {
         title: "A Forecast Data Bias Correction Method and Bias Correction System",
         numberLabel: "Patent No.",
         number: "ZL 2025 1 1030042.4",
+        publicationLabel: "Publication No.",
+        publicationNumber: "CN120541441A",
+        href: "https://www.patentguru.com/cn/search?q=CN120541441A",
       },
       {
         title: "A Physics-Constrained Medium-Range Temperature Prediction Method",
         numberLabel: "Publication No.",
         number: "CN 121559636 B",
+        href: "https://www.patentguru.com/cn/search?q=CN121559636B",
       },
     ],
     honorItems: [
@@ -442,6 +470,7 @@ const content = {
     experienceKicker: "05 / PARCOURS & SERVICE",
     experienceTitle: "Au-delà de la recherche,\ns’investir dans la durée.",
     patents: "Brevets",
+    patentLinkLabel: "Consulter le brevet",
     honors: "Distinctions",
     education: "Formation",
     services: "Services",
@@ -450,26 +479,39 @@ const content = {
         title: "Méthode et système de fusion d’informations multivariées sur une sphère",
         numberLabel: "N° de brevet",
         number: "ZL 2025 1 1716023.7",
+        publicationLabel: "N° de publication",
+        publicationNumber: "CN121188717B",
+        href: "https://www.patentguru.com/cn/search?q=CN121188717B",
       },
       {
         title: "Méthode et système de prévision de variables océaniques fondés sur la cohérence spatio-temporelle",
         numberLabel: "N° de brevet",
         number: "ZL 2025 1 1726905.1",
+        publicationLabel: "N° de publication",
+        publicationNumber: "CN121188438B",
+        href: "https://www.patentguru.com/cn/search?q=CN121188438B",
       },
       {
         title: "Méthode de prévision de la hauteur significative des vagues fondée sur l’ingénierie des caractéristiques et un mécanisme de guidage expert",
         numberLabel: "N° de brevet",
         number: "ZL 2025 1 0781011.6",
+        publicationLabel: "N° de publication",
+        publicationNumber: "CN120296702B",
+        href: "https://www.patentguru.com/cn/search?q=CN120296702B",
       },
       {
         title: "Méthode de correction des biais de données prévisionnelles et système de correction des biais",
         numberLabel: "N° de brevet",
         number: "ZL 2025 1 1030042.4",
+        publicationLabel: "N° de publication",
+        publicationNumber: "CN120541441A",
+        href: "https://www.patentguru.com/cn/search?q=CN120541441A",
       },
       {
         title: "Méthode de prévision de température à moyen terme fondée sur des contraintes physiques",
         numberLabel: "N° de publication",
         number: "CN 121559636 B",
+        href: "https://www.patentguru.com/cn/search?q=CN121559636B",
       },
     ],
     honorItems: [
@@ -581,7 +623,7 @@ function HighlightedNewsText({ text }: { text: string }) {
 }
 
 export default function Home() {
-  const [locale, setLocale] = useState<Locale>("zh");
+  const [locale, setLocale] = useState<Locale>("en");
   const [dark, setDark] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const t = content[locale];
@@ -965,6 +1007,15 @@ export default function Home() {
                       <span>
                         {item.numberLabel} · {item.number}
                       </span>
+                      {"publicationNumber" in item && item.publicationNumber ? (
+                        <span>
+                          {item.publicationLabel} · {item.publicationNumber}
+                        </span>
+                      ) : null}
+                      <a href={item.href} target="_blank" rel="noreferrer">
+                        {t.patentLinkLabel}
+                        <AssetIcon name="external" />
+                      </a>
                     </div>
                   </li>
                 ))}

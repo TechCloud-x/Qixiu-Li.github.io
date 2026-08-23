@@ -289,6 +289,8 @@ img {
   isolation: isolate;
   display: grid;
   grid-template-columns: repeat(3, minmax(64px, 1fr));
+  overflow: hidden;
+  border-radius: 999px;
 }
 
 .language-slider {
@@ -300,8 +302,9 @@ img {
   background: var(--ink);
   box-shadow: 0 5px 16px rgba(20, 20, 22, 0.14);
   transform: translateX(0);
+  will-change: transform;
   transition:
-    transform 460ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 560ms cubic-bezier(0.34, 1.32, 0.64, 1),
     background-color var(--theme-duration) var(--theme-ease),
     box-shadow var(--theme-duration) var(--theme-ease);
 }
@@ -331,12 +334,28 @@ img {
   color: var(--ink-soft);
   font-size: 11px;
   font-weight: 750;
-  transition: color 320ms ease;
+  transform: scale(0.97);
+  transition:
+    color 320ms ease,
+    transform 460ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .language-switch button.active {
   background: transparent;
   color: var(--canvas);
+  transform: translateY(-1px) scale(1);
+}
+
+.language-switch button > span {
+  display: inline-block;
+  transition:
+    opacity 280ms ease,
+    transform 460ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.language-switch button:not(.active) > span {
+  opacity: 0.82;
+  transform: translateY(1px);
 }
 
 .language-short {
@@ -1353,7 +1372,8 @@ a:hover .link-icon {
   grid-template-columns: 82px minmax(0, 1fr);
 }
 
-.honor-list a {
+.honor-list a,
+.patent-list a {
   display: inline-flex;
   width: max-content;
   align-items: center;
@@ -1372,12 +1392,14 @@ a:hover .link-icon {
   gap: 7px 16px;
 }
 
-.honor-list a .asset-icon {
+.honor-list a .asset-icon,
+.patent-list a .asset-icon {
   width: 13px;
   height: 13px;
 }
 
-.honor-list a:hover {
+.honor-list a:hover,
+.patent-list a:hover {
   color: var(--magenta);
 }
 
