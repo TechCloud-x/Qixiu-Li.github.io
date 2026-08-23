@@ -8,10 +8,10 @@ type ThemeTransitionDocument = Document & {
   startViewTransition?: (update: () => void) => { finished: Promise<void> };
 };
 
-const locales: { id: Locale; label: string; short: string }[] = [
-  { id: "zh", label: "中文", short: "中" },
-  { id: "en", label: "English", short: "EN" },
-  { id: "fr", label: "Français", short: "FR" },
+const locales: { id: Locale; label: string }[] = [
+  { id: "zh", label: "中文" },
+  { id: "en", label: "English" },
+  { id: "fr", label: "Français" },
 ];
 
 const content = {
@@ -766,8 +766,7 @@ export default function Home() {
                   aria-pressed={locale === item.id}
                   title={item.label}
                 >
-                  <span className="language-full">{item.label}</span>
-                  <span className="language-short">{item.short}</span>
+                  <span>{item.label}</span>
                 </button>
               ))}
             </div>
@@ -1002,20 +1001,24 @@ export default function Home() {
                 {t.patentItems.map((item, index) => (
                   <li key={item.number}>
                     <span className="record-index">{String(index + 1).padStart(2, "0")}</span>
-                    <div>
+                    <div className="patent-entry">
                       <strong>{item.title}</strong>
-                      <span>
-                        {item.numberLabel} · {item.number}
-                      </span>
-                      {"publicationNumber" in item && item.publicationNumber ? (
-                        <span>
-                          {item.publicationLabel} · {item.publicationNumber}
-                        </span>
-                      ) : null}
-                      <a href={item.href} target="_blank" rel="noreferrer">
-                        {t.patentLinkLabel}
-                        <AssetIcon name="external" />
-                      </a>
+                      <div className="patent-meta-row">
+                        <div className="patent-identifiers">
+                          <span>
+                            {item.numberLabel} · {item.number}
+                          </span>
+                          {"publicationNumber" in item && item.publicationNumber ? (
+                            <span>
+                              {item.publicationLabel} · {item.publicationNumber}
+                            </span>
+                          ) : null}
+                        </div>
+                        <a href={item.href} target="_blank" rel="noreferrer">
+                          {t.patentLinkLabel}
+                          <AssetIcon name="external" />
+                        </a>
+                      </div>
                     </div>
                   </li>
                 ))}
