@@ -210,14 +210,14 @@ const content = {
     ],
     educationItems: [
       {
-        date: "2020–2024",
-        institution: "长春理工大学",
-        degree: "数据科学与大数据技术 · 学士",
-      },
-      {
         date: "2024–至今",
         institution: "国防科技大学",
         degree: "硕士在读",
+      },
+      {
+        date: "2020–2024",
+        institution: "长春理工大学",
+        degree: "数据科学与大数据技术 · 学士",
       },
     ],
     serviceItems: [
@@ -396,14 +396,14 @@ const content = {
     ],
     educationItems: [
       {
-        date: "2020–2024",
-        institution: "Changchun University of Science and Technology",
-        degree: "B.Sc. in Data Science and Big Data Technology",
-      },
-      {
         date: "2024–Present",
         institution: "National University of Defense Technology",
         degree: "Master’s student",
+      },
+      {
+        date: "2020–2024",
+        institution: "Changchun University of Science and Technology",
+        degree: "B.Sc. in Data Science and Big Data Technology",
       },
     ],
     serviceItems: [
@@ -582,14 +582,14 @@ const content = {
     ],
     educationItems: [
       {
-        date: "2020–2024",
-        institution: "Université des sciences et technologies de Changchun",
-        degree: "Licence en science des données et technologies du big data",
-      },
-      {
         date: "2024–Présent",
         institution: "Université nationale de technologie de défense",
         degree: "Master en cours",
+      },
+      {
+        date: "2020–2024",
+        institution: "Université des sciences et technologies de Changchun",
+        degree: "Licence en science des données et technologies du big data",
       },
     ],
     serviceItems: [
