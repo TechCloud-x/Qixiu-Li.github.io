@@ -816,7 +816,8 @@ a:hover .link-icon {
   margin-top: 8px;
 }
 
-.section-heading h2 {
+.section-heading h2,
+.news-heading h2 {
   max-width: 980px;
   font-size: clamp(52px, 7.5vw, 112px);
 }
@@ -1172,7 +1173,6 @@ a:hover .link-icon {
 
 .news-heading h2 {
   margin: 0;
-  font-size: clamp(48px, 6vw, 88px);
   letter-spacing: -0.06em;
   line-height: 0.95;
 }
@@ -1399,7 +1399,7 @@ a:hover .link-icon {
 .experience-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(2, minmax(0, 1fr));
+  grid-template-rows: minmax(0, 1.16fr) minmax(0, 0.84fr);
   gap: 22px;
   height: clamp(520px, 60svh, 620px);
   margin-top: clamp(30px, 4vw, 52px);
@@ -2106,6 +2106,8 @@ footer {
 
   .about .section-heading h2,
   .projects .section-heading h2,
+  .news .news-heading h2,
+  .publications .section-heading h2,
   .experience .section-heading h2 {
     font-size: clamp(42px, 5vw, 76px);
   }
@@ -2165,8 +2167,12 @@ footer {
   }
 
   .experience-grid {
-    height: clamp(430px, 58svh, 590px);
-    margin-top: 24px;
+    height: clamp(460px, 62svh, 610px);
+    margin-top: 8px;
+  }
+
+  .experience .section-heading {
+    transform: translateY(-18px);
   }
 }
 
@@ -2449,7 +2455,8 @@ footer {
     padding: 100px 0;
   }
 
-  .section-heading h2 {
+  .section-heading h2,
+  .news-heading h2 {
     font-size: clamp(47px, 16vw, 74px);
   }
 
