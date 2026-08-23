@@ -74,11 +74,11 @@ const content = {
     heroTitleA: "让智能体",
     heroTitleB: "学会思考。",
     heroBody:
-      "你好，我是李奇烋，一名关注强化学习、智能体与可靠人工智能的研究者和开发者。我整理前沿研究，也把想法变成可复现、可交流的开放项目。",
+      "你好，我是李奇烋，目前是国防科技大学硕士研究生，也是一名主要聚焦于大模型强化学习后训练、智能体与可靠人工智能的研究者和开发者。我拥有极强的自我约束与学习能力：两个月自学雅思并取得 6.5 分；能够在 IO 赛制下连续 5 小时使用英文解题并完成 12 题编程；已在 CVPR、SIGKDD 等顶级人工智能会议发表论文。我关注并整理前沿研究，也把想法转化为可复现、可交流的顶级论文与开放项目。",
     explore: "探索我的工作",
     github: "GitHub",
     available: "欢迎研究交流与开源协作",
-    portraitAlt: "李奇烋的 GitHub 头像",
+    portraitAlt: "李奇烋的个人照片",
     scroll: "向下滚动",
     aboutKicker: "01 / 关于我",
     aboutTitle: "研究复杂问题，\n构建清晰答案。",
@@ -252,11 +252,11 @@ const content = {
     heroTitleA: "Teaching agents",
     heroTitleB: "to think.",
     heroBody:
-      "Hi, I’m Qixiu Li, a researcher and developer exploring reinforcement learning, intelligent agents, and reliable AI. I map emerging research and turn ideas into open, reproducible work.",
+      "Hi, I’m Qixiu Li, a master’s student at the National University of Defense Technology and a researcher and developer focused on reinforcement-learning post-training for large language models, intelligent agents, and reliable AI. I am highly self-disciplined and a fast learner: I achieved an IELTS score of 6.5 after two months of self-study, completed 12 English-language programming problems during a five-hour IO-format contest, and have published at leading AI conferences including CVPR and SIGKDD. I track and synthesize frontier research, then turn ideas into reproducible, openly discussed top-tier papers and open-source projects.",
     explore: "Explore my work",
     github: "GitHub",
     available: "Open to research conversations and collaboration",
-    portraitAlt: "Qixiu Li’s GitHub profile picture",
+    portraitAlt: "Portrait of Qixiu Li",
     scroll: "Scroll to explore",
     aboutKicker: "01 / ABOUT",
     aboutTitle: "Complex questions.\nClear answers.",
@@ -438,11 +438,11 @@ const content = {
     heroTitleA: "Apprendre aux agents",
     heroTitleB: "à réfléchir.",
     heroBody:
-      "Bonjour, je suis Qixiu Li, chercheur et développeur en apprentissage par renforcement, agents intelligents et IA fiable. Je cartographie la recherche émergente et transforme les idées en travaux ouverts et reproductibles.",
+      "Bonjour, je suis Qixiu Li, étudiant en master à l’Université nationale des technologies de défense, chercheur et développeur principalement axé sur le post-entraînement par renforcement des grands modèles de langage, les agents intelligents et l’IA fiable. Très discipliné et doté d’une forte capacité d’apprentissage, j’ai obtenu 6,5 à l’IELTS après deux mois d’autoformation, résolu et codé 12 problèmes en anglais lors d’une épreuve au format IO de cinq heures, et publié dans des conférences majeures d’IA telles que CVPR et SIGKDD. Je suis et synthétise les recherches de pointe, puis transforme mes idées en articles de premier plan reproductibles, ouverts à l’échange, et en projets open source.",
     explore: "Découvrir mes travaux",
     github: "GitHub",
     available: "Ouvert aux échanges et aux collaborations",
-    portraitAlt: "Photo de profil GitHub de Qixiu Li",
+    portraitAlt: "Portrait de Qixiu Li",
     scroll: "Faire défiler",
     aboutKicker: "01 / À PROPOS",
     aboutTitle: "Questions complexes.\nRéponses claires.",
@@ -887,7 +887,7 @@ export default function Home() {
             <aside className="hero-profile" data-parallax-global="0.035">
               <div className="profile-frame">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="https://github.com/TechCloud-x.png?size=640" alt={t.portraitAlt} />
+                <img src={visual("my-pic.png")} alt={t.portraitAlt} />
                 <span className="profile-number">001</span>
                 <span className="profile-caption">LQX / TECHCLOUD-X</span>
               </div>
