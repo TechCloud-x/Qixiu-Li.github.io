@@ -124,6 +124,15 @@ const content = {
         href: "https://gitee.com/custhitachi/tourismwms",
         action: "查看项目",
       },
+      {
+        index: "04",
+        title: "颅底卵圆孔穿刺辅助系统",
+        description:
+          "融合机器人引导、卵圆孔靶点与皮肤入针点定位，辅助颅底卵圆孔穿刺路径规划与可视化验证。",
+        meta: "医疗机器人 · 计算机视觉 · 开源项目",
+        href: "https://github.com/TechCloud-x/IGS",
+        action: "查看项目",
+      },
     ],
     newsKicker: "03 / 新闻动态",
     newsTitle: "近期\n进展",
@@ -302,9 +311,18 @@ const content = {
         href: "https://gitee.com/custhitachi/tourismwms",
         action: "View project",
       },
+      {
+        index: "04",
+        title: "Skull-Base Foramen Ovale Puncture Assistance System",
+        description:
+          "An assistance system combining robotic guidance with foramen ovale target and skin-entry localization for puncture-path planning and visual verification.",
+        meta: "Medical robotics · Computer vision · Open source",
+        href: "https://github.com/TechCloud-x/IGS",
+        action: "View project",
+      },
     ],
     newsKicker: "03 / NEWS",
-    newsTitle: "Recent\nsignals",
+    newsTitle: "Recent\nnews",
     news: [
       ["2026.08.14", "Published the reproducible ICASSP 2025–2026 reinforcement-learning review."],
       ["2026.08.14", "Released a 2026 top-conference RL index covering CVPR, AAAI, and ACL."],
@@ -488,9 +506,18 @@ const content = {
         href: "https://gitee.com/custhitachi/tourismwms",
         action: "Voir le projet",
       },
+      {
+        index: "04",
+        title: "Système d’assistance à la ponction du foramen ovale de la base du crâne",
+        description:
+          "Un système combinant guidage robotisé, localisation de la cible et du point d’entrée cutané pour planifier et vérifier visuellement la trajectoire de ponction.",
+        meta: "Robotique médicale · Vision par ordinateur · Open source",
+        href: "https://github.com/TechCloud-x/IGS",
+        action: "Voir le projet",
+      },
     ],
     newsKicker: "03 / ACTUALITÉS",
-    newsTitle: "Signaux\nrécents",
+    newsTitle: "Actualités\nrécentes",
     news: [
       ["14.08.2026", "Publication de la revue reproductible ICASSP 2025–2026 sur le RL."],
       ["14.08.2026", "Publication d’un index RL 2026 couvrant CVPR, AAAI et ACL."],
@@ -959,18 +986,27 @@ export default function Home() {
               {t.projects.map((project, index) => (
                 <article className={`project-card project-${index + 1}`} key={project.title}>
                   <div className="project-visual" aria-hidden="true">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      className={`repository-banner repository-banner-${index + 1}`}
-                      src={visual(
-                        [
-                          "repository-icassp-banner.png",
-                          "repository-rl-top-banner.png",
-                          "repository-tourismwms-banner.png",
-                        ][index],
-                      )}
-                      alt=""
-                    />
+                    {index === 3 ? (
+                      <div className="project-image-pair">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={visual("igs-robot-lab.png")} alt="" />
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={visual("igs-target-visualization.jpg")} alt="" />
+                      </div>
+                    ) : (
+                      /* eslint-disable-next-line @next/next/no-img-element */
+                      <img
+                        className={`repository-banner repository-banner-${index + 1}`}
+                        src={visual(
+                          [
+                            "repository-icassp-banner.png",
+                            "repository-rl-top-banner.png",
+                            "repository-tourismwms-banner.png",
+                          ][index],
+                        )}
+                        alt=""
+                      />
+                    )}
                     <span className="project-index">{project.index}</span>
                   </div>
                   <div className="project-content">
