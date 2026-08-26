@@ -1,5 +1,12 @@
 # 修改记录
 
+## 2026-08-26 · 新闻导航与 EVEREST 预印本
+
+- Recent news 中四条论文接收动态的右侧导航按钮改为站内锚点，分别跳转至 PUBLICATIONS 中对应的 Slow-OCast、PhyOceanCast、DOLPHIN 与 IFG-Net 论文卡片。
+- 两条研究目录动态的导航按钮分别指向 ICASSP 强化学习综述与 RL Top Papers 2026 的 GitHub 仓库。
+- 新增 EVEREST 论文卡片，使用用户提供的架构图并链接至 `arXiv:2608.24640`；状态明确标注为 arXiv preprint，不标注为已接收。
+- 将 Slow-OCast 会议信息中的 “32nd” 移除，更新为 “ACM SIGKDD Conference on Knowledge Discovery and Data Mining (SIGKDD 2026)”。
+
 ## 2026-08-24 · IGS 开源项目与新闻标题
 
 - 新增开源项目“颅底卵圆孔穿刺辅助系统”，链接指向 `TechCloud-x/IGS`，并同步中英法三语内容。

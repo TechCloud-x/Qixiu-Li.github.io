@@ -16,11 +16,21 @@ const locales: { id: Locale; label: string }[] = [
 
 const publicationRecords = [
   {
+    id: "everest",
+    title:
+      "EVEREST: Endogenous Vision-Language Reinforcement Reasoning Exploration for Urban Socio-Semantic Segmentation",
+    venue: "arXiv PREPRINT",
+    venueName: "arXiv preprint · arXiv:2608.24640 [cs.MM] · Submitted 25 Aug 2026",
+    authors: ["Qixiu Li", "Zhongzhi He", "Xiang Zhu", "Xiaoyong Li", "Jiarun Lin", "Weifeng Xu"],
+    image: "publication-architecture-everest.png",
+    href: "https://arxiv.org/abs/2608.24640",
+  },
+  {
     id: "slow-ocast",
     title:
       "Slow-OCast: Slow-Varying Motion Inspired Transfer Learning for Regional High-Resolution Ocean Environmental Forecasting",
     venue: "SIGKDD 2026",
-    venueName: "32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining (SIGKDD 2026)",
+    venueName: "ACM SIGKDD Conference on Knowledge Discovery and Data Mining (SIGKDD 2026)",
     authors: ["Qixiu Li", "Xiang Zhu", "Xiaoyong Li", "Haolong Xiang", "Xiaolong Xu"],
     image: "publication-architecture-slow-ocast.webp",
     href: "https://dl.acm.org/doi/abs/10.1145/3770855.3819036",
@@ -53,6 +63,21 @@ const publicationRecords = [
     image: "publication-architecture-ifg-net-v2.webp",
     href: "https://ieeexplore.ieee.org/abstract/document/11394978",
   },
+] as const;
+
+const newsDestinations = [
+  {
+    href: "https://github.com/TechCloud-x/ICASSP2025_6RL-Paper-main",
+    external: true,
+  },
+  {
+    href: "https://github.com/TechCloud-x/RL-TOP-2026PAPER-main",
+    external: true,
+  },
+  { href: "#publication-slow-ocast", external: false },
+  { href: "#publication-phyoceancast", external: false },
+  { href: "#publication-dolphin", external: false },
+  { href: "#publication-ifg-net", external: false },
 ] as const;
 
 const content = {
@@ -1042,15 +1067,26 @@ export default function Home() {
             tabIndex={0}
           >
             <div className="news-list">
-              {t.news.map(([date, item], index) => (
-                <article className="news-item" key={`${date}-${index}`}>
-                  <time>{date}</time>
-                  <p>
-                    <HighlightedNewsText text={item} />
-                  </p>
-                  <AssetIcon name="external" className="news-arrow" />
-                </article>
-              ))}
+              {t.news.map(([date, item], index) => {
+                const destination = newsDestinations[index];
+                return (
+                  <article className="news-item" key={`${date}-${index}`}>
+                    <time>{date}</time>
+                    <p>
+                      <HighlightedNewsText text={item} />
+                    </p>
+                    <a
+                      className="news-link"
+                      href={destination.href}
+                      target={destination.external ? "_blank" : undefined}
+                      rel={destination.external ? "noreferrer" : undefined}
+                      aria-label={item}
+                    >
+                      <AssetIcon name="external" className="news-arrow" />
+                    </a>
+                  </article>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -1065,6 +1101,7 @@ export default function Home() {
               <article
                 className="publication-card"
                 data-parallax={index % 2 === 0 ? "0.018" : "-0.014"}
+                id={`publication-${paper.id}`}
                 key={paper.id}
               >
                 <div className="publication-visual">

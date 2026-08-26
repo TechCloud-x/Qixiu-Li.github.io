@@ -1267,6 +1267,19 @@ a:hover .link-icon {
   transition: transform 180ms ease;
 }
 
+.news-link {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 12px;
+}
+
+.news-link:focus-visible {
+  outline: 2px solid var(--magenta);
+  outline-offset: 3px;
+}
+
 .news-item:hover .news-arrow {
   transform: translate(4px, -4px);
 }
@@ -1290,12 +1303,20 @@ a:hover .link-icon {
   border-radius: 28px;
   background: var(--surface);
   box-shadow: var(--shadow);
+  scroll-margin-top: 110px;
   transform: translate3d(0, var(--parallax-y, 0), 0);
   transition:
     background-color var(--theme-duration) var(--theme-ease),
     border-color var(--theme-duration) var(--theme-ease),
     box-shadow 260ms ease;
   will-change: transform;
+}
+
+.publication-card:target {
+  border-color: var(--magenta);
+  box-shadow:
+    0 0 0 4px rgba(240, 45, 130, 0.12),
+    var(--shadow);
 }
 
 .publication-card:hover {
@@ -2067,6 +2088,13 @@ footer {
     0 0 0 1px rgba(240, 45, 130, 0.08);
 }
 
+:root[data-theme="light"] .publication-card:target {
+  border-color: rgba(240, 45, 130, 0.72);
+  box-shadow:
+    0 0 0 4px rgba(240, 45, 130, 0.14),
+    0 30px 88px rgba(96, 35, 134, 0.18);
+}
+
 :root[data-theme="light"] .project-visual > img,
 :root[data-theme="light"] .project-image-pair img,
 :root[data-theme="light"] .publication-visual > img {
@@ -2532,7 +2560,7 @@ footer {
   }
 
   .news-item {
-    grid-template-columns: 1fr 36px;
+    grid-template-columns: 1fr 42px;
     gap: 12px;
     padding: 24px 0;
   }
