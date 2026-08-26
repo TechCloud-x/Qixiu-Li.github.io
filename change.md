@@ -1,5 +1,13 @@
 # 修改记录
 
+## 2026-08-26 · 三语文案重译润色与 EVEREST 动态
+
+- 以中文内容为语义基准，按“直译、校核、学术精译、英文润色”流程重写整站英文文案，并统一 VLM、LLM、智能体与可信人工智能术语。
+- 首屏英文删除国防科技大学名称后的 `and`，拆分为独立句，并将研究重点更新为 `reinforcement-learning post-training for VLMs and LLMs`。
+- 对法语首屏、关于我、项目、新闻、履历、服务与联系文案进行一致性和学术表达润色。
+- Recent news 新增 EVEREST 已在 arXiv 公开的动态，右侧导航按钮指向 PUBLICATIONS 中的 EVEREST 论文卡片。
+- 同步更新英文页面描述、社交分享文案及默认 Open Graph 语言。
+
 ## 2026-08-26 · 新闻导航与 EVEREST 预印本
 
 - Recent news 中四条论文接收动态的右侧导航按钮改为站内锚点，分别跳转至 PUBLICATIONS 中对应的 Slow-OCast、PhyOceanCast、DOLPHIN 与 IFG-Net 论文卡片。
