@@ -298,7 +298,7 @@ const content = {
     aboutTitle: "Tackle complex questions.\nBuild clear answers.",
     aboutBody: [
       "My research interests span post-training for large models, multimodal agents, and computer vision, with additional attention to AI for Science. I focus particularly on coding agents, reinforcement-learning algorithms for large models, efficient visual representation learning, and multimodal intent understanding.",
-      "Beyond academic publications, I actively contribute to open research and production-grade system development. As a member of a medical-assistance collaboration with the provincial science and technology department, I helped develop a robotic guidance system for skull-base foramen ovale puncture and optimized methods for localizing the foramen ovale target and skin entry point. The project passed acceptance review by the Second Bethune Hospital of Jilin University. As a core full-stack developer for the provincial Cultural Tourism Aggregation Platform, I contributed to the implementation of full-stack logic for government data review and monthly and annual statistical reporting. The platform currently serves thousands of tourist attractions and tourism service providers across Jilin Province. I have also received the Sunny Optical Enterprise Scholarship and the National Scholarship, among other distinctions.",
+      "Beyond academic publications, I actively contribute to open research and production-grade system development. As a member of a medical-assistance collaboration with the provincial science and technology department, I helped develop a robotic guidance system for skull-base foramen ovale puncture and optimized methods for localizing the foramen ovale target and skin entry point. The project passed acceptance review by the Second Bethune Hospital of Jilin University. As a core full-stack developer for the provincial Cultural Tourism Aggregation Platform, I contributed to the implementation of full-stack logic for government data review and monthly and annual statistical reporting. The platform currently serves thousands of tourist attractions and tourism service providers across Jilin Province. I have also received the Sunny Optical Technology (Group) Company Scholarship and the National Scholarship, among other distinctions.",
     ],
     focusTitle: "Research focus",
     focus: ["Reinforcement-learning post-training for large models", "Multimodal agents", "Efficient computer-vision representations", "AI for Science and trustworthy AI"],
@@ -436,7 +436,7 @@ const content = {
       },
       {
         date: "2022.12",
-        title: "Sunny Optical Scholarship",
+        title: "Sunny Optical Technology (Group) Company Scholarship",
         detail: "20 recipients per cohort · Top 1%",
       },
     ],
