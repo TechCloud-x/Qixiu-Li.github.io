@@ -861,7 +861,7 @@ a:hover .link-icon {
 
 .about-layout {
   display: grid;
-  grid-template-columns: 0.78fr 1.22fr;
+  grid-template-columns: minmax(0, 1.22fr) minmax(360px, 0.78fr);
   gap: clamp(35px, 7vw, 110px);
   margin-top: clamp(70px, 10vw, 145px);
 }
@@ -872,7 +872,7 @@ a:hover .link-icon {
 }
 
 .about-copy p {
-  max-width: 600px;
+  max-width: 760px;
   margin: 0;
   color: var(--ink-soft);
   font-size: clamp(18px, 2vw, 30px);
