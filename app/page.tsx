@@ -100,7 +100,7 @@ const content = {
     heroTitleA: "让智能体",
     heroTitleB: "学会思考。",
     heroBody:
-      "你好，我是李奇烋，目前是国防科技大学硕士研究生，也是一名主要聚焦于大模型强化学习后训练、智能体与可靠人工智能的研究者和开发者。我拥有极强的自我约束与学习能力：两个月自学雅思并取得 6.5 分；在 IO 赛下连续 5 小时使用英文解题并在不借助AI的情况下，完成13题编码；已在 CVPR、SIGKDD 等顶级人工智能会议发表论文。我关注并整理前沿研究，也把想法转化为可复现、可交流的顶级论文与开放项目。",
+      "你好，我是李奇烋，目前是国防科技大学硕士研究生，也是一名主要聚焦于大模型强化学习后训练、智能体与可靠人工智能的研究者和开发者。我拥有极强的自我约束与学习能力：两个月自学雅思并取得 6.5 分；在 IO 赛下连续 5 小时使用英文解题并在不借助 AI 的情况下，完成 13 题算法编程；也是 NVIDIA 的 17.7K-star GitHub 开源项目 Training Transformer Models at Scale 的贡献者；已在 CVPR、SIGKDD 等顶级人工智能会议发表论文。我关注并整理前沿研究，也把想法转化为可复现、可交流的顶级论文与开放项目。",
     explore: "探索我的工作",
     github: "GitHub",
     available: "欢迎研究交流与开源协作",
@@ -288,7 +288,7 @@ const content = {
     heroTitleA: "Teaching agents",
     heroTitleB: "to think.",
     heroBody:
-      "Hi, I’m Qixiu Li, a master’s student at the National University of Defense Technology. I am a researcher and developer focused on reinforcement-learning post-training for VLMs and LLMs, intelligent agents, and trustworthy AI. I am highly self-disciplined and learn quickly: after two months of self-directed IELTS preparation, I earned an IELTS score of 6.5; during an IO-style competition, I worked entirely in English for five consecutive hours and solved 13 programming problems without AI assistance; and I have published papers at leading AI conferences, including CVPR and SIGKDD. I track and synthesize cutting-edge research, turning ideas into reproducible top-tier papers and open-source projects that support open exchange.",
+      "Hi, I’m Qixiu Li, a master’s student at the National University of Defense Technology. I am a researcher and developer focused on reinforcement-learning post-training for VLMs and LLMs, intelligent agents, and trustworthy AI. I am highly self-disciplined and a fast learner: after two months of independent IELTS preparation, I earned a score of 6.5; during an IO-style competition, I worked entirely in English for five consecutive hours and solved 13 algorithmic programming problems without AI assistance; I have contributed to NVIDIA’s 17.7K-star open-source GitHub project, Training Transformer Models at Scale; and I have published papers at leading AI conferences, including CVPR and SIGKDD. I track and synthesize cutting-edge research, turning ideas into reproducible top-tier papers and open-source projects that support open exchange.",
     explore: "Explore my work",
     github: "GitHub",
     available: "Open to research discussions and open-source collaboration",
@@ -484,7 +484,7 @@ const content = {
     heroTitleA: "Apprendre aux agents",
     heroTitleB: "à raisonner.",
     heroBody:
-      "Bonjour, je suis Qixiu Li, étudiant en master à l’Université nationale de technologie de défense. Mes travaux portent principalement sur le post-entraînement des VLM et des LLM par apprentissage par renforcement, les agents intelligents et l’IA digne de confiance. Très autodiscipliné et doté d’une grande capacité d’apprentissage, j’ai obtenu 6,5 à l’IELTS après deux mois de préparation autonome, travaillé exclusivement en anglais pendant cinq heures consécutives lors d’un concours au format IO et résolu 13 problèmes de programmation sans recourir à l’IA, puis publié des articles dans des conférences majeures d’IA, notamment CVPR et SIGKDD. Je suis les avancées de la recherche et les synthétise, puis transforme mes idées en articles de premier plan, reproductibles et propices aux échanges scientifiques, ainsi qu’en projets open source.",
+      "Bonjour, je suis Qixiu Li, étudiant en master à l’Université nationale de technologie de défense. Mes travaux portent principalement sur le post-entraînement des VLM et des LLM par apprentissage par renforcement, les agents intelligents et l’IA digne de confiance. Très autodiscipliné et doté d’une grande capacité d’apprentissage, j’ai obtenu 6,5 à l’IELTS après deux mois de préparation autonome. Lors d’un concours au format IO, j’ai travaillé exclusivement en anglais pendant cinq heures consécutives et résolu 13 problèmes de programmation algorithmique sans recourir à l’IA. Je contribue également à Training Transformer Models at Scale, le projet GitHub open source de NVIDIA qui compte 17,7 k étoiles, et j’ai publié des articles dans des conférences majeures en intelligence artificielle, notamment CVPR et SIGKDD. Je suis les avancées de la recherche et les synthétise, puis transforme mes idées en articles de premier plan, reproductibles et propices aux échanges scientifiques, ainsi qu’en projets open source.",
     explore: "Découvrir mes travaux",
     github: "GitHub",
     available: "Ouvert aux échanges scientifiques et aux collaborations autour de projets open source",
