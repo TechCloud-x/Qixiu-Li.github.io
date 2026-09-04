@@ -4,7 +4,7 @@
 
 - 将首屏竞赛经历由“完成 13 题编码”调整为“完成 13 题算法编程”。
 - 在自我约束与学习能力的经历中补充：NVIDIA 的 17.7K-star GitHub 开源项目 `Training Transformer Models at Scale` 贡献者。
-- 按学术中译英三步流程完成英文翻译，并进一步润色英文与法语版本，确保三语事实、数字和项目归属一致。
+- 按学术中译英三步流程完成英文翻译，并进一步润色英文与法语版本，确保三语事实、数字和项目归属一致；英文最终采用 `NVIDIA’s 17.7K-star open-source GitHub project for training transformer models at scale`，避免连续名词修饰造成歧义。
 
 ## 2026-09-01 · 移动端适配第一轮修复
 
