@@ -1094,7 +1094,8 @@ a:hover .link-icon {
 }
 
 .project-4,
-.project-5 {
+.project-5,
+.project-6 {
   margin-top: 0;
 }
 
@@ -1106,12 +1107,20 @@ a:hover .link-icon {
   grid-column: 2;
 }
 
+.project-6 {
+  grid-column: 3;
+}
+
 .project-visual {
   position: relative;
   min-height: 0;
   aspect-ratio: 3 / 1;
   overflow: hidden;
   background: #101015;
+}
+
+.project-1 .project-visual {
+  background: #f5f8fc;
 }
 
 .project-visual > img {
@@ -2277,6 +2286,10 @@ footer {
   .project-5 {
     grid-column: 2;
   }
+
+  .project-6 {
+    grid-column: 3;
+  }
 }
 
 @media (max-width: 900px) {
@@ -2776,7 +2789,8 @@ footer {
   .project-2,
   .project-3,
   .project-4,
-  .project-5 {
+  .project-5,
+  .project-6 {
     grid-column: 1;
   }
 

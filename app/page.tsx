@@ -125,6 +125,15 @@ const content = {
     projects: [
       {
         index: "01",
+        title: "TIAO",
+        description:
+          "面向抽象式文本摘要，在组相对策略优化中引入层次化 Token 级信用分配，并利用 Token 重要性缩放轨迹优势，将策略梯度更新聚焦于最依赖源文本的 Token。",
+        meta: "文本摘要 · Token 级信用分配 · 强化学习",
+        href: "https://github.com/TechCloud-x/TIAO",
+        action: "查看项目",
+      },
+      {
+        index: "02",
         title: "EVEREST",
         description:
           "从数字地图、空间对齐的卫星图像与文本目标中恢复社会定义城市实体的像素级范围，并通过候选实例枚举、粗分割反馈与边界验证生成可执行的框点提示。",
@@ -133,7 +142,7 @@ const content = {
         action: "查看项目",
       },
       {
-        index: "02",
+        index: "03",
         title: "ICASSP 2025–2026 RL Atlas",
         description:
           "对 122 篇强化学习相关论文进行可复核筛选、主题归类与代码完整性审计，连接论文、DOI 与公开实现。",
@@ -142,7 +151,7 @@ const content = {
         action: "查看项目",
       },
       {
-        index: "03",
+        index: "04",
         title: "RL Top Papers 2026",
         description:
           "持续整理 CVPR、AAAI、ACL 等顶级会议中的强化学习论文，让跨领域研究脉络更容易检索与比较。",
@@ -151,7 +160,7 @@ const content = {
         action: "浏览目录",
       },
       {
-        index: "04",
+        index: "05",
         title: "吉林省文旅厅专项-文旅汇总平台",
         description:
           "面向吉林省文化和旅游资源的数据汇总与管理平台，支持文旅数据采集、信息管理、统计分析与可视化展示。",
@@ -160,7 +169,7 @@ const content = {
         action: "查看项目",
       },
       {
-        index: "05",
+        index: "06",
         title: "颅底卵圆孔穿刺辅助系统",
         description:
           "融合机器人引导、卵圆孔靶点与皮肤入针点定位，辅助颅底卵圆孔穿刺路径规划与可视化验证。",
@@ -322,6 +331,15 @@ const content = {
     projects: [
       {
         index: "01",
+        title: "TIAO",
+        description:
+          "TIAO introduces hierarchical token-level credit assignment into group-relative policy optimization for abstractive summarization, using token importance both to rescale trajectory advantages and to focus policy-gradient updates on the tokens most dependent on the source document.",
+        meta: "Text summarization · Token-level credit assignment · Reinforcement learning",
+        href: "https://github.com/TechCloud-x/TIAO",
+        action: "View project",
+      },
+      {
+        index: "02",
         title: "EVEREST",
         description:
           "EVEREST recovers the pixel-level extent of socially defined urban entities from digital maps, spatially aligned satellite imagery, and textual targets through candidate enumeration, coarse-mask feedback, and boundary verification.",
@@ -330,7 +348,7 @@ const content = {
         action: "View project",
       },
       {
-        index: "02",
+        index: "03",
         title: "ICASSP 2025–2026 RL Atlas",
         description:
           "A reproducible screening and review of 122 reinforcement-learning papers, including topic classification and code-completeness audits, with links to the papers, their DOIs, and available public implementations.",
@@ -339,7 +357,7 @@ const content = {
         action: "View project",
       },
       {
-        index: "03",
+        index: "04",
         title: "RL Top Papers 2026",
         description:
           "A continuously updated index of reinforcement-learning papers from leading conferences such as CVPR, AAAI, and ACL, designed to make cross-disciplinary research trends easier to search and compare.",
@@ -348,7 +366,7 @@ const content = {
         action: "Browse catalog",
       },
       {
-        index: "04",
+        index: "05",
         title: "Jilin Provincial Department of Culture and Tourism Special Project — Cultural Tourism Aggregation Platform",
         description:
           "A platform for aggregating and managing cultural and tourism resources across Jilin Province, supporting data collection, information management, statistical analysis, and visualization.",
@@ -357,7 +375,7 @@ const content = {
         action: "View project",
       },
       {
-        index: "05",
+        index: "06",
         title: "Skull-Base Foramen Ovale Puncture Assistance System",
         description:
           "A system that combines robotic guidance with localization of the foramen ovale target and skin entry point to support puncture-path planning and visual validation.",
@@ -527,6 +545,15 @@ const content = {
     projects: [
       {
         index: "01",
+        title: "TIAO",
+        description:
+          "TIAO introduit une attribution hiérarchique du crédit au niveau des jetons dans l’optimisation relative de politique par groupe pour le résumé abstractif. L’importance des jetons sert à pondérer les avantages de trajectoire et à concentrer les gradients de politique sur ceux qui dépendent le plus du document source.",
+        meta: "Résumé abstractif · Attribution du crédit par jeton · Apprentissage par renforcement",
+        href: "https://github.com/TechCloud-x/TIAO",
+        action: "Voir le projet",
+      },
+      {
+        index: "02",
         title: "EVEREST",
         description:
           "EVEREST reconstitue l’étendue pixellaire d’entités urbaines socialement définies à partir de cartes numériques, d’images satellitaires spatialement alignées et de cibles textuelles, grâce à l’énumération des instances, au retour de masques grossiers et à la vérification des frontières.",
@@ -535,7 +562,7 @@ const content = {
         action: "Voir le projet",
       },
       {
-        index: "02",
+        index: "03",
         title: "Atlas RL ICASSP 2025–2026",
         description:
           "Une sélection vérifiable de 122 articles sur l’apprentissage par renforcement, comprenant une classification thématique et un audit de la complétude du code, avec des liens vers les articles, les DOI et les implémentations publiques.",
@@ -544,7 +571,7 @@ const content = {
         action: "Voir le projet",
       },
       {
-        index: "03",
+        index: "04",
         title: "Articles RL majeurs 2026",
         description:
           "Un index continuellement mis à jour des articles sur l’apprentissage par renforcement issus de conférences de premier plan telles que CVPR, AAAI et ACL, afin de faciliter la recherche et la comparaison entre domaines.",
@@ -553,7 +580,7 @@ const content = {
         action: "Parcourir l’index",
       },
       {
-        index: "04",
+        index: "05",
         title: "Projet spécial du Département de la culture et du tourisme du Jilin — Plateforme d’agrégation touristique",
         description:
           "Une plateforme d’agrégation et de gestion des ressources culturelles et touristiques du Jilin, prenant en charge la collecte, la gestion, l’analyse statistique et la visualisation des données.",
@@ -562,7 +589,7 @@ const content = {
         action: "Voir le projet",
       },
       {
-        index: "05",
+        index: "06",
         title: "Système d’assistance à la ponction du foramen ovale de la base du crâne",
         description:
           "Un système associant guidage robotisé, localisation du point cible au niveau du foramen ovale et repérage du point d’entrée cutané afin de faciliter la planification et la validation visuelle de la trajectoire de ponction.",
@@ -1042,7 +1069,7 @@ export default function Home() {
               {t.projects.map((project, index) => (
                 <article className={`project-card project-${index + 1}`} key={project.title}>
                   <div className="project-visual" aria-hidden="true">
-                    {index === 4 ? (
+                    {index === 5 ? (
                       <div className="project-image-pair">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src={visual("igs-robot-lab.png")} alt="" />
@@ -1055,6 +1082,7 @@ export default function Home() {
                         className={`repository-banner repository-banner-${index + 1}`}
                         src={visual(
                           [
+                            "repository-tiao-banner-4k.png",
                             "repository-everest-banner.png",
                             "repository-icassp-banner.png",
                             "repository-rl-top-banner.png",
