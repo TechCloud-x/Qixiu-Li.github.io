@@ -1,5 +1,10 @@
 # 修改记录
 
+## 2026-09-06 · 项目视觉与措辞微调
+
+- 将 EVEREST Banner 完整缩放后产生的黑色余白调整为白色，使其与图片原有背景自然衔接。
+- 将 TIAO 的 `abstractive summarization` 修改为 `text summarization`，并同步调整中文与法文项目表述。
+
 ## 2026-09-06 · TIAO 精选项目
 
 - 将 `TechCloud-x/TIAO` 新增为 02 / 精选项目中的 `01` 号项目，并把原有五个项目依次顺延为 `02–06`。

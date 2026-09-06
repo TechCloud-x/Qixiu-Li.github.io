@@ -127,7 +127,7 @@ const content = {
         index: "01",
         title: "TIAO",
         description:
-          "面向抽象式文本摘要，在组相对策略优化中引入层次化 Token 级信用分配，并利用 Token 重要性缩放轨迹优势，将策略梯度更新聚焦于最依赖源文本的 Token。",
+          "面向文本摘要，在组相对策略优化中引入层次化 Token 级信用分配，并利用 Token 重要性缩放轨迹优势，将策略梯度更新聚焦于最依赖源文本的 Token。",
         meta: "文本摘要 · Token 级信用分配 · 强化学习",
         href: "https://github.com/TechCloud-x/TIAO",
         action: "查看项目",
@@ -333,7 +333,7 @@ const content = {
         index: "01",
         title: "TIAO",
         description:
-          "TIAO introduces hierarchical token-level credit assignment into group-relative policy optimization for abstractive summarization, using token importance both to rescale trajectory advantages and to focus policy-gradient updates on the tokens most dependent on the source document.",
+          "TIAO introduces hierarchical token-level credit assignment into group-relative policy optimization for text summarization, using token importance both to rescale trajectory advantages and to focus policy-gradient updates on the tokens most dependent on the source document.",
         meta: "Text summarization · Token-level credit assignment · Reinforcement learning",
         href: "https://github.com/TechCloud-x/TIAO",
         action: "View project",
@@ -547,8 +547,8 @@ const content = {
         index: "01",
         title: "TIAO",
         description:
-          "TIAO introduit une attribution hiérarchique du crédit au niveau des jetons dans l’optimisation relative de politique par groupe pour le résumé abstractif. L’importance des jetons sert à pondérer les avantages de trajectoire et à concentrer les gradients de politique sur ceux qui dépendent le plus du document source.",
-        meta: "Résumé abstractif · Attribution du crédit par jeton · Apprentissage par renforcement",
+          "TIAO introduit une attribution hiérarchique du crédit au niveau des jetons dans l’optimisation relative de politique par groupe pour le résumé de texte. L’importance des jetons sert à pondérer les avantages de trajectoire et à concentrer les gradients de politique sur ceux qui dépendent le plus du document source.",
+        meta: "Résumé de texte · Attribution du crédit par jeton · Apprentissage par renforcement",
         href: "https://github.com/TechCloud-x/TIAO",
         action: "Voir le projet",
       },

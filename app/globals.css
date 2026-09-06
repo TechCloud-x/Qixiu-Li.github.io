@@ -1119,7 +1119,8 @@ a:hover .link-icon {
   background: #101015;
 }
 
-.project-1 .project-visual {
+.project-1 .project-visual,
+.project-2 .project-visual {
   background: #f5f8fc;
 }
 
