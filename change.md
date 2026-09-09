@@ -1,5 +1,12 @@
 # 修改记录
 
+## 2026-09-09 · TIAO 论文与动态
+
+- 在 04 / PUBLICATIONS 首位新增论文 `TIAO: Token Importance-Aware Policy Optimization for Text Summarization`，状态明确标注为 `arXiv · on hold`。
+- 完整展示七位作者、共同一作与通讯作者标记，并在论文链接公开前使用不可点击的待公开状态标签。
+- 使用用户提供的 2476 × 759 PNG 作为论文架构图，保留原图内容与比例。
+- 在 03 / NEWS 首位新增 TIAO 动态，右侧导航入口指向站内对应论文卡片，并同步中文、英文与法文内容。
+
 ## 2026-09-08 · TIAO Banner 更新
 
 - 从 `TechCloud-x/TIAO` 最新版本重新获取官方 `assets/tiao-banner-4k.png`，替换精选项目中的原 Banner。

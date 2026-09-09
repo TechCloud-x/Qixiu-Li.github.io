@@ -1423,6 +1423,20 @@ a:hover .link-icon {
   line-height: 1.65;
 }
 
+.publication-author-mark {
+  margin-left: 1px;
+  font-size: 0.72em;
+  font-weight: 850;
+  vertical-align: super;
+}
+
+.publication-author-note {
+  margin-top: 5px !important;
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 1.55;
+}
+
 .author-self {
   color: var(--ink);
   font-weight: 850;
@@ -1454,10 +1468,16 @@ a:hover .link-icon {
   height: 14px;
 }
 
-.publication-link:hover {
+.publication-link:not(.publication-link-pending):hover {
   border-color: var(--magenta);
   color: var(--magenta);
   transform: translateY(-2px);
+}
+
+.publication-link-pending {
+  cursor: default;
+  border-style: dashed;
+  opacity: 0.68;
 }
 
 .experience {

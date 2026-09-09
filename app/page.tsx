@@ -8,13 +8,42 @@ type ThemeTransitionDocument = Document & {
   startViewTransition?: (update: () => void) => { finished: Promise<void> };
 };
 
+type PublicationRecord = {
+  id: string;
+  title: string;
+  venue: string;
+  venueName: string;
+  authors: readonly string[];
+  authorNote?: boolean;
+  image: string;
+  href: string | null;
+};
+
 const locales: { id: Locale; label: string }[] = [
   { id: "zh", label: "中文" },
   { id: "en", label: "English" },
   { id: "fr", label: "Français" },
 ];
 
-const publicationRecords = [
+const publicationRecords: readonly PublicationRecord[] = [
+  {
+    id: "tiao",
+    title: "TIAO: Token Importance-Aware Policy Optimization for Text Summarization",
+    venue: "arXiv ON HOLD",
+    venueName: "arXiv submission · On hold",
+    authors: [
+      "Qixiu Li1,†",
+      "Chenlong Bao1,†",
+      "Xiang Zhu1,*",
+      "Xiaoyong Li1,*",
+      "Ruixin Cao1",
+      "Shukai Chen1",
+      "Zhenxiong Zhou1",
+    ],
+    authorNote: true,
+    image: "publication-architecture-tiao.png",
+    href: null,
+  },
   {
     id: "everest",
     title:
@@ -63,9 +92,10 @@ const publicationRecords = [
     image: "publication-architecture-ifg-net-v2.webp",
     href: "https://ieeexplore.ieee.org/abstract/document/11394978",
   },
-] as const;
+];
 
 const newsDestinations = [
+  { href: "#publication-tiao", external: false },
   { href: "#publication-everest", external: false },
   {
     href: "https://github.com/TechCloud-x/ICASSP2025_6RL-Paper-main",
@@ -181,6 +211,7 @@ const content = {
     newsKicker: "03 / 新闻动态",
     newsTitle: "近期\n进展",
     news: [
+      ["2026.09.09", "我们的文章（TIAO）已提交至 arXiv，目前处于 on hold 状态。"],
       ["2026.08.25", "我们的文章（EVEREST）已在 arXiv 上公开！"],
       ["2026.08.14", "公开 ICASSP 2025–2026 强化学习论文综述与可复核目录。"],
       ["2026.08.14", "发布 2026 强化学习顶会论文索引，覆盖 CVPR、AAAI 与 ACL。"],
@@ -193,7 +224,10 @@ const content = {
     publicationsTitle: "Selected Publications",
     publicationTag: "精选论文",
     paperLinkLabel: "查看论文",
+    paperPendingLabel: "论文链接待公开",
     paperAuthorsLabel: "作者",
+    equalContributionLabel: "共同一作",
+    correspondingAuthorLabel: "通讯作者",
     architectureAlt: "论文架构图",
     experienceKicker: "05 / 履历与贡献",
     experienceTitle: "研究之外，\n保持长期投入。",
@@ -387,6 +421,7 @@ const content = {
     newsKicker: "03 / NEWS",
     newsTitle: "Recent\nnews",
     news: [
+      ["2026.09.09", "Our paper TIAO has been submitted to arXiv and is currently on hold."],
       ["2026.08.25", "Our paper EVEREST is now available on arXiv."],
       ["2026.08.14", "Released a reproducible review and catalog of reinforcement-learning papers from ICASSP 2025–2026."],
       ["2026.08.14", "Released a 2026 index of reinforcement-learning papers from leading conferences, including CVPR, AAAI, and ACL."],
@@ -399,7 +434,10 @@ const content = {
     publicationsTitle: "Selected Publications",
     publicationTag: "SELECTED PAPER",
     paperLinkLabel: "View paper",
+    paperPendingLabel: "Paper link pending",
     paperAuthorsLabel: "Authors",
+    equalContributionLabel: "Equal contribution",
+    correspondingAuthorLabel: "Corresponding authors",
     architectureAlt: "paper architecture figure",
     experienceKicker: "05 / EXPERIENCE & SERVICE",
     experienceTitle: "Beyond research,\nstay committed.",
@@ -601,6 +639,7 @@ const content = {
     newsKicker: "03 / ACTUALITÉS",
     newsTitle: "Actualités\nrécentes",
     news: [
+      ["09.09.2026", "Notre article TIAO a été soumis à arXiv et est actuellement en attente."],
       ["25.08.2026", "Notre article EVEREST est désormais disponible sur arXiv."],
       ["14.08.2026", "Mise en ligne d’une revue et d’un catalogue vérifiables consacrés aux articles sur l’apprentissage par renforcement d’ICASSP 2025–2026."],
       ["14.08.2026", "Publication d’un index 2026 des articles sur l’apprentissage par renforcement issus de conférences de premier plan, notamment CVPR, AAAI et ACL."],
@@ -613,7 +652,10 @@ const content = {
     publicationsTitle: "Publications sélectionnées",
     publicationTag: "ARTICLE SÉLECTIONNÉ",
     paperLinkLabel: "Voir l’article",
+    paperPendingLabel: "Lien de l’article à venir",
     paperAuthorsLabel: "Auteurs",
+    equalContributionLabel: "Contribution égale",
+    correspondingAuthorLabel: "Auteurs correspondants",
     architectureAlt: "figure d’architecture de l’article",
     experienceKicker: "05 / PARCOURS & SERVICE",
     experienceTitle: "Au-delà de la recherche,\ns’engager dans la durée.",
@@ -1179,17 +1221,31 @@ export default function Home() {
                   <h3>{paper.title}</h3>
                   <p className="publication-venue-name">{paper.venueName}</p>
                   <p className="publication-authors" aria-label={t.paperAuthorsLabel}>
-                    {paper.authors.map((author, authorIndex) => (
-                      <span className={author === "Qixiu Li" ? "author-self" : undefined} key={author}>
-                        {author}
-                        {authorIndex < paper.authors.length - 1 ? ", " : ""}
-                      </span>
-                    ))}
+                    {paper.authors.map((author, authorIndex) => {
+                      const authorName = author.replace(/[1,†*]+$/u, "");
+                      const authorMark = author.slice(authorName.length);
+                      return (
+                        <span className={authorName === "Qixiu Li" ? "author-self" : undefined} key={author}>
+                          {authorName}
+                          {authorMark ? <sup className="publication-author-mark">{authorMark}</sup> : null}
+                          {authorIndex < paper.authors.length - 1 ? ", " : ""}
+                        </span>
+                      );
+                    })}
                   </p>
-                  <a className="publication-link" href={paper.href} target="_blank" rel="noreferrer">
-                    {t.paperLinkLabel}
-                    <AssetIcon name="external" />
-                  </a>
+                  {paper.authorNote ? (
+                    <p className="publication-author-note">
+                      † {t.equalContributionLabel} · * {t.correspondingAuthorLabel}
+                    </p>
+                  ) : null}
+                  {paper.href ? (
+                    <a className="publication-link" href={paper.href} target="_blank" rel="noreferrer">
+                      {t.paperLinkLabel}
+                      <AssetIcon name="external" />
+                    </a>
+                  ) : (
+                    <span className="publication-link publication-link-pending">{t.paperPendingLabel}</span>
+                  )}
                 </div>
               </article>
             ))}
