@@ -14,7 +14,6 @@ type PublicationRecord = {
   venue: string;
   venueName: string;
   authors: readonly string[];
-  authorNote?: boolean;
   image: string;
   href: string | null;
 };
@@ -31,16 +30,7 @@ const publicationRecords: readonly PublicationRecord[] = [
     title: "TIAO: Token Importance-Aware Policy Optimization for Text Summarization",
     venue: "arXiv ON HOLD",
     venueName: "arXiv submission · On hold",
-    authors: [
-      "Qixiu Li1,†",
-      "Chenlong Bao1,†",
-      "Xiang Zhu1,*",
-      "Xiaoyong Li1,*",
-      "Ruixin Cao1",
-      "Shukai Chen1",
-      "Zhenxiong Zhou1",
-    ],
-    authorNote: true,
+    authors: ["Qixiu Li", "Chenlong Bao", "Xiang Zhu", "Xiaoyong Li", "Ruixin Cao", "Shukai Chen", "Zhenxiong Zhou"],
     image: "publication-architecture-tiao.png",
     href: null,
   },
@@ -226,8 +216,6 @@ const content = {
     paperLinkLabel: "查看论文",
     paperPendingLabel: "论文链接待公开",
     paperAuthorsLabel: "作者",
-    equalContributionLabel: "共同一作",
-    correspondingAuthorLabel: "通讯作者",
     architectureAlt: "论文架构图",
     experienceKicker: "05 / 履历与贡献",
     experienceTitle: "研究之外，\n保持长期投入。",
@@ -436,8 +424,6 @@ const content = {
     paperLinkLabel: "View paper",
     paperPendingLabel: "Paper link pending",
     paperAuthorsLabel: "Authors",
-    equalContributionLabel: "Equal contribution",
-    correspondingAuthorLabel: "Corresponding authors",
     architectureAlt: "paper architecture figure",
     experienceKicker: "05 / EXPERIENCE & SERVICE",
     experienceTitle: "Beyond research,\nstay committed.",
@@ -654,8 +640,6 @@ const content = {
     paperLinkLabel: "Voir l’article",
     paperPendingLabel: "Lien de l’article à venir",
     paperAuthorsLabel: "Auteurs",
-    equalContributionLabel: "Contribution égale",
-    correspondingAuthorLabel: "Auteurs correspondants",
     architectureAlt: "figure d’architecture de l’article",
     experienceKicker: "05 / PARCOURS & SERVICE",
     experienceTitle: "Au-delà de la recherche,\ns’engager dans la durée.",
@@ -1221,23 +1205,13 @@ export default function Home() {
                   <h3>{paper.title}</h3>
                   <p className="publication-venue-name">{paper.venueName}</p>
                   <p className="publication-authors" aria-label={t.paperAuthorsLabel}>
-                    {paper.authors.map((author, authorIndex) => {
-                      const authorName = author.replace(/[1,†*]+$/u, "");
-                      const authorMark = author.slice(authorName.length);
-                      return (
-                        <span className={authorName === "Qixiu Li" ? "author-self" : undefined} key={author}>
-                          {authorName}
-                          {authorMark ? <sup className="publication-author-mark">{authorMark}</sup> : null}
-                          {authorIndex < paper.authors.length - 1 ? ", " : ""}
-                        </span>
-                      );
-                    })}
+                    {paper.authors.map((author, authorIndex) => (
+                      <span className={author === "Qixiu Li" ? "author-self" : undefined} key={author}>
+                        {author}
+                        {authorIndex < paper.authors.length - 1 ? ", " : ""}
+                      </span>
+                    ))}
                   </p>
-                  {paper.authorNote ? (
-                    <p className="publication-author-note">
-                      † {t.equalContributionLabel} · * {t.correspondingAuthorLabel}
-                    </p>
-                  ) : null}
                   {paper.href ? (
                     <a className="publication-link" href={paper.href} target="_blank" rel="noreferrer">
                       {t.paperLinkLabel}

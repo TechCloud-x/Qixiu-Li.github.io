@@ -1,5 +1,11 @@
 # 修改记录
 
+## 2026-09-09 · TIAO 作者展示精简
+
+- 删除 TIAO 论文作者姓名右上角的机构编号 `1`、共同一作符号 `†` 与通讯作者符号 `*`。
+- 删除共同一作与通讯作者说明，仅保留七位作者姓名及原有作者顺序。
+- 清理仅供上述标记使用的三语标签、渲染逻辑与样式。
+
 ## 2026-09-09 · TIAO 论文与动态
 
 - 在 04 / PUBLICATIONS 首位新增论文 `TIAO: Token Importance-Aware Policy Optimization for Text Summarization`，状态明确标注为 `arXiv · on hold`。
