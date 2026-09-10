@@ -43,22 +43,86 @@
 html {
   scroll-behavior: smooth;
   background: var(--canvas);
+  transition: background-color var(--theme-duration) var(--theme-ease);
 }
 
 body {
+  position: relative;
+  isolation: isolate;
   margin: 0;
   min-width: 0;
-  background:
-    radial-gradient(circle at 86% 18%, rgba(123, 53, 242, 0.055), transparent 28%),
-    radial-gradient(circle at 8% 64%, rgba(255, 122, 32, 0.045), transparent 24%),
-    var(--canvas);
+  background: transparent;
   color: var(--ink);
   font-family: var(--font-geist-sans), Inter, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
+  transition: color var(--theme-duration) var(--theme-ease);
+}
+
+.site-background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background: #0b0b0d;
+  pointer-events: none;
+}
+
+.site-background-layer {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  will-change: opacity;
   transition:
-    background-color var(--theme-duration) var(--theme-ease),
-    color var(--theme-duration) var(--theme-ease);
+    opacity var(--theme-duration) var(--theme-ease),
+    visibility 0s linear var(--theme-duration);
+}
+
+.site-background-layer::after {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(currentColor 1px, transparent 1px),
+    linear-gradient(90deg, currentColor 1px, transparent 1px);
+  pointer-events: none;
+  content: "";
+}
+
+.site-background-dark {
+  color: rgba(245, 244, 240, 0.15);
+  background:
+    radial-gradient(circle at 86% 18%, rgba(123, 53, 242, 0.055), transparent 28%),
+    radial-gradient(circle at 8% 64%, rgba(255, 122, 32, 0.045), transparent 24%),
+    #0b0b0d;
+}
+
+.site-background-dark::after {
+  background-size: 86px 86px;
+  opacity: 0.12;
+}
+
+.site-background-light {
+  color: rgba(20, 20, 22, 0.14);
+  background:
+    radial-gradient(circle at 82% 12%, rgba(123, 53, 242, 0.11), transparent 29%),
+    radial-gradient(circle at 14% 47%, rgba(255, 35, 139, 0.075), transparent 27%),
+    radial-gradient(circle at 80% 81%, rgba(255, 122, 32, 0.085), transparent 26%),
+    #fbfaf7;
+}
+
+.site-background-light::after {
+  background-size: 72px 72px;
+  opacity: 0.1;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 12%, #000 82%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 12%, #000 82%, transparent);
+}
+
+:root[data-theme="dark"] .site-background-dark,
+:root[data-theme="light"] .site-background-light {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
 }
 
 ::view-transition-old(root),
@@ -91,7 +155,10 @@ body {
 
 :root[data-theme-switching="true"] .site-header,
 :root[data-theme-switching="true"] .hero-sticky,
+:root[data-theme-switching="true"] .hero-theme-surface,
 :root[data-theme-switching="true"] .hero-media,
+:root[data-theme-switching="true"] .hero-light-grid,
+:root[data-theme-switching="true"] .hero-light-orb,
 :root[data-theme-switching="true"] .hero-shade,
 :root[data-theme-switching="true"] .brand-mark,
 :root[data-theme-switching="true"] .email-shortcut,
@@ -107,18 +174,6 @@ body {
   transition-property: background, background-color, border-color, color, box-shadow, opacity, filter;
   transition-duration: var(--theme-duration);
   transition-timing-function: var(--theme-ease);
-}
-
-body::before {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background-image: linear-gradient(var(--line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--line) 1px, transparent 1px);
-  background-size: 86px 86px;
-  opacity: 0.12;
-  pointer-events: none;
-  content: "";
 }
 
 button,
@@ -447,16 +502,16 @@ img {
     opacity 320ms ease;
 }
 
-.theme-toggle.is-light .control-icon {
+:root:not([data-theme="dark"]) .theme-toggle .control-icon {
   transform: rotate(0deg) scale(1);
 }
 
-.theme-toggle.is-dark .control-icon {
+:root[data-theme="dark"] .theme-toggle .control-icon {
   transform: rotate(180deg) scale(0.92);
   filter: saturate(1.18) brightness(1.08);
 }
 
-.theme-toggle.is-dark::before {
+:root[data-theme="dark"] .theme-toggle::before {
   opacity: 0.72;
   transform: rotate(0deg) scale(1);
 }
@@ -496,12 +551,32 @@ main {
   top: 0;
   min-height: 100svh;
   overflow: hidden;
-  background: var(--canvas);
+  background-color: var(--canvas);
 }
 
 .hero-light-grid,
-.hero-light-orb {
-  display: none;
+.hero-light-orb,
+.hero-theme-surface {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity var(--theme-duration) var(--theme-ease),
+    visibility 0s linear var(--theme-duration);
+}
+
+.hero-theme-surface {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfaf7 100%);
+  pointer-events: none;
+}
+
+:root[data-theme="light"] .hero-theme-surface-light {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
 }
 
 .hero-media {
@@ -511,9 +586,24 @@ main {
   bottom: -7%;
   width: min(78vw, 1250px);
   transform: translate3d(0, var(--parallax-y, 0), 0) scale(1.08);
-  will-change: transform;
+  will-change: transform, opacity;
   -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 25%, #000 100%);
   mask-image: linear-gradient(90deg, transparent 0%, #000 25%, #000 100%);
+}
+
+.hero-media-dark {
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity var(--theme-duration) var(--theme-ease),
+    filter var(--theme-duration) var(--theme-ease),
+    visibility 0s linear var(--theme-duration);
+}
+
+:root[data-theme="dark"] .hero-media-dark {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
 }
 
 .hero-media img {
@@ -1861,21 +1951,6 @@ footer {
 }
 
 /* Light theme: the original violet–pink–orange orbital card language. */
-:root[data-theme="light"] body {
-  background:
-    radial-gradient(circle at 82% 12%, rgba(123, 53, 242, 0.11), transparent 29%),
-    radial-gradient(circle at 14% 47%, rgba(255, 35, 139, 0.075), transparent 27%),
-    radial-gradient(circle at 80% 81%, rgba(255, 122, 32, 0.085), transparent 26%),
-    #fbfaf7;
-}
-
-:root[data-theme="light"] body::before {
-  opacity: 0.1;
-  background-size: 72px 72px;
-  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 12%, #000 82%, transparent);
-  mask-image: linear-gradient(to bottom, transparent, #000 12%, #000 82%, transparent);
-}
-
 :root[data-theme="light"] .site-header {
   border-color: rgba(123, 53, 242, 0.2);
   background: rgba(255, 255, 255, 0.82);
@@ -1893,7 +1968,7 @@ footer {
 }
 
 :root[data-theme="light"] .hero-sticky {
-  background: linear-gradient(180deg, #ffffff 0%, #fbfaf7 100%);
+  background-color: #fbfaf7;
 }
 
 :root[data-theme="light"] .hero-sticky::before,
@@ -1942,8 +2017,10 @@ footer {
   mask-image: none;
 }
 
-:root[data-theme="light"] .hero-media-dark {
-  display: none;
+:root[data-theme="light"] .hero-media.hero-media-dark {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
 }
 
 :root[data-theme="light"] .hero-light-grid {
@@ -1952,6 +2029,7 @@ footer {
   z-index: 0;
   display: block;
   opacity: 0.2;
+  visibility: visible;
   background-image:
     linear-gradient(to right, rgba(20, 20, 22, 0.14) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(20, 20, 22, 0.14) 1px, transparent 1px);
@@ -1959,6 +2037,7 @@ footer {
   -webkit-mask-image: linear-gradient(to bottom, transparent, #000 18%, transparent 78%);
   mask-image: linear-gradient(to bottom, transparent, #000 18%, transparent 78%);
   pointer-events: none;
+  transition-delay: 0s;
 }
 
 :root[data-theme="light"] .hero-light-orb {
@@ -1970,6 +2049,8 @@ footer {
   transform: translate3d(0, var(--parallax-y, 0), 0);
   will-change: transform;
   pointer-events: none;
+  visibility: visible;
+  transition-delay: 0s;
 }
 
 :root[data-theme="light"] .hero-light-orb-primary {
@@ -3066,6 +3147,20 @@ footer {
   }
 }
 
+@media (max-width: 1024px) and (max-height: 520px) and (orientation: landscape) {
+  .email-shortcut,
+  .theme-toggle,
+  .menu-toggle {
+    width: 44px;
+    height: 44px;
+  }
+
+  .language-switch button {
+    min-height: 44px;
+    padding-block: 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -3081,6 +3176,6 @@ footer {
 
   [data-parallax],
   [data-parallax-global] {
-    transform: none !important;
+    --parallax-y: 0px !important;
   }
 }

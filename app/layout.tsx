@@ -2,6 +2,24 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
+const themeBootstrap = `
+  (() => {
+    const root = document.documentElement;
+    let savedTheme = null;
+
+    try {
+      savedTheme = window.localStorage.getItem("portfolio-theme");
+    } catch {}
+
+    const hasSavedTheme = savedTheme === "light" || savedTheme === "dark";
+    const prefersDark = window.matchMedia?.("(prefers-color-scheme: dark)").matches ?? false;
+    const theme = hasSavedTheme ? savedTheme : prefersDark ? "dark" : "light";
+
+    root.dataset.theme = theme;
+    root.dataset.themePreference = hasSavedTheme ? "user" : "system";
+  })();
+`;
+
 const geistSans = localFont({
   src: "./fonts/geist-latin-variable.woff2",
   variable: "--font-geist-sans",
@@ -70,7 +88,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" data-theme="light" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeBootstrap }} />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>{children}</body>
     </html>
   );

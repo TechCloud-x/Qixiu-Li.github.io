@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 type Locale = "zh" | "en" | "fr";
+type Theme = "light" | "dark";
 
 type ThemeTransitionDocument = Document & {
   startViewTransition?: (update: () => void) => { finished: Promise<void> };
@@ -798,69 +799,198 @@ function HighlightedNewsText({ text }: { text: string }) {
 
 export default function Home() {
   const [locale, setLocale] = useState<Locale>("en");
-  const [dark, setDark] = useState(false);
+  const [theme, setTheme] = useState<Theme | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
+  const hasExplicitTheme = useRef(false);
+  const themeSwitchTimer = useRef<number | null>(null);
+  const themeTransitionSequence = useRef(0);
   const t = content[locale];
+  const dark = theme === "dark";
+
+  const applyTheme = useCallback((nextTheme: Theme) => {
+    const root = document.documentElement;
+    const transitionDocument = document as ThemeTransitionDocument;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const sequence = ++themeTransitionSequence.current;
+
+    if (themeSwitchTimer.current !== null) {
+      window.clearTimeout(themeSwitchTimer.current);
+      themeSwitchTimer.current = null;
+    }
+
+    const commitTheme = () => {
+      root.dataset.theme = nextTheme;
+      setTheme(nextTheme);
+    };
+
+    if (reducedMotion) {
+      delete root.dataset.themeSwitching;
+      commitTheme();
+      return;
+    }
+
+    root.dataset.themeSwitching = "true";
+    const finishTransition = () => {
+      if (themeTransitionSequence.current === sequence) {
+        delete root.dataset.themeSwitching;
+      }
+    };
+
+    if (transitionDocument.startViewTransition) {
+      try {
+        const transition = transitionDocument.startViewTransition(commitTheme);
+        transition.finished.then(finishTransition, finishTransition);
+        return;
+      } catch {
+        // Fall through to the CSS cross-fade when View Transitions are unavailable.
+      }
+    }
+
+    commitTheme();
+    themeSwitchTimer.current = window.setTimeout(finishTransition, 720);
+  }, []);
 
   useEffect(() => {
-    const savedLocale = window.localStorage.getItem("portfolio-locale") as Locale | null;
-    const savedTheme = window.localStorage.getItem("portfolio-theme");
+    let savedLocale: Locale | null = null;
+    try {
+      savedLocale = window.localStorage.getItem("portfolio-locale") as Locale | null;
+    } catch {}
     const frame = window.requestAnimationFrame(() => {
       if (savedLocale && locales.some((item) => item.id === savedLocale)) {
         setLocale(savedLocale);
       }
-      if (savedTheme === "dark") setDark(true);
     });
     return () => window.cancelAnimationFrame(frame);
   }, []);
 
   useEffect(() => {
     document.documentElement.lang = locale === "zh" ? "zh-CN" : locale;
-    document.documentElement.dataset.theme = dark ? "dark" : "light";
-    window.localStorage.setItem("portfolio-locale", locale);
-    window.localStorage.setItem("portfolio-theme", dark ? "dark" : "light");
-  }, [locale, dark]);
+    try {
+      window.localStorage.setItem("portfolio-locale", locale);
+    } catch {
+      // Keep the selected language for this session when storage is unavailable.
+    }
+  }, [locale]);
 
   useEffect(() => {
-    let ticking = false;
-    const update = () => {
-      const viewportHeight = window.innerHeight;
-      const scrollRange = Math.max(document.documentElement.scrollHeight - viewportHeight, 1);
-      const localLayers = document.querySelectorAll<HTMLElement>("[data-parallax]");
-      const globalLayers = document.querySelectorAll<HTMLElement>("[data-parallax-global]");
+    const root = document.documentElement;
+    const colorScheme = window.matchMedia("(prefers-color-scheme: dark)");
+    let savedTheme: string | null = null;
 
-      localLayers.forEach((layer) => {
-        const rect = layer.getBoundingClientRect();
-        const speed = Number(layer.dataset.parallax ?? 0.08);
-        const distance = rect.top + rect.height / 2 - viewportHeight / 2;
-        const offset = Math.max(-150, Math.min(150, distance * speed * -1));
-        layer.style.setProperty("--parallax-y", `${offset.toFixed(2)}px`);
-      });
+    try {
+      savedTheme = window.localStorage.getItem("portfolio-theme");
+    } catch {}
 
-      globalLayers.forEach((layer) => {
-        const speed = Number(layer.dataset.parallaxGlobal ?? -0.05);
-        const offset = Math.max(-110, Math.min(110, window.scrollY * speed));
-        layer.style.setProperty("--parallax-y", `${offset.toFixed(2)}px`);
-      });
+    const validSavedTheme: Theme | null =
+      savedTheme === "light" || savedTheme === "dark" ? savedTheme : null;
+    const rootTheme = root.dataset.theme;
+    const initialTheme: Theme =
+      rootTheme === "light" || rootTheme === "dark"
+        ? rootTheme
+        : validSavedTheme
+          ? validSavedTheme
+          : colorScheme.matches
+            ? "dark"
+            : "light";
 
-      document.documentElement.style.setProperty(
-        "--scroll-progress",
-        `${Math.min(window.scrollY / scrollRange, 1)}`,
-      );
-      ticking = false;
-    };
-    const requestUpdate = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(update);
-        ticking = true;
+    hasExplicitTheme.current = validSavedTheme !== null;
+    root.dataset.theme = initialTheme;
+    root.dataset.themePreference = validSavedTheme ? "user" : "system";
+    const initialThemeSync = window.requestAnimationFrame(() => {
+      const activeRootTheme = root.dataset.theme;
+      setTheme(activeRootTheme === "dark" || activeRootTheme === "light" ? activeRootTheme : initialTheme);
+    });
+
+    const handleSystemThemeChange = (event: MediaQueryListEvent) => {
+      if (!hasExplicitTheme.current) {
+        applyTheme(event.matches ? "dark" : "light");
       }
     };
-    update();
-    window.addEventListener("scroll", requestUpdate, { passive: true });
-    window.addEventListener("resize", requestUpdate);
+
+    colorScheme.addEventListener("change", handleSystemThemeChange);
     return () => {
-      window.removeEventListener("scroll", requestUpdate);
-      window.removeEventListener("resize", requestUpdate);
+      window.cancelAnimationFrame(initialThemeSync);
+      colorScheme.removeEventListener("change", handleSystemThemeChange);
+      if (themeSwitchTimer.current !== null) {
+        window.clearTimeout(themeSwitchTimer.current);
+      }
+      delete root.dataset.themeSwitching;
+    };
+  }, [applyTheme]);
+
+  useEffect(() => {
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let stopParallax = () => {};
+
+    const resetParallax = () => {
+      document
+        .querySelectorAll<HTMLElement>("[data-parallax], [data-parallax-global]")
+        .forEach((layer) => layer.style.removeProperty("--parallax-y"));
+      document.documentElement.style.setProperty("--scroll-progress", "0");
+    };
+
+    const configureParallax = () => {
+      stopParallax();
+
+      if (reducedMotion.matches) {
+        resetParallax();
+        stopParallax = () => {};
+        return;
+      }
+
+      let ticking = false;
+      let animationFrame: number | null = null;
+      const update = () => {
+        const viewportHeight = window.innerHeight;
+        const scrollRange = Math.max(document.documentElement.scrollHeight - viewportHeight, 1);
+        const localLayers = document.querySelectorAll<HTMLElement>("[data-parallax]");
+        const globalLayers = document.querySelectorAll<HTMLElement>("[data-parallax-global]");
+
+        localLayers.forEach((layer) => {
+          const rect = layer.getBoundingClientRect();
+          const speed = Number(layer.dataset.parallax ?? 0.08);
+          const distance = rect.top + rect.height / 2 - viewportHeight / 2;
+          const offset = Math.max(-150, Math.min(150, distance * speed * -1));
+          layer.style.setProperty("--parallax-y", `${offset.toFixed(2)}px`);
+        });
+
+        globalLayers.forEach((layer) => {
+          const speed = Number(layer.dataset.parallaxGlobal ?? -0.05);
+          const offset = Math.max(-110, Math.min(110, window.scrollY * speed));
+          layer.style.setProperty("--parallax-y", `${offset.toFixed(2)}px`);
+        });
+
+        document.documentElement.style.setProperty(
+          "--scroll-progress",
+          `${Math.min(window.scrollY / scrollRange, 1)}`,
+        );
+        ticking = false;
+        animationFrame = null;
+      };
+      const requestUpdate = () => {
+        if (!ticking) {
+          animationFrame = window.requestAnimationFrame(update);
+          ticking = true;
+        }
+      };
+
+      update();
+      window.addEventListener("scroll", requestUpdate, { passive: true });
+      window.addEventListener("resize", requestUpdate);
+      stopParallax = () => {
+        window.removeEventListener("scroll", requestUpdate);
+        window.removeEventListener("resize", requestUpdate);
+        if (animationFrame !== null) {
+          window.cancelAnimationFrame(animationFrame);
+        }
+      };
+    };
+
+    configureParallax();
+    reducedMotion.addEventListener("change", configureParallax);
+    return () => {
+      reducedMotion.removeEventListener("change", configureParallax);
+      stopParallax();
     };
   }, []);
 
@@ -870,28 +1000,21 @@ export default function Home() {
   };
 
   const toggleTheme = () => {
-    const nextDark = !dark;
     const root = document.documentElement;
-    const transitionDocument = document as ThemeTransitionDocument;
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const applyTheme = () => {
-      root.dataset.theme = nextDark ? "dark" : "light";
-      setDark(nextDark);
-    };
+    const currentTheme =
+      root.dataset.theme === "dark" || root.dataset.theme === "light"
+        ? root.dataset.theme
+        : theme ?? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    const nextTheme: Theme = currentTheme === "dark" ? "light" : "dark";
 
-    root.dataset.themeSwitching = "true";
-    if (transitionDocument.startViewTransition && !reducedMotion) {
-      const transition = transitionDocument.startViewTransition(applyTheme);
-      transition.finished.finally(() => {
-        delete root.dataset.themeSwitching;
-      });
-      return;
+    hasExplicitTheme.current = true;
+    root.dataset.themePreference = "user";
+    try {
+      window.localStorage.setItem("portfolio-theme", nextTheme);
+    } catch {
+      // The theme still applies for this session when storage is unavailable.
     }
-
-    applyTheme();
-    window.setTimeout(() => {
-      delete root.dataset.themeSwitching;
-    }, 720);
+    applyTheme(nextTheme);
   };
 
   const navItems = [
@@ -905,6 +1028,11 @@ export default function Home() {
 
   return (
     <>
+      <div className="site-background" aria-hidden="true">
+        <div className="site-background-layer site-background-dark" />
+        <div className="site-background-layer site-background-light" />
+      </div>
+
       <a className="skip-link" href="#main">
         {t.skip}
       </a>
@@ -956,10 +1084,11 @@ export default function Home() {
             </div>
           </div>
           <button
-            className={`theme-toggle ${dark ? "is-dark" : "is-light"}`}
+            className="theme-toggle"
             onClick={toggleTheme}
             aria-label={dark ? t.themeDark : t.themeLight}
             title={dark ? t.themeDark : t.themeLight}
+            aria-pressed={theme === null ? undefined : dark}
           >
             <AssetIcon name="theme" className="control-icon" />
           </button>
@@ -978,6 +1107,7 @@ export default function Home() {
       <main id="main">
         <section className="hero" id="top">
           <div className="hero-sticky">
+            <div className="hero-theme-surface hero-theme-surface-light" aria-hidden="true" />
             <div className="hero-light-grid" aria-hidden="true" />
             <div
               className="hero-light-orb hero-light-orb-primary"
@@ -989,12 +1119,10 @@ export default function Home() {
               data-parallax-global="0.026"
               aria-hidden="true"
             />
-            {dark && (
-              <div className="hero-media hero-media-dark" data-parallax-global="-0.05" aria-hidden="true">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={visual("hero-orbit-4k.jpg")} alt="" />
-              </div>
-            )}
+            <div className="hero-media hero-media-dark" data-parallax-global="-0.05" aria-hidden="true">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={visual("hero-orbit-4k.jpg")} alt="" />
+            </div>
             <div className="hero-shade" aria-hidden="true" />
             <div className="hero-content">
               <p className="eyebrow hero-eyebrow">{t.heroEyebrow}</p>
