@@ -29,11 +29,11 @@ const publicationRecords: readonly PublicationRecord[] = [
   {
     id: "tiao",
     title: "TIAO: Token Importance-Aware Policy Optimization for Text Summarization",
-    venue: "arXiv ON HOLD",
-    venueName: "arXiv submission · On hold",
+    venue: "arXiv PREPRINT",
+    venueName: "arXiv preprint · arXiv:2609.16748 [cs.CL] · Submitted 15 Sep 2026",
     authors: ["Qixiu Li", "Chenlong Bao", "Xiang Zhu", "Xiaoyong Li", "Ruixin Cao", "Shukai Chen", "Zhenxiong Zhou"],
     image: "publication-architecture-tiao.png",
-    href: null,
+    href: "https://arxiv.org/abs/2609.16748",
   },
   {
     id: "everest",
@@ -202,7 +202,7 @@ const content = {
     newsKicker: "03 / 新闻动态",
     newsTitle: "近期\n进展",
     news: [
-      ["2026.09.09", "我们的文章（TIAO）已提交至 arXiv，目前处于 on hold 状态。"],
+      ["2026.09.15", "我们的文章（TIAO）已在 arXiv 上公开！"],
       ["2026.08.25", "我们的文章（EVEREST）已在 arXiv 上公开！"],
       ["2026.08.14", "公开 ICASSP 2025–2026 强化学习论文综述与可复核目录。"],
       ["2026.08.14", "发布 2026 强化学习顶会论文索引，覆盖 CVPR、AAAI 与 ACL。"],
@@ -410,7 +410,7 @@ const content = {
     newsKicker: "03 / NEWS",
     newsTitle: "Recent\nnews",
     news: [
-      ["2026.09.09", "Our paper TIAO has been submitted to arXiv and is currently on hold."],
+      ["2026.09.15", "Our paper TIAO is now available on arXiv."],
       ["2026.08.25", "Our paper EVEREST is now available on arXiv."],
       ["2026.08.14", "Released a reproducible review and catalog of reinforcement-learning papers from ICASSP 2025–2026."],
       ["2026.08.14", "Released a 2026 index of reinforcement-learning papers from leading conferences, including CVPR, AAAI, and ACL."],
@@ -626,7 +626,7 @@ const content = {
     newsKicker: "03 / ACTUALITÉS",
     newsTitle: "Actualités\nrécentes",
     news: [
-      ["09.09.2026", "Notre article TIAO a été soumis à arXiv et est actuellement en attente."],
+      ["15.09.2026", "Notre article TIAO est désormais disponible sur arXiv."],
       ["25.08.2026", "Notre article EVEREST est désormais disponible sur arXiv."],
       ["14.08.2026", "Mise en ligne d’une revue et d’un catalogue vérifiables consacrés aux articles sur l’apprentissage par renforcement d’ICASSP 2025–2026."],
       ["14.08.2026", "Publication d’un index 2026 des articles sur l’apprentissage par renforcement issus de conférences de premier plan, notamment CVPR, AAAI et ACL."],
