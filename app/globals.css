@@ -2436,6 +2436,9 @@ footer {
     background: rgba(var(--canvas-rgb), 0.96);
     box-shadow: var(--shadow);
     backdrop-filter: blur(18px);
+    max-height: calc(100svh - 110px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
   }
 
   .main-nav.is-open {
@@ -2450,6 +2453,18 @@ footer {
 
   .header-actions {
     justify-self: end;
+  }
+
+  .email-shortcut,
+  .theme-toggle,
+  .menu-toggle {
+    width: 44px;
+    height: 44px;
+  }
+
+  .language-switch button {
+    min-height: 44px;
+    padding-block: 0;
   }
 
   .menu-toggle {
@@ -3033,6 +3048,10 @@ footer {
     min-height: 108px;
   }
 
+  .main-nav {
+    max-height: calc(100svh - 132px);
+  }
+
   .header-actions {
     grid-template-areas:
       "email theme menu"
@@ -3061,7 +3080,7 @@ footer {
   }
 }
 
-@media (max-width: 620px), (max-width: 900px) and (max-height: 740px) {
+@media (max-width: 900px) {
   .hero {
     min-height: auto;
   }

@@ -306,9 +306,9 @@ const content = {
       },
     ],
     serviceItems: [
-      ["AAAI 2026 审稿人", "学术同行评审服务"],
-      ["ICML 2026 审稿人", "学术同行评审服务"],
       ["IEEE TGRS 期刊审稿人", "学术同行评审服务"],
+      ["AAAI 2027 审稿人", "学术同行评审服务"],
+      ["ICML 2026 审稿人", "学术同行评审服务"],
       ["开放研究", "维护可复核的文献目录与研究地图"],
     ],
     contactKicker: "06 / 联系",
@@ -339,10 +339,10 @@ const content = {
     heroTitleB: "to think.",
     heroBody: {
       lead:
-        "Hi, I’m Qixiu Li, a master’s student at the National University of Defense Technology. I am a researcher and developer focused on reinforcement-learning post-training for VLMs and LLMs, multimodal agents, and AI4Science for intelligent weather and ocean forecasting. I am highly self-disciplined and a fast learner: after two months of independent IELTS preparation, I earned a score of 6.5; at an ACM ICPC Asia Regional Contest, I spent five consecutive hours solving problems in English and completed 13 algorithmic programming problems without AI assistance. I am also a contributor to NVIDIA’s 17.7K-star open-source GitHub project ",
+        "Hi, I’m Qixiu Li, a master’s student at the National University of Defense Technology. I am a researcher and developer focused on reinforcement-learning post-training for VLMs and LLMs, multimodal agents, and AI4Science for intelligent weather and ocean forecasting. I am highly self-disciplined and a fast learner: after 2 months of independent IELTS preparation, I earned a score of 6.5; at an ACM ICPC Asia Regional Contest, I spent 5 consecutive hours solving problems in English and completed 13 algorithmic programming problems without AI assistance. I am also a contributor to NVIDIA’s 17.7K-star open-source GitHub project ",
       linkLabel: "Megatron-LM",
       tail:
-        ". I have published nearly ten papers at leading AI conferences, including CVPR and SIGKDD. I track and synthesize cutting-edge research, turning ideas into reproducible top-tier papers and open-source projects that foster open exchange.",
+        ". I have published nearly 10 papers at leading AI conferences, including CVPR and SIGKDD. I track and synthesize cutting-edge research, turning ideas into reproducible top-tier papers and open-source projects that foster open exchange.",
     },
     explore: "Explore my work",
     github: "GitHub",
@@ -355,7 +355,7 @@ const content = {
       "My research interests center on post-training for large models, multimodal agents, and AI4Science for intelligent weather and ocean forecasting. I focus on reinforcement-learning algorithms for large models, coding agents, efficient visual representation learning, and multimodal intent understanding.",
       "Beyond academic publications, I actively participate in research projects and production-grade system development. I contribute to “Regional High-Resolution Intelligent Ensemble Forecasting with Probabilistic Diffusion Models” (National Natural Science Foundation of China, No. 4250050812). To address the limited ability of data-driven methods to quantify atmospheric uncertainty in regional high-resolution ensemble forecasting, the project develops a physics-constrained probabilistic diffusion framework. It incorporates dynamical conservation laws into prior-distribution modeling for meteorological variables and uses global large-scale forecasts to condition the sampling process, enabling the efficient generation of reliable initial fields for ensemble prediction.",
       "I also contribute to “Multilevel Anomalous-Event Detection for Unlabeled Video Data” (National Natural Science Foundation of China, No. 6250075854). To address the limited ability of existing unlabeled-video anomaly-detection methods to capture multilevel feature differences associated with anomalous events, the project develops a multilevel feature-distillation approach that integrates pretrained foundation models. It distills knowledge of normal events from unlabeled videos to construct a normality model and identifies anomalous events through multilevel feature discrepancies.",
-      "In university–industry system development, I have contributed to a robot-assisted guidance system for skull-base foramen ovale puncture. As a member of a medical-assistance collaboration with the provincial science and technology department, I optimized methods for localizing the foramen ovale target and skin entry point; the system passed acceptance review by the Second Bethune Hospital of Jilin University. Designed to support robot-assisted navigation for trigeminal nerve puncture procedures, the system completes three-dimensional reconstruction in 15 seconds, treatment-planning simulation in 30 seconds, and the treatment procedure in 20 minutes, substantially reducing treatment time. Its noninvasive calibration avoids secondary injury, supports rapid recovery, and minimizes disruption to patients’ daily lives and work. I also contributed to the Jilin Provincial Cultural Tourism Aggregation Platform. As a core full-stack developer, I implemented full-stack logic for government data review and the aggregation of monthly and annual statistical reports. The platform currently serves more than 300 tourist attractions and over 840 related businesses across Jilin Province.",
+      "In university–industry system development, I have contributed to a robot-assisted guidance system for skull-base foramen ovale puncture. As a member of a medical-assistance collaboration with the provincial science and technology department, I optimized methods for localizing the foramen ovale target and skin entry point; the system passed acceptance review by the Second Bethune Hospital of Jilin University. Designed to support robot-assisted navigation for trigeminal nerve puncture procedures, the system completes 3D reconstruction in 15 seconds, treatment-planning simulation in 30 seconds, and the treatment procedure in 20 minutes, substantially reducing treatment time. Its noninvasive calibration avoids secondary injury, supports rapid recovery, and minimizes disruption to patients’ daily lives and work. I also contributed to the Jilin Provincial Cultural Tourism Aggregation Platform. As a core full-stack developer, I implemented full-stack logic for government data review and the aggregation of monthly and annual statistical reports. The platform currently serves more than 300 tourist attractions and over 840 related businesses across Jilin Province.",
       "I have also received the National Scholarship (top 0.4% of 619 students) and the Sunny Optical Technology (Group) Company Scholarship (top 1% of 619 students), among other distinctions.",
     ],
     focusTitle: "Research focus",
@@ -494,7 +494,7 @@ const content = {
       {
         date: "2025.12",
         title: "2025 Global Campus Artificial Intelligence Algorithm Elite Competition",
-        detail: "National First Prize",
+        detail: "National 1st Prize",
       },
       { date: "2024.09", title: "Incoming Student Scholarship" },
       {
@@ -531,9 +531,9 @@ const content = {
       },
     ],
     serviceItems: [
-      ["AAAI 2026 Reviewer", "Scholarly peer-review service"],
-      ["ICML 2026 Reviewer", "Scholarly peer-review service"],
       ["Reviewer for IEEE Transactions on Geoscience and Remote Sensing (TGRS)", "Scholarly peer-review service"],
+      ["AAAI 2027 Reviewer", "Scholarly peer-review service"],
+      ["ICML 2026 Reviewer", "Scholarly peer-review service"],
       ["Open research", "Maintaining reproducible literature catalogs and research maps"],
     ],
     contactKicker: "06 / CONTACT",
@@ -756,9 +756,9 @@ const content = {
       },
     ],
     serviceItems: [
-      ["Évaluateur pour AAAI 2026", "Évaluation scientifique par les pairs"],
-      ["Évaluateur pour ICML 2026", "Évaluation scientifique par les pairs"],
       ["Évaluateur pour la revue IEEE Transactions on Geoscience and Remote Sensing (TGRS)", "Évaluation scientifique par les pairs"],
+      ["Évaluateur pour AAAI 2027", "Évaluation scientifique par les pairs"],
+      ["Évaluateur pour ICML 2026", "Évaluation scientifique par les pairs"],
       ["Recherche ouverte", "Tenue à jour de répertoires bibliographiques vérifiables et de cartographies de la recherche"],
     ],
     contactKicker: "06 / CONTACT",
