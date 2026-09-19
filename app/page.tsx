@@ -120,8 +120,13 @@ const content = {
     heroEyebrow: "强化学习 · 智能决策 · 开放研究",
     heroTitleA: "让智能体",
     heroTitleB: "学会思考。",
-    heroBody:
-      "你好，我是李奇烋，目前是国防科技大学硕士研究生，也是一名主要聚焦于大模型强化学习后训练、智能体与可靠人工智能的研究者和开发者。我拥有极强的自我约束与学习能力：两个月自学雅思并取得 6.5 分；在 IO 赛下连续 5 小时使用英文解题并在不借助 AI 的情况下，完成 13 题算法编程；也是 NVIDIA 的 17.7K-star GitHub 开源项目 Training Transformer Models at Scale 的贡献者；已在 CVPR、SIGKDD 等顶级人工智能会议发表论文。我关注并整理前沿研究，也把想法转化为可复现、可交流的顶级论文与开放项目。",
+    heroBody: {
+      lead:
+        "你好，我是李奇烋，目前是国防科技大学硕士研究生，也是一名主要聚焦于大模型强化学习后训练、多模态智能体与 AI4Science（气象海洋智能预报）的研究者和开发者。我拥有极强的自我约束与学习能力：两个月自学雅思并取得 6.5 分；在 ACM ICPC 亚洲赛区中连续 5 小时使用英文解题，并在不借助 AI 的情况下完成 13 题算法编程；也是 NVIDIA 的 17.7K-star GitHub 开源项目 ",
+      linkLabel: "Megatron-LM",
+      tail:
+        " 的贡献者；已在 CVPR、SIGKDD 等顶级人工智能会议发表论文近 10 篇。我关注并整理前沿研究，也把想法转化为可复现、可交流的顶级论文与开放项目。",
+    },
     explore: "探索我的工作",
     github: "GitHub",
     available: "欢迎研究交流与开源协作",
@@ -130,11 +135,14 @@ const content = {
     aboutKicker: "01 / 关于我",
     aboutTitle: "研究复杂问题，\n构建清晰答案。",
     aboutBody: [
-      "我的兴趣围绕大模型后训练、多模态智能体与计算机视觉，同时也关注 AI4Science 相关工作。我重点关注 Coding Agent、大模型强化学习算法、视觉嵌入的高效表征与多模态意图理解。",
-      "除学术论文外，我也积极参与开源研究与产业级系统研发。作为省科技厅医疗辅助合作项目成员，我参与构建颅底卵圆孔穿刺引导辅助机器人系统，负责优化卵圆孔靶点和皮肤入针点定位方法；该项目已通过吉林大学白求恩第二医院验收。作为省级项目“文旅汇总平台”的核心全栈开发人员，我参与政府部门数据审核、月报与年报数据统计汇总等全栈代码逻辑编写；该项目目前服务吉林省数千家旅游景点和服务公司。我也曾获得舜宇企业奖学金、国家奖学金等荣誉。",
+      "我的兴趣围绕大模型后训练、多模态智能体与 AI4Science（气象海洋智能预报）。我重点关注大模型强化学习算法、Coding Agent、视觉嵌入的高效表征与多模态意图理解。",
+      "除学术论文外，我也积极参与科研项目与产业级系统研发。我参与“基于概率扩散模型的区域高分辨率智能集合预报方法研究”（国家自然科学基金，No. 4250050812）。针对区域高分辨率集合预报中数据驱动智能方法对大气不确定性量化不足的问题，项目提出物理约束的概率扩散集合预报方法：将动力学守恒律融入气象要素先验分布建模，并以全球大尺度预报为条件引导采样，从而高效生成可靠的集合预报初始场。",
+      "我还参与“面向无标签视频数据的多层次异常事件检测研究”（国家自然科学基金，No. 6250075854）。针对现有无标签视频异常检测方法难以充分挖掘异常事件多层次特征差异的问题，项目提出融合预训练大模型的多层次特征蒸馏检测方法：从无标签视频中蒸馏正常事件知识以构建正常性模型，并利用多层次特征差异判别异常事件。",
+      "在校企系统研发方面，我参与构建颅底卵圆孔穿刺引导辅助机器人系统。作为省科技厅医疗辅助合作项目成员，我负责优化卵圆孔靶点和皮肤入针点定位方法；该项目已通过吉林大学白求恩第二医院验收。该系统用于机器人辅助三叉神经穿刺手术导航，三维重建仅需 15 秒，治疗规划预演仅需 30 秒，治疗过程仅需 20 分钟，可有效缩短治疗时间。系统采用无创标定方式，不会对患者造成二次伤害，术后恢复快，且不影响正常生活和工作。我还参与吉林省文旅汇总平台建设。作为团队核心全栈开发人员，我负责政府部门数据审核、月报与年报数据统计汇总等全栈逻辑开发；该平台目前服务吉林省 300 余家旅游景区和 840 余家相关业务公司。",
+      "我也曾获得国家奖学金（前 0.4%，共 619 人）、舜宇企业奖学金（前 1%，共 619 人）等荣誉。",
     ],
     focusTitle: "研究方向",
-    focus: ["大模型强化学习后训练", "多模态智能体", "计算机视觉高效表征", "AI4Science 与可靠 AI"],
+    focus: ["大模型强化学习后训练", "多模态智能体", "计算机视觉高效表征", "AI4Science（气象海洋智能预报）"],
     stats: [
       ["10+", "发表、投稿顶级会议论文"],
       ["5W+", "累计奖学金"],
@@ -300,16 +308,17 @@ const content = {
     serviceItems: [
       ["AAAI 2026 审稿人", "学术同行评审服务"],
       ["ICML 2026 审稿人", "学术同行评审服务"],
+      ["IEEE TGRS 期刊审稿人", "学术同行评审服务"],
       ["开放研究", "维护可复核的文献目录与研究地图"],
     ],
     contactKicker: "06 / 联系",
     contactTitle: "下一项研究，\n一起开始？",
     contactBody:
-      "如果你正在研究强化学习、智能体或可靠 AI，欢迎分享问题、想法与合作机会。",
+      "如果你正在研究强化学习、多模态智能体或 AI4Science（气象海洋智能预报），欢迎分享问题、想法与合作机会。",
     emailAction: "发送邮件",
     contactAction: "在 GitHub 上联系我",
     footerLine: "为开放研究与好奇心而构建。",
-    lastUpdated: "最近更新 · 2026 年 8 月",
+    lastUpdated: "最近更新 · 2026 年 9 月",
   },
   en: {
     skip: "Skip to main content",
@@ -328,8 +337,13 @@ const content = {
     heroEyebrow: "REINFORCEMENT LEARNING · INTELLIGENT DECISION-MAKING · OPEN RESEARCH",
     heroTitleA: "Teaching agents",
     heroTitleB: "to think.",
-    heroBody:
-      "Hi, I’m Qixiu Li, a master’s student at the National University of Defense Technology. I am a researcher and developer focused on reinforcement-learning post-training for VLMs and LLMs, intelligent agents, and trustworthy AI. I am highly self-disciplined and a fast learner: after two months of independent IELTS preparation, I earned a score of 6.5; during an IO-style competition, I worked entirely in English for five consecutive hours and solved 13 algorithmic programming problems without AI assistance; I have contributed to NVIDIA’s 17.7K-star open-source GitHub project for training transformer models at scale; and I have published papers at leading AI conferences, including CVPR and SIGKDD. I track and synthesize cutting-edge research, turning ideas into reproducible top-tier papers and open-source projects that support open exchange.",
+    heroBody: {
+      lead:
+        "Hi, I’m Qixiu Li, a master’s student at the National University of Defense Technology. I am a researcher and developer focused on reinforcement-learning post-training for VLMs and LLMs, multimodal agents, and AI4Science for intelligent weather and ocean forecasting. I am highly self-disciplined and a fast learner: after two months of independent IELTS preparation, I earned a score of 6.5; at an ACM ICPC Asia Regional Contest, I spent five consecutive hours solving problems in English and completed 13 algorithmic programming problems without AI assistance. I am also a contributor to NVIDIA’s 17.7K-star open-source GitHub project ",
+      linkLabel: "Megatron-LM",
+      tail:
+        ". I have published nearly ten papers at leading AI conferences, including CVPR and SIGKDD. I track and synthesize cutting-edge research, turning ideas into reproducible top-tier papers and open-source projects that foster open exchange.",
+    },
     explore: "Explore my work",
     github: "GitHub",
     available: "Open to research discussions and open-source collaboration",
@@ -338,11 +352,14 @@ const content = {
     aboutKicker: "01 / ABOUT",
     aboutTitle: "Tackle complex questions.\nBuild clear answers.",
     aboutBody: [
-      "My research interests span post-training for large models, multimodal agents, and computer vision, with additional attention to AI for Science. I focus particularly on coding agents, reinforcement-learning algorithms for large models, efficient visual representation learning, and multimodal intent understanding.",
-      "Beyond academic publications, I actively contribute to open research and production-grade system development. As a member of a medical-assistance collaboration with the provincial science and technology department, I helped develop a robotic guidance system for skull-base foramen ovale puncture and optimized methods for localizing the foramen ovale target and skin entry point. The project passed acceptance review by the Second Bethune Hospital of Jilin University. As a core full-stack developer for the provincial Cultural Tourism Aggregation Platform, I contributed to the implementation of full-stack logic for government data review and monthly and annual statistical reporting. The platform currently serves thousands of tourist attractions and tourism service providers across Jilin Province. I have also received the Sunny Optical Technology (Group) Company Scholarship and the National Scholarship, among other distinctions.",
+      "My research interests center on post-training for large models, multimodal agents, and AI4Science for intelligent weather and ocean forecasting. I focus on reinforcement-learning algorithms for large models, coding agents, efficient visual representation learning, and multimodal intent understanding.",
+      "Beyond academic publications, I actively participate in research projects and production-grade system development. I contribute to “Regional High-Resolution Intelligent Ensemble Forecasting with Probabilistic Diffusion Models” (National Natural Science Foundation of China, No. 4250050812). To address the limited ability of data-driven methods to quantify atmospheric uncertainty in regional high-resolution ensemble forecasting, the project develops a physics-constrained probabilistic diffusion framework. It incorporates dynamical conservation laws into prior-distribution modeling for meteorological variables and uses global large-scale forecasts to condition the sampling process, enabling the efficient generation of reliable initial fields for ensemble prediction.",
+      "I also contribute to “Multilevel Anomalous-Event Detection for Unlabeled Video Data” (National Natural Science Foundation of China, No. 6250075854). To address the limited ability of existing unlabeled-video anomaly-detection methods to capture multilevel feature differences associated with anomalous events, the project develops a multilevel feature-distillation approach that integrates pretrained foundation models. It distills knowledge of normal events from unlabeled videos to construct a normality model and identifies anomalous events through multilevel feature discrepancies.",
+      "In university–industry system development, I have contributed to a robot-assisted guidance system for skull-base foramen ovale puncture. As a member of a medical-assistance collaboration with the provincial science and technology department, I optimized methods for localizing the foramen ovale target and skin entry point; the system passed acceptance review by the Second Bethune Hospital of Jilin University. Designed to support robot-assisted navigation for trigeminal nerve puncture procedures, the system completes three-dimensional reconstruction in 15 seconds, treatment-planning simulation in 30 seconds, and the treatment procedure in 20 minutes, substantially reducing treatment time. Its noninvasive calibration avoids secondary injury, supports rapid recovery, and minimizes disruption to patients’ daily lives and work. I also contributed to the Jilin Provincial Cultural Tourism Aggregation Platform. As a core full-stack developer, I implemented full-stack logic for government data review and the aggregation of monthly and annual statistical reports. The platform currently serves more than 300 tourist attractions and over 840 related businesses across Jilin Province.",
+      "I have also received the National Scholarship (top 0.4% of 619 students) and the Sunny Optical Technology (Group) Company Scholarship (top 1% of 619 students), among other distinctions.",
     ],
     focusTitle: "Research focus",
-    focus: ["Reinforcement-learning post-training for large models", "Multimodal agents", "Efficient computer-vision representations", "AI for Science and trustworthy AI"],
+    focus: ["Reinforcement-learning post-training for large models", "Multimodal agents", "Efficient computer-vision representations", "AI4Science for intelligent weather and ocean forecasting"],
     stats: [
       ["10+", "papers published at or submitted to top-tier conferences"],
       ["¥50K+", "cumulative scholarships"],
@@ -516,16 +533,17 @@ const content = {
     serviceItems: [
       ["AAAI 2026 Reviewer", "Scholarly peer-review service"],
       ["ICML 2026 Reviewer", "Scholarly peer-review service"],
+      ["Reviewer for IEEE Transactions on Geoscience and Remote Sensing (TGRS)", "Scholarly peer-review service"],
       ["Open research", "Maintaining reproducible literature catalogs and research maps"],
     ],
     contactKicker: "06 / CONTACT",
     contactTitle: "The next study—\nshall we begin together?",
     contactBody:
-      "If you are working on reinforcement learning, agents, or trustworthy AI, I welcome your questions, ideas, and opportunities for collaboration.",
+      "If you are working on reinforcement learning, multimodal agents, or AI4Science for intelligent weather and ocean forecasting, I welcome your questions, ideas, and opportunities for collaboration.",
     emailAction: "Email me",
     contactAction: "Connect on GitHub",
     footerLine: "Built for open research and curiosity.",
-    lastUpdated: "Last updated · August 2026",
+    lastUpdated: "Last updated · September 2026",
   },
   fr: {
     skip: "Aller au contenu principal",
@@ -544,8 +562,13 @@ const content = {
     heroEyebrow: "APPRENTISSAGE PAR RENFORCEMENT · DÉCISION INTELLIGENTE · RECHERCHE OUVERTE",
     heroTitleA: "Apprendre aux agents",
     heroTitleB: "à raisonner.",
-    heroBody:
-      "Bonjour, je suis Qixiu Li, étudiant en master à l’Université nationale de technologie de défense. Mes travaux portent principalement sur le post-entraînement des VLM et des LLM par apprentissage par renforcement, les agents intelligents et l’IA digne de confiance. Très autodiscipliné et doté d’une grande capacité d’apprentissage, j’ai obtenu 6,5 à l’IELTS après deux mois de préparation autonome. Lors d’un concours au format IO, j’ai travaillé exclusivement en anglais pendant cinq heures consécutives et résolu 13 problèmes de programmation algorithmique sans recourir à l’IA. Je contribue également à Training Transformer Models at Scale, le projet GitHub open source de NVIDIA qui compte 17,7 k étoiles, et j’ai publié des articles dans des conférences majeures en intelligence artificielle, notamment CVPR et SIGKDD. Je suis les avancées de la recherche et les synthétise, puis transforme mes idées en articles de premier plan, reproductibles et propices aux échanges scientifiques, ainsi qu’en projets open source.",
+    heroBody: {
+      lead:
+        "Bonjour, je suis Qixiu Li, étudiant en master à l’Université nationale de technologie de défense. Mes travaux de recherche et de développement portent principalement sur le post-entraînement des VLM et des LLM par apprentissage par renforcement, les agents multimodaux et l’AI4Science appliquée à la prévision intelligente météorologique et océanique. Très autodiscipliné et doté d’une grande capacité d’apprentissage, j’ai obtenu 6,5 à l’IELTS après deux mois de préparation autonome. Lors d’une compétition régionale asiatique de l’ACM ICPC, j’ai résolu des problèmes en anglais pendant cinq heures consécutives et mené à bien 13 exercices de programmation algorithmique sans recourir à l’IA. Je contribue également au projet GitHub open source de NVIDIA ",
+      linkLabel: "Megatron-LM",
+      tail:
+        ", qui compte 17,7 k étoiles. J’ai publié près de dix articles dans des conférences majeures en intelligence artificielle, notamment CVPR et SIGKDD. Je suis et synthétise les avancées de la recherche, puis transforme mes idées en articles de premier plan reproductibles et propices aux échanges scientifiques, ainsi qu’en projets open source.",
+    },
     explore: "Découvrir mes travaux",
     github: "GitHub",
     available: "Ouvert aux échanges scientifiques et aux collaborations autour de projets open source",
@@ -554,11 +577,14 @@ const content = {
     aboutKicker: "01 / À PROPOS",
     aboutTitle: "Étudier des questions complexes.\nConstruire des réponses claires.",
     aboutBody: [
-      "Mes intérêts de recherche couvrent le post-entraînement des grands modèles, les agents multimodaux et la vision par ordinateur, ainsi que certains travaux en IA pour les sciences. Je m’intéresse particulièrement aux agents de programmation, aux algorithmes d’apprentissage par renforcement pour les grands modèles, aux représentations visuelles efficaces et à la compréhension multimodale des intentions.",
-      "Au-delà des publications scientifiques, je contribue activement à la recherche ouverte et au développement de systèmes de niveau industriel. Dans le cadre d’un projet de coopération en assistance médicale du Département provincial des sciences et technologies, j’ai participé au développement d’un système robotisé de guidage pour la ponction du foramen ovale de la base du crâne et optimisé les méthodes de localisation du point cible au niveau du foramen ovale et du point d’entrée cutané. Le projet a été validé par le Deuxième Hôpital Bethune de l’Université de Jilin. En tant que développeur full-stack principal de la plateforme provinciale d’agrégation touristique, j’ai contribué à la mise en œuvre de la logique de contrôle des données administratives ainsi que des synthèses statistiques mensuelles et annuelles. La plateforme dessert actuellement des milliers de sites touristiques et de prestataires de services touristiques dans la province du Jilin. J’ai également reçu la bourse d’entreprise Sunny Optical et la Bourse nationale.",
+      "Mes intérêts de recherche portent sur le post-entraînement des grands modèles, les agents multimodaux et l’AI4Science appliquée à la prévision intelligente météorologique et océanique. Je m’intéresse principalement aux algorithmes d’apprentissage par renforcement pour les grands modèles, aux agents de programmation, à l’apprentissage efficace de représentations visuelles et à la compréhension multimodale des intentions.",
+      "Au-delà des publications scientifiques, je participe activement à des projets de recherche et au développement de systèmes de niveau industriel. Je contribue au projet « Prévision d’ensemble intelligente régionale à haute résolution fondée sur des modèles de diffusion probabiliste » (Fondation nationale des sciences naturelles de Chine, no 4250050812). Afin de pallier la capacité limitée des méthodes fondées sur les données à quantifier l’incertitude atmosphérique dans la prévision d’ensemble régionale à haute résolution, ce projet développe une méthode de diffusion probabiliste sous contraintes physiques. Les lois de conservation dynamiques sont intégrées à la modélisation de la distribution a priori des variables météorologiques, tandis que les prévisions globales à grande échelle conditionnent l’échantillonnage afin de générer efficacement des champs initiaux fiables pour la prévision d’ensemble.",
+      "Je contribue également au projet « Détection multiniveau d’événements anormaux dans des données vidéo non étiquetées » (Fondation nationale des sciences naturelles de Chine, no 6250075854). Pour remédier à l’insuffisante prise en compte des différences de caractéristiques multiniveaux associées aux événements anormaux, le projet développe une méthode de détection par distillation de caractéristiques multiniveaux intégrant des grands modèles préentraînés. Les connaissances relatives aux événements normaux sont distillées à partir de vidéos non étiquetées afin de construire un modèle de normalité, puis les événements anormaux sont identifiés à partir des écarts entre caractéristiques multiniveaux.",
+      "Dans le cadre du développement de systèmes associant l’université et l’industrie, j’ai participé à la conception d’un système robotisé de guidage pour la ponction du foramen ovale de la base du crâne. Membre d’un projet provincial de coopération en assistance médicale, j’ai optimisé les méthodes de localisation de la cible au niveau du foramen ovale et du point d’entrée cutané ; le système a été validé par le Deuxième Hôpital Bethune de l’Université de Jilin. Destiné à la navigation robotisée lors d’interventions de ponction du nerf trijumeau, il réalise la reconstruction tridimensionnelle en 15 secondes, la simulation du plan thérapeutique en 30 secondes et le traitement en 20 minutes, ce qui réduit efficacement la durée de la prise en charge. Son étalonnage non invasif évite toute lésion secondaire, favorise une récupération rapide et limite les répercussions sur la vie quotidienne et professionnelle. J’ai également participé au développement de la plateforme d’agrégation du tourisme culturel de la province du Jilin. En tant que développeur full-stack principal de l’équipe, j’ai mis en œuvre la logique de contrôle des données administratives ainsi que l’agrégation des statistiques mensuelles et annuelles. La plateforme dessert actuellement plus de 300 sites touristiques et plus de 840 entreprises associées dans la province du Jilin.",
+      "J’ai également reçu la Bourse nationale (parmi les 0,4 % les mieux classés sur 619 étudiants) et la Sunny Optical Technology (Group) Company Scholarship (parmi les 1 % les mieux classés sur 619 étudiants), entre autres distinctions.",
     ],
     focusTitle: "Axes de recherche",
-    focus: ["Post-entraînement des grands modèles par apprentissage par renforcement", "Agents multimodaux", "Représentations visuelles efficaces", "IA pour les sciences et IA digne de confiance"],
+    focus: ["Post-entraînement des grands modèles par apprentissage par renforcement", "Agents multimodaux", "Représentations visuelles efficaces", "AI4Science pour la prévision intelligente météorologique et océanique"],
     stats: [
       ["10+", "articles publiés ou soumis à des conférences de premier plan"],
       ["50 k¥+", "montant cumulé des bourses"],
@@ -732,16 +758,17 @@ const content = {
     serviceItems: [
       ["Évaluateur pour AAAI 2026", "Évaluation scientifique par les pairs"],
       ["Évaluateur pour ICML 2026", "Évaluation scientifique par les pairs"],
+      ["Évaluateur pour la revue IEEE Transactions on Geoscience and Remote Sensing (TGRS)", "Évaluation scientifique par les pairs"],
       ["Recherche ouverte", "Tenue à jour de répertoires bibliographiques vérifiables et de cartographies de la recherche"],
     ],
     contactKicker: "06 / CONTACT",
     contactTitle: "Le prochain projet de recherche —\net si nous le lancions ensemble ?",
     contactBody:
-      "Si vous travaillez sur l’apprentissage par renforcement, les agents ou l’IA digne de confiance, je serais heureux d’échanger sur vos questions, vos idées et d’éventuelles collaborations.",
+      "Si vos travaux portent sur l’apprentissage par renforcement, les agents multimodaux ou l’AI4Science appliquée à la prévision intelligente météorologique et océanique, je serais heureux d’échanger sur vos questions, vos idées et d’éventuelles collaborations.",
     emailAction: "M’écrire",
     contactAction: "Me contacter sur GitHub",
     footerLine: "Conçu pour la recherche ouverte et la curiosité.",
-    lastUpdated: "Dernière mise à jour · août 2026",
+    lastUpdated: "Dernière mise à jour · septembre 2026",
   },
 } as const;
 
@@ -1131,7 +1158,18 @@ export default function Home() {
                 <span className="gradient-text">{t.heroTitleB}</span>
               </h1>
               <div className="hero-lower">
-                <p>{t.heroBody}</p>
+                <p>
+                  {t.heroBody.lead}
+                  <a
+                    className="hero-inline-link"
+                    href="https://github.com/TechCloud-x/Megatron-LM"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {t.heroBody.linkLabel}
+                  </a>
+                  {t.heroBody.tail}
+                </p>
                 <div className="hero-actions">
                   <a className="button button-primary" href="#projects">
                     {t.explore} <Arrow />
@@ -1172,10 +1210,15 @@ export default function Home() {
           <div className="section-aura aura-violet" data-parallax="0.04" aria-hidden="true" />
           <div className="section-heading">
             <p className="eyebrow">{t.aboutKicker}</p>
-            <h2 className="multiline">{t.aboutTitle}</h2>
+            <h2 className="multiline" id="about-title">{t.aboutTitle}</h2>
           </div>
           <div className="about-layout">
-            <div className="about-copy">
+            <div
+              className="about-copy about-copy-scroll"
+              role="region"
+              aria-labelledby="about-title"
+              tabIndex={0}
+            >
               {t.aboutBody.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
