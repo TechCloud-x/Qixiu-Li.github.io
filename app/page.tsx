@@ -172,21 +172,21 @@ const content = {
       },
       {
         index: "03",
-        title: "ICASSP 2025–2026 RL Atlas",
-        description:
-          "对 122 篇强化学习相关论文进行可复核筛选、主题归类与代码完整性审计，连接论文、DOI 与公开实现。",
-        meta: "文献综述 · 数据目录 · 2026",
-        href: "https://github.com/TechCloud-x/ICASSP2025_6RL-Paper-main",
-        action: "查看项目",
-      },
-      {
-        index: "04",
         title: "RL-TOP-main",
         description:
           "持续整理 CVPR、AAAI、ACL 等顶级会议中的强化学习论文，让跨领域研究脉络更容易检索与比较。",
         meta: "研究索引 · 开放知识",
         href: "https://github.com/TechCloud-x/RL-TOP-main",
         action: "浏览目录",
+      },
+      {
+        index: "04",
+        title: "ICASSP 2025–2026 RL Atlas",
+        description:
+          "对 122 篇强化学习相关论文进行可复核筛选、主题归类与代码完整性审计，连接论文、DOI 与公开实现。",
+        meta: "文献综述 · 数据目录 · 2026",
+        href: "https://github.com/TechCloud-x/ICASSP2025_6RL-Paper-main",
+        action: "查看项目",
       },
       {
         index: "05",
@@ -388,21 +388,21 @@ const content = {
       },
       {
         index: "03",
-        title: "ICASSP 2025–2026 RL Atlas",
-        description:
-          "A reproducible screening and review of 122 reinforcement-learning papers, including topic classification and code-completeness audits, with links to the papers, their DOIs, and available public implementations.",
-        meta: "Literature review · Data catalog · 2026",
-        href: "https://github.com/TechCloud-x/ICASSP2025_6RL-Paper-main",
-        action: "View project",
-      },
-      {
-        index: "04",
         title: "RL-TOP-main",
         description:
           "A continuously updated index of reinforcement-learning papers from leading conferences such as CVPR, AAAI, and ACL, designed to make cross-disciplinary research trends easier to search and compare.",
         meta: "Research index · Open knowledge",
         href: "https://github.com/TechCloud-x/RL-TOP-main",
         action: "Browse catalog",
+      },
+      {
+        index: "04",
+        title: "ICASSP 2025–2026 RL Atlas",
+        description:
+          "A reproducible screening and review of 122 reinforcement-learning papers, including topic classification and code-completeness audits, with links to the papers, their DOIs, and available public implementations.",
+        meta: "Literature review · Data catalog · 2026",
+        href: "https://github.com/TechCloud-x/ICASSP2025_6RL-Paper-main",
+        action: "View project",
       },
       {
         index: "05",
@@ -612,21 +612,21 @@ const content = {
       },
       {
         index: "03",
-        title: "Atlas RL ICASSP 2025–2026",
-        description:
-          "Une sélection vérifiable de 122 articles sur l’apprentissage par renforcement, comprenant une classification thématique et un audit de la complétude du code, avec des liens vers les articles, les DOI et les implémentations publiques.",
-        meta: "Revue de littérature · Catalogue de données · 2026",
-        href: "https://github.com/TechCloud-x/ICASSP2025_6RL-Paper-main",
-        action: "Voir le projet",
-      },
-      {
-        index: "04",
         title: "RL-TOP-main",
         description:
           "Un index continuellement mis à jour des articles sur l’apprentissage par renforcement issus de conférences de premier plan telles que CVPR, AAAI et ACL, afin de faciliter la recherche et la comparaison entre domaines.",
         meta: "Index scientifique · Savoir ouvert",
         href: "https://github.com/TechCloud-x/RL-TOP-main",
         action: "Parcourir l’index",
+      },
+      {
+        index: "04",
+        title: "Atlas RL ICASSP 2025–2026",
+        description:
+          "Une sélection vérifiable de 122 articles sur l’apprentissage par renforcement, comprenant une classification thématique et un audit de la complétude du code, avec des liens vers les articles, les DOI et les implémentations publiques.",
+        meta: "Revue de littérature · Catalogue de données · 2026",
+        href: "https://github.com/TechCloud-x/ICASSP2025_6RL-Paper-main",
+        action: "Voir le projet",
       },
       {
         index: "05",
@@ -1278,8 +1278,8 @@ export default function Home() {
                           [
                             "repository-tiao-banner-4k.png",
                             "repository-everest-banner.png",
-                            "repository-icassp-banner.png",
                             "repository-rl-top-banner-v2.png",
+                            "repository-icassp-banner.png",
                             "repository-tourismwms-banner.png",
                           ][index],
                         )}
