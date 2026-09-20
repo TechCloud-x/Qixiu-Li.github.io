@@ -181,11 +181,11 @@ const content = {
       },
       {
         index: "04",
-        title: "RL Top Papers 2026",
+        title: "RL-TOP-main",
         description:
           "持续整理 CVPR、AAAI、ACL 等顶级会议中的强化学习论文，让跨领域研究脉络更容易检索与比较。",
-        meta: "研究索引 · 开放知识 · 2026",
-        href: "https://github.com/TechCloud-x/RL-TOP-2026PAPER-main",
+        meta: "研究索引 · 开放知识",
+        href: "https://github.com/TechCloud-x/RL-TOP-main",
         action: "浏览目录",
       },
       {
@@ -397,11 +397,11 @@ const content = {
       },
       {
         index: "04",
-        title: "RL Top Papers 2026",
+        title: "RL-TOP-main",
         description:
           "A continuously updated index of reinforcement-learning papers from leading conferences such as CVPR, AAAI, and ACL, designed to make cross-disciplinary research trends easier to search and compare.",
-        meta: "Research index · Open knowledge · 2026",
-        href: "https://github.com/TechCloud-x/RL-TOP-2026PAPER-main",
+        meta: "Research index · Open knowledge",
+        href: "https://github.com/TechCloud-x/RL-TOP-main",
         action: "Browse catalog",
       },
       {
@@ -621,11 +621,11 @@ const content = {
       },
       {
         index: "04",
-        title: "Articles RL majeurs 2026",
+        title: "RL-TOP-main",
         description:
           "Un index continuellement mis à jour des articles sur l’apprentissage par renforcement issus de conférences de premier plan telles que CVPR, AAAI et ACL, afin de faciliter la recherche et la comparaison entre domaines.",
-        meta: "Index scientifique · Savoir ouvert · 2026",
-        href: "https://github.com/TechCloud-x/RL-TOP-2026PAPER-main",
+        meta: "Index scientifique · Savoir ouvert",
+        href: "https://github.com/TechCloud-x/RL-TOP-main",
         action: "Parcourir l’index",
       },
       {
@@ -1279,7 +1279,7 @@ export default function Home() {
                             "repository-tiao-banner-4k.png",
                             "repository-everest-banner.png",
                             "repository-icassp-banner.png",
-                            "repository-rl-top-banner.png",
+                            "repository-rl-top-banner-v2.png",
                             "repository-tourismwms-banner.png",
                           ][index],
                         )}
