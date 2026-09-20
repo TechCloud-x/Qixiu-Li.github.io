@@ -1,5 +1,12 @@
 # 修改记录
 
+## 2026-09-20 · 荣誉与审稿服务精简
+
+- 舜宇奖学金删除“每届 20 人”信息，中、英、法三语仅保留前 1% 的排名说明。
+- Services 删除“开放研究”条目；英文 TGRS 审稿服务标题精简为 `IEEE TGRS`。
+- 英文首页将 `reinforcement-learning post-training for VLMs and LLMs` 统一修改为 `reinforcement-learning post-training for LMs`，并同步更新页面描述与社交分享文案。
+- 英文首页将 `a fast learner` 调整为语法正确的 `an effective learner`。
+
 ## 2026-09-19 · 审稿服务、英文数字与移动端逻辑修正
 
 - 将 AAAI 审稿服务年份由 2026 更新为 2027，并在中文、英文和法文 Services 列表中把 IEEE TGRS 期刊审稿人移至首位。

@@ -291,7 +291,7 @@ const content = {
           },
         ],
       },
-      { date: "2022.12", title: "舜宇奖学金", detail: "每届 20 人，前 1%" },
+      { date: "2022.12", title: "舜宇奖学金", detail: "前 1%" },
     ],
     educationItems: [
       {
@@ -309,7 +309,6 @@ const content = {
       ["IEEE TGRS 期刊审稿人", "学术同行评审服务"],
       ["AAAI 2027 审稿人", "学术同行评审服务"],
       ["ICML 2026 审稿人", "学术同行评审服务"],
-      ["开放研究", "维护可复核的文献目录与研究地图"],
     ],
     contactKicker: "06 / 联系",
     contactTitle: "下一项研究，\n一起开始？",
@@ -339,7 +338,7 @@ const content = {
     heroTitleB: "to think.",
     heroBody: {
       lead:
-        "Hi, I’m Qixiu Li, a master’s student at the National University of Defense Technology. I am a researcher and developer focused on reinforcement-learning post-training for VLMs and LLMs, multimodal agents, and AI4Science for intelligent weather and ocean forecasting. I am highly self-disciplined and a fast learner: after 2 months of independent IELTS preparation, I earned a score of 6.5; at an ACM ICPC Asia Regional Contest, I spent 5 consecutive hours solving problems in English and completed 13 algorithmic programming problems without AI assistance. I am also a contributor to NVIDIA’s 17.7K-star open-source GitHub project ",
+        "Hi, I’m Qixiu Li, a master’s student at the National University of Defense Technology. I am a researcher and developer focused on reinforcement-learning post-training for LMs, multimodal agents, and AI4Science for intelligent weather and ocean forecasting. I am highly self-disciplined and an effective learner: after 2 months of independent IELTS preparation, I earned a score of 6.5; at an ACM ICPC Asia Regional Contest, I spent 5 consecutive hours solving problems in English and completed 13 algorithmic programming problems without AI assistance. I am also a contributor to NVIDIA’s 17.7K-star open-source GitHub project ",
       linkLabel: "Megatron-LM",
       tail:
         ". I have published nearly 10 papers at leading AI conferences, including CVPR and SIGKDD. I track and synthesize cutting-edge research, turning ideas into reproducible top-tier papers and open-source projects that foster open exchange.",
@@ -515,7 +514,7 @@ const content = {
       {
         date: "2022.12",
         title: "Sunny Optical Technology (Group) Company Scholarship",
-        detail: "20 recipients per cohort · Top 1%",
+        detail: "Top 1%",
       },
     ],
     educationItems: [
@@ -531,10 +530,9 @@ const content = {
       },
     ],
     serviceItems: [
-      ["Reviewer for IEEE Transactions on Geoscience and Remote Sensing (TGRS)", "Scholarly peer-review service"],
+      ["IEEE TGRS", "Scholarly peer-review service"],
       ["AAAI 2027 Reviewer", "Scholarly peer-review service"],
       ["ICML 2026 Reviewer", "Scholarly peer-review service"],
-      ["Open research", "Maintaining reproducible literature catalogs and research maps"],
     ],
     contactKicker: "06 / CONTACT",
     contactTitle: "The next study—\nshall we begin together?",
@@ -740,7 +738,7 @@ const content = {
       {
         date: "12.2022",
         title: "Bourse Sunny Optical",
-        detail: "20 lauréats par promotion · Top 1 %",
+        detail: "Top 1 %",
       },
     ],
     educationItems: [
@@ -759,7 +757,6 @@ const content = {
       ["Évaluateur pour la revue IEEE Transactions on Geoscience and Remote Sensing (TGRS)", "Évaluation scientifique par les pairs"],
       ["Évaluateur pour AAAI 2027", "Évaluation scientifique par les pairs"],
       ["Évaluateur pour ICML 2026", "Évaluation scientifique par les pairs"],
-      ["Recherche ouverte", "Tenue à jour de répertoires bibliographiques vérifiables et de cartographies de la recherche"],
     ],
     contactKicker: "06 / CONTACT",
     contactTitle: "Le prochain projet de recherche —\net si nous le lancions ensemble ?",
