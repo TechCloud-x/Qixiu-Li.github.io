@@ -1090,6 +1090,16 @@ export default function Home() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={visual("email-icon-4k.png")} alt="" aria-hidden="true" />
           </a>
+          <a
+            className="scholar-shortcut"
+            href="https://scholar.google.com/citations?user=AXNRTnsAAAAJ"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Google Scholar"
+            title="Google Scholar"
+          >
+            <AssetIcon name="publication" className="control-icon scholar-control-icon" />
+          </a>
           <div className="language-switch" role="group" aria-label="Language">
             <AssetIcon name="language" className="control-icon language-control-icon" />
             <div className="language-options" data-locale={locale}>
