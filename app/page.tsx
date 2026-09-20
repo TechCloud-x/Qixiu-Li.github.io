@@ -49,8 +49,8 @@ const publicationRecords: readonly PublicationRecord[] = [
     id: "slow-ocast",
     title:
       "Slow-OCast: Slow-Varying Motion Inspired Transfer Learning for Regional High-Resolution Ocean Environmental Forecasting",
-    venue: "SIGKDD 2026",
-    venueName: "ACM SIGKDD Conference on Knowledge Discovery and Data Mining (SIGKDD 2026)",
+    venue: "SIGKDD'26",
+    venueName: "ACM SIGKDD Conference on Knowledge Discovery and Data Mining (SIGKDD'26)",
     authors: ["Qixiu Li", "Xiang Zhu", "Xiaoyong Li", "Haolong Xiang", "Xiaolong Xu"],
     image: "publication-architecture-slow-ocast.webp",
     href: "https://dl.acm.org/doi/abs/10.1145/3770855.3819036",
@@ -58,8 +58,8 @@ const publicationRecords: readonly PublicationRecord[] = [
   {
     id: "phyoceancast",
     title: "PhyOceanCast: Global Ocean Forecasting with Physics-Informed Diffusion",
-    venue: "CVPR 2026",
-    venueName: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2026)",
+    venue: "CVPR'26",
+    venueName: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR'26)",
     authors: ["Qixiu Li", "Xiang Zhu", "Xiaoyong Li", "Xiaolong Xu"],
     image: "publication-architecture-phyoceancast.webp",
     href:
@@ -68,8 +68,8 @@ const publicationRecords: readonly PublicationRecord[] = [
   {
     id: "dolphin",
     title: "DOLPHIN: Diffusion Model-Based Approach for Coastal Sea Temperature Forecast Bias Correction",
-    venue: "ISPA 2025",
-    venueName: "IEEE International Symposium on Parallel and Distributed Processing with Applications (ISPA 2025)",
+    venue: "ISPA'25",
+    venueName: "IEEE International Symposium on Parallel and Distributed Processing with Applications (ISPA'25)",
     authors: ["Qixiu Li", "Xiang Zhu", "Junxing Zhu", "Xiaoyong Li", "Xiaoli Ren", "Jingnan Wang", "Ruiqing Qi"],
     image: "publication-architecture-dolphin.webp",
     href: "https://ieeexplore.ieee.org/abstract/document/11245387",
@@ -77,8 +77,8 @@ const publicationRecords: readonly PublicationRecord[] = [
   {
     id: "ifg-net",
     title: "IFG-Net: Channel Info Fusion Guidance for Retinal Vessel Segmentation",
-    venue: "UIC 2025",
-    venueName: "IEEE International Conference on Ubiquitous Intelligence and Computing (UIC 2025)",
+    venue: "UIC'25",
+    venueName: "IEEE International Conference on Ubiquitous Intelligence and Computing (UIC'25)",
     authors: ["Qixiu Li", "Xiang Zhu", "Xiaoyong Li", "Chengcheng Shao", "Xiaoli Ren"],
     image: "publication-architecture-ifg-net-v2.webp",
     href: "https://ieeexplore.ieee.org/abstract/document/11394978",
@@ -214,10 +214,10 @@ const content = {
       ["2026.08.25", "我们的文章（EVEREST）已在 arXiv 上公开！"],
       ["2026.08.14", "公开 ICASSP 2025–2026 强化学习论文综述与可复核目录。"],
       ["2026.08.14", "发布 2026 强化学习顶会论文索引，覆盖 CVPR、AAAI 与 ACL。"],
-      ["2026.05.17", "一篇论文（Slow-OCast）被 SIGKDD 2026 接收！感谢所有合作者！"],
-      ["2026.02.21", "一篇论文（PhyOceanCast）被 CVPR 2026 接收！感谢所有合作者！"],
-      ["2025.08.31", "一篇论文（DOLPHIN）被 ISPA 2025 接收！感谢所有合作者！"],
-      ["2025.06.10", "一篇论文（IFG-Net）被 UIC 2025 接收！感谢所有合作者！"],
+      ["2026.05.17", "一篇论文（Slow-OCast）被 SIGKDD'26 接收！感谢所有合作者！"],
+      ["2026.02.21", "一篇论文（PhyOceanCast）被 CVPR'26 接收！感谢所有合作者！"],
+      ["2025.08.31", "一篇论文（DOLPHIN）被 ISPA'25 接收！感谢所有合作者！"],
+      ["2025.06.10", "一篇论文（IFG-Net）被 UIC'25 接收！感谢所有合作者！"],
     ],
     publicationsKicker: "04 / 论文发表",
     publicationsTitle: "Selected Publications",
@@ -430,10 +430,10 @@ const content = {
       ["2026.08.25", "Our paper EVEREST is now available on arXiv."],
       ["2026.08.14", "Released a reproducible review and catalog of reinforcement-learning papers from ICASSP 2025–2026."],
       ["2026.08.14", "Released a 2026 index of reinforcement-learning papers from leading conferences, including CVPR, AAAI, and ACL."],
-      ["2026.05.17", "Our paper Slow-OCast was accepted at SIGKDD 2026. Many thanks to all collaborators!"],
-      ["2026.02.21", "Our paper PhyOceanCast was accepted at CVPR 2026. Many thanks to all collaborators!"],
-      ["2025.08.31", "Our paper DOLPHIN was accepted at ISPA 2025. Many thanks to all collaborators!"],
-      ["2025.06.10", "Our paper IFG-Net was accepted at UIC 2025. Many thanks to all collaborators!"],
+      ["2026.05.17", "Our paper Slow-OCast was accepted at SIGKDD'26. Many thanks to all collaborators!"],
+      ["2026.02.21", "Our paper PhyOceanCast was accepted at CVPR'26. Many thanks to all collaborators!"],
+      ["2025.08.31", "Our paper DOLPHIN was accepted at ISPA'25. Many thanks to all collaborators!"],
+      ["2025.06.10", "Our paper IFG-Net was accepted at UIC'25. Many thanks to all collaborators!"],
     ],
     publicationsKicker: "04 / PUBLICATIONS",
     publicationsTitle: "Selected Publications",
@@ -654,10 +654,10 @@ const content = {
       ["25.08.2026", "Notre article EVEREST est désormais disponible sur arXiv."],
       ["14.08.2026", "Mise en ligne d’une revue et d’un catalogue vérifiables consacrés aux articles sur l’apprentissage par renforcement d’ICASSP 2025–2026."],
       ["14.08.2026", "Publication d’un index 2026 des articles sur l’apprentissage par renforcement issus de conférences de premier plan, notamment CVPR, AAAI et ACL."],
-      ["17.05.2026", "Notre article Slow-OCast a été accepté à SIGKDD 2026. Merci à tous nos collaborateurs !"],
-      ["21.02.2026", "Notre article PhyOceanCast a été accepté à CVPR 2026. Merci à tous nos collaborateurs !"],
-      ["31.08.2025", "Notre article DOLPHIN a été accepté à ISPA 2025. Merci à tous nos collaborateurs !"],
-      ["10.06.2025", "Notre article IFG-Net a été accepté à UIC 2025. Merci à tous nos collaborateurs !"],
+      ["17.05.2026", "Notre article Slow-OCast a été accepté à SIGKDD'26. Merci à tous nos collaborateurs !"],
+      ["21.02.2026", "Notre article PhyOceanCast a été accepté à CVPR'26. Merci à tous nos collaborateurs !"],
+      ["31.08.2025", "Notre article DOLPHIN a été accepté à ISPA'25. Merci à tous nos collaborateurs !"],
+      ["10.06.2025", "Notre article IFG-Net a été accepté à UIC'25. Merci à tous nos collaborateurs !"],
     ],
     publicationsKicker: "04 / PUBLICATIONS",
     publicationsTitle: "Publications sélectionnées",
@@ -806,8 +806,8 @@ function GiteeIcon({ className = "gitee-icon" }: { className?: string }) {
   );
 }
 
-const highlightedVenues = new Set(["SIGKDD 2026", "CVPR 2026", "ISPA 2025", "UIC 2025"]);
-const venuePattern = /(SIGKDD 2026|CVPR 2026|ISPA 2025|UIC 2025)/g;
+const highlightedVenues = new Set(["SIGKDD'26", "CVPR'26", "ISPA'25", "UIC'25"]);
+const venuePattern = /(SIGKDD'26|CVPR'26|ISPA'25|UIC'25)/g;
 
 function HighlightedNewsText({ text }: { text: string }) {
   return text.split(venuePattern).map((part, index) =>
