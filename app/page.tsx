@@ -235,6 +235,12 @@ const content = {
     services: "Services",
     patentItems: [
       {
+        title: "一种基于通道信息融合的时空序列预测方法和系统",
+        numberLabel: "公告号",
+        number: "CN122673497A",
+        href: "https://www.patentguru.com/cn/search?q=CN122673497A",
+      },
+      {
         title: "一种多变量球面信息融合方法和系统",
         numberLabel: "专利号",
         number: "ZL 2025 1 1716023.7",
@@ -450,6 +456,12 @@ const content = {
     education: "Education",
     services: "Services",
     patentItems: [
+      {
+        title: "A Spatiotemporal Sequence Prediction Method and System Based on Channel Information Fusion",
+        numberLabel: "Publication No.",
+        number: "CN122673497A",
+        href: "https://www.patentguru.com/cn/search?q=CN122673497A",
+      },
       {
         title: "A Method and System for Multivariable Spherical Information Fusion",
         numberLabel: "Patent No.",
@@ -674,6 +686,12 @@ const content = {
     education: "Formation",
     services: "Services",
     patentItems: [
+      {
+        title: "Méthode et système de prévision de séquences spatio-temporelles fondés sur la fusion d’informations de canal",
+        numberLabel: "N° de publication",
+        number: "CN122673497A",
+        href: "https://www.patentguru.com/cn/search?q=CN122673497A",
+      },
       {
         title: "Méthode et système de fusion d’informations multivariées sur une sphère",
         numberLabel: "N° de brevet",
