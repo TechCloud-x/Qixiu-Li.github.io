@@ -117,7 +117,7 @@ const content = {
     themeDark: "切换到浅色模式",
     menuOpen: "打开导航菜单",
     menuClose: "关闭导航菜单",
-    heroEyebrow: "强化学习 · 智能决策 · 开放研究",
+    heroEyebrow: "推理策略优化 · 预测世界模型 · 开放研究",
     heroTitleA: "让智能体",
     heroTitleB: "学会思考。",
     heroBody: {
@@ -127,6 +127,8 @@ const content = {
       tail:
         " 的贡献者；已在 CVPR、SIGKDD 等顶级人工智能会议发表论文近 10 篇。我关注并整理前沿研究，也把想法转化为可复现、可交流的顶级论文与开放项目。",
     },
+    heroPhdNotice:
+      "寻找 2027 Fall PhD 岗位。我很乐意在硕士最后一年探索博士相关方向，并与您合作，向顶级期刊或会议投稿。",
     explore: "探索我的工作",
     github: "GitHub",
     available: "欢迎研究交流与开源协作",
@@ -339,7 +341,7 @@ const content = {
     themeDark: "Switch to light theme",
     menuOpen: "Open navigation menu",
     menuClose: "Close navigation menu",
-    heroEyebrow: "REINFORCEMENT LEARNING · INTELLIGENT DECISION-MAKING · OPEN RESEARCH",
+    heroEyebrow: "Reasoning policy optimization · predictive world model · OPEN RESEARCH",
     heroTitleA: "Teaching agents",
     heroTitleB: "to think.",
     heroBody: {
@@ -349,6 +351,8 @@ const content = {
       tail:
         ". I have published nearly 10 papers at leading AI conferences, including CVPR and SIGKDD. I track and synthesize cutting-edge research, turning ideas into reproducible top-tier papers and open-source projects that foster open exchange.",
     },
+    heroPhdNotice:
+      "I am seeking PhD opportunities for Fall 2027 and would be delighted to explore potential doctoral research directions with you during the final year of my master’s program, with the goal of collaborating on submissions to leading journals and conferences.",
     explore: "Explore my work",
     github: "GitHub",
     available: "Open to research discussions and open-source collaboration",
@@ -569,7 +573,7 @@ const content = {
     themeDark: "Passer au thème clair",
     menuOpen: "Ouvrir le menu de navigation",
     menuClose: "Fermer le menu de navigation",
-    heroEyebrow: "APPRENTISSAGE PAR RENFORCEMENT · DÉCISION INTELLIGENTE · RECHERCHE OUVERTE",
+    heroEyebrow: "Optimisation des politiques de raisonnement · modèle du monde prédictif · recherche ouverte",
     heroTitleA: "Apprendre aux agents",
     heroTitleB: "à raisonner.",
     heroBody: {
@@ -579,6 +583,8 @@ const content = {
       tail:
         ", qui compte 17,7 k étoiles. J’ai publié près de dix articles dans des conférences majeures en intelligence artificielle, notamment CVPR et SIGKDD. Je suis et synthétise les avancées de la recherche, puis transforme mes idées en articles de premier plan reproductibles et propices aux échanges scientifiques, ainsi qu’en projets open source.",
     },
+    heroPhdNotice:
+      "Je recherche une opportunité de doctorat pour l’automne 2027. Durant ma dernière année de master, je serais ravi d’explorer de nouvelles pistes de recherche en vue d’un doctorat et de collaborer avec vous afin de soumettre nos travaux à des revues ou conférences de premier plan.",
     explore: "Découvrir mes travaux",
     github: "GitHub",
     available: "Ouvert aux échanges scientifiques et aux collaborations autour de projets open source",
@@ -1183,30 +1189,37 @@ export default function Home() {
                 <span className="gradient-text">{t.heroTitleB}</span>
               </h1>
               <div className="hero-lower">
-                <p>
-                  {t.heroBody.lead}
-                  <a
-                    className="hero-inline-link"
-                    href="https://github.com/TechCloud-x/Megatron-LM"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {t.heroBody.linkLabel}
-                  </a>
-                  {t.heroBody.tail}
-                </p>
-                <div className="hero-actions">
-                  <a className="button button-primary" href="#projects">
-                    {t.explore} <Arrow />
-                  </a>
-                  <a
-                    className="button button-ghost"
-                    href="https://github.com/TechCloud-x"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {t.github} <GitHubIcon />
-                  </a>
+                <div className="hero-copy">
+                  <p>
+                    {t.heroBody.lead}
+                    <a
+                      className="hero-inline-link"
+                      href="https://github.com/TechCloud-x/Megatron-LM"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {t.heroBody.linkLabel}
+                    </a>
+                    {t.heroBody.tail}
+                  </p>
+                </div>
+                <div className="hero-outreach">
+                  <p className="hero-phd-notice">
+                    <strong>{t.heroPhdNotice}</strong>
+                  </p>
+                  <div className="hero-actions">
+                    <a className="button button-primary" href="#projects">
+                      {t.explore} <Arrow />
+                    </a>
+                    <a
+                      className="button button-ghost"
+                      href="https://github.com/TechCloud-x"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {t.github} <GitHubIcon />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
