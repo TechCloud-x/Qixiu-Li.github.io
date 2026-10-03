@@ -4,6 +4,7 @@
 
 - 将三语首屏研究标签更新为“推理策略优化 · 预测世界模型”，并保留开放研究定位。
 - 在首屏个人陈述下新增加粗的 2027 Fall PhD 求职与合作说明，并补充桌面端与移动端适配样式。
+- 将英文 PhD 求职说明中的 `leading journals and conferences` 更新为 `top journals and conferences`。
 
 ## 2026-09-30 · AI4Science 研究方向表述统一
 

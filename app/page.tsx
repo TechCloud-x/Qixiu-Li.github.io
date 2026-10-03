@@ -352,7 +352,7 @@ const content = {
         ". I have published nearly 10 papers at leading AI conferences, including CVPR and SIGKDD. I track and synthesize cutting-edge research, turning ideas into reproducible top-tier papers and open-source projects that foster open exchange.",
     },
     heroPhdNotice:
-      "I am seeking PhD opportunities for Fall 2027 and would be delighted to explore potential doctoral research directions with you during the final year of my master’s program, with the goal of collaborating on submissions to leading journals and conferences.",
+      "I am seeking PhD opportunities for Fall 2027 and would be delighted to explore potential doctoral research directions with you during the final year of my master’s program, with the goal of collaborating on submissions to top journals and conferences.",
     explore: "Explore my work",
     github: "GitHub",
     available: "Open to research discussions and open-source collaboration",
