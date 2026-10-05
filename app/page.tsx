@@ -323,9 +323,10 @@ const content = {
     contactBody:
       "如果你正在研究强化学习、多模态智能体或 AI4Science（物理约束的时空预报），欢迎分享问题、想法与合作机会。",
     emailAction: "发送邮件",
+    gmailAction: "Gmail 邮箱",
     contactAction: "在 GitHub 上联系我",
     footerLine: "为开放研究与好奇心而构建。",
-    lastUpdated: "最近更新 · 2026 年 9 月",
+    lastUpdated: "最近更新 · 2026 年 10 月",
   },
   en: {
     skip: "Skip to main content",
@@ -555,9 +556,10 @@ const content = {
     contactBody:
       "If you are working on reinforcement learning, multimodal agents, or AI4Science (Physics-constrained spatiotemporal forecasting), I welcome your questions, ideas, and opportunities for collaboration.",
     emailAction: "Email me",
+    gmailAction: "Gmail",
     contactAction: "Connect on GitHub",
     footerLine: "Built for open research and curiosity.",
-    lastUpdated: "Last updated · September 2026",
+    lastUpdated: "Last updated · October 2026",
   },
   fr: {
     skip: "Aller au contenu principal",
@@ -787,9 +789,10 @@ const content = {
     contactBody:
       "Si vos travaux portent sur l’apprentissage par renforcement, les agents multimodaux ou l’AI4Science (prévision spatio-temporelle sous contraintes physiques), je serais heureux d’échanger sur vos questions, vos idées et d’éventuelles collaborations.",
     emailAction: "M’écrire",
+    gmailAction: "Gmail",
     contactAction: "Me contacter sur GitHub",
     footerLine: "Conçu pour la recherche ouverte et la curiosité.",
-    lastUpdated: "Dernière mise à jour · septembre 2026",
+    lastUpdated: "Dernière mise à jour · octobre 2026",
   },
 } as const;
 
@@ -820,6 +823,28 @@ function GitHubIcon({ className = "github-icon" }: { className?: string }) {
       alt=""
       aria-hidden="true"
     />
+  );
+}
+
+function GmailIcon({ className = "gmail-brand-icon" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        fill="#EA4335"
+        d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457Z"
+      />
+    </svg>
+  );
+}
+
+function GoogleScholarIcon({ className = "scholar-brand-icon" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        fill="#4285F4"
+        d="M5.242 13.769 0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269ZM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14Z"
+      />
+    </svg>
   );
 }
 
@@ -1115,6 +1140,14 @@ export default function Home() {
             <img src={visual("email-icon-4k.png")} alt="" aria-hidden="true" />
           </a>
           <a
+            className="gmail-shortcut"
+            href="mailto:liqixiu2001@gmail.com"
+            aria-label={`${t.gmailAction}: liqixiu2001@gmail.com`}
+            title="liqixiu2001@gmail.com"
+          >
+            <GmailIcon />
+          </a>
+          <a
             className="scholar-shortcut"
             href="https://scholar.google.com/citations?user=AXNRTnsAAAAJ"
             target="_blank"
@@ -1122,7 +1155,7 @@ export default function Home() {
             aria-label="Google Scholar"
             title="Google Scholar"
           >
-            <AssetIcon name="publication" className="control-icon scholar-control-icon" />
+            <GoogleScholarIcon />
           </a>
           <div className="language-switch" role="group" aria-label="Language">
             <AssetIcon name="language" className="control-icon language-control-icon" />
@@ -1559,6 +1592,13 @@ export default function Home() {
                   <span className="contact-link-copy">
                     <small>{t.emailAction}</small>
                     <strong>lqx@nudt.edu.cn</strong>
+                  </span>
+                </a>
+                <a className="contact-email contact-gmail" href="mailto:liqixiu2001@gmail.com">
+                  <GmailIcon className="contact-gmail-icon" />
+                  <span className="contact-link-copy">
+                    <small>{t.gmailAction}</small>
+                    <strong>liqixiu2001@gmail.com</strong>
                   </span>
                 </a>
                 <a
