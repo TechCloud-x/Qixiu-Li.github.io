@@ -174,6 +174,15 @@ const content = {
       },
       {
         index: "03",
+        title: "颅底卵圆孔穿刺辅助系统",
+        description:
+          "融合机器人引导、卵圆孔靶点与皮肤入针点定位，辅助颅底卵圆孔穿刺路径规划与可视化验证。",
+        meta: "医疗机器人 · 计算机视觉 · 开源项目",
+        href: "https://github.com/TechCloud-x/IGS",
+        action: "查看项目",
+      },
+      {
+        index: "04",
         title: "RL-TOP-main",
         description:
           "持续整理 CVPR、AAAI、ACL 等顶级会议中的强化学习论文，让跨领域研究脉络更容易检索与比较。",
@@ -182,7 +191,7 @@ const content = {
         action: "浏览目录",
       },
       {
-        index: "04",
+        index: "05",
         title: "ICASSP 2025–2026 RL Atlas",
         description:
           "对 122 篇强化学习相关论文进行可复核筛选、主题归类与代码完整性审计，连接论文、DOI 与公开实现。",
@@ -191,21 +200,12 @@ const content = {
         action: "查看项目",
       },
       {
-        index: "05",
+        index: "06",
         title: "吉林省文旅厅专项-文旅汇总平台",
         description:
           "面向吉林省文化和旅游资源的数据汇总与管理平台，支持文旅数据采集、信息管理、统计分析与可视化展示。",
         meta: "文旅数据 · 管理平台 · 开源项目",
         href: "https://gitee.com/custhitachi/tourismwms",
-        action: "查看项目",
-      },
-      {
-        index: "06",
-        title: "颅底卵圆孔穿刺辅助系统",
-        description:
-          "融合机器人引导、卵圆孔靶点与皮肤入针点定位，辅助颅底卵圆孔穿刺路径规划与可视化验证。",
-        meta: "医疗机器人 · 计算机视觉 · 开源项目",
-        href: "https://github.com/TechCloud-x/IGS",
         action: "查看项目",
       },
     ],
@@ -399,6 +399,15 @@ const content = {
       },
       {
         index: "03",
+        title: "Skull-Base Foramen Ovale Puncture Assistance System",
+        description:
+          "A system that combines robotic guidance with localization of the foramen ovale target and skin entry point to support puncture-path planning and visual validation.",
+        meta: "Medical robotics · Computer vision · Open source",
+        href: "https://github.com/TechCloud-x/IGS",
+        action: "View project",
+      },
+      {
+        index: "04",
         title: "RL-TOP-main",
         description:
           "A continuously updated index of reinforcement-learning papers from leading conferences such as CVPR, AAAI, and ACL, designed to make cross-disciplinary research trends easier to search and compare.",
@@ -407,7 +416,7 @@ const content = {
         action: "Browse catalog",
       },
       {
-        index: "04",
+        index: "05",
         title: "ICASSP 2025–2026 RL Atlas",
         description:
           "A reproducible screening and review of 122 reinforcement-learning papers, including topic classification and code-completeness audits, with links to the papers, their DOIs, and available public implementations.",
@@ -416,21 +425,12 @@ const content = {
         action: "View project",
       },
       {
-        index: "05",
+        index: "06",
         title: "Jilin Provincial Department of Culture and Tourism Special Project — Cultural Tourism Aggregation Platform",
         description:
           "A platform for aggregating and managing cultural and tourism resources across Jilin Province, supporting data collection, information management, statistical analysis, and visualization.",
         meta: "Cultural tourism · Management platform · Open source",
         href: "https://gitee.com/custhitachi/tourismwms",
-        action: "View project",
-      },
-      {
-        index: "06",
-        title: "Skull-Base Foramen Ovale Puncture Assistance System",
-        description:
-          "A system that combines robotic guidance with localization of the foramen ovale target and skin entry point to support puncture-path planning and visual validation.",
-        meta: "Medical robotics · Computer vision · Open source",
-        href: "https://github.com/TechCloud-x/IGS",
         action: "View project",
       },
     ],
@@ -632,6 +632,15 @@ const content = {
       },
       {
         index: "03",
+        title: "Système d’assistance à la ponction du foramen ovale de la base du crâne",
+        description:
+          "Un système associant guidage robotisé, localisation du point cible au niveau du foramen ovale et repérage du point d’entrée cutané afin de faciliter la planification et la validation visuelle de la trajectoire de ponction.",
+        meta: "Robotique médicale · Vision par ordinateur · Open source",
+        href: "https://github.com/TechCloud-x/IGS",
+        action: "Voir le projet",
+      },
+      {
+        index: "04",
         title: "RL-TOP-main",
         description:
           "Un index continuellement mis à jour des articles sur l’apprentissage par renforcement issus de conférences de premier plan telles que CVPR, AAAI et ACL, afin de faciliter la recherche et la comparaison entre domaines.",
@@ -640,7 +649,7 @@ const content = {
         action: "Parcourir l’index",
       },
       {
-        index: "04",
+        index: "05",
         title: "Atlas RL ICASSP 2025–2026",
         description:
           "Une sélection vérifiable de 122 articles sur l’apprentissage par renforcement, comprenant une classification thématique et un audit de la complétude du code, avec des liens vers les articles, les DOI et les implémentations publiques.",
@@ -649,21 +658,12 @@ const content = {
         action: "Voir le projet",
       },
       {
-        index: "05",
+        index: "06",
         title: "Projet spécial du Département de la culture et du tourisme du Jilin — Plateforme d’agrégation touristique",
         description:
           "Une plateforme d’agrégation et de gestion des ressources culturelles et touristiques du Jilin, prenant en charge la collecte, la gestion, l’analyse statistique et la visualisation des données.",
         meta: "Tourisme culturel · Gestion · Open source",
         href: "https://gitee.com/custhitachi/tourismwms",
-        action: "Voir le projet",
-      },
-      {
-        index: "06",
-        title: "Système d’assistance à la ponction du foramen ovale de la base du crâne",
-        description:
-          "Un système associant guidage robotisé, localisation du point cible au niveau du foramen ovale et repérage du point d’entrée cutané afin de faciliter la planification et la validation visuelle de la trajectoire de ponction.",
-        meta: "Robotique médicale · Vision par ordinateur · Open source",
-        href: "https://github.com/TechCloud-x/IGS",
         action: "Voir le projet",
       },
     ],
@@ -797,6 +797,14 @@ const content = {
 } as const;
 
 const visual = (name: string) => `visuals/${name}`;
+
+const projectBannerByHref: Record<string, string> = {
+  "https://github.com/TechCloud-x/TIAO": "repository-tiao-banner-4k.png",
+  "https://github.com/TechCloud-x/EVEREST": "repository-everest-banner.png",
+  "https://github.com/TechCloud-x/RL-TOP-main": "repository-rl-top-banner-v2.png",
+  "https://github.com/TechCloud-x/ICASSP2025_6RL-Paper-main": "repository-icassp-banner.png",
+  "https://gitee.com/custhitachi/tourismwms": "repository-tourismwms-banner.png",
+};
 
 function AssetIcon({
   name,
@@ -1337,7 +1345,7 @@ export default function Home() {
               {t.projects.map((project, index) => (
                 <article className={`project-card project-${index + 1}`} key={project.title}>
                   <div className="project-visual" aria-hidden="true">
-                    {index === 5 ? (
+                    {project.href === "https://github.com/TechCloud-x/IGS" ? (
                       <div className="project-image-pair">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src={visual("igs-robot-lab.png")} alt="" />
@@ -1348,15 +1356,7 @@ export default function Home() {
                       /* eslint-disable-next-line @next/next/no-img-element */
                       <img
                         className={`repository-banner repository-banner-${index + 1}`}
-                        src={visual(
-                          [
-                            "repository-tiao-banner-4k.png",
-                            "repository-everest-banner.png",
-                            "repository-rl-top-banner-v2.png",
-                            "repository-icassp-banner.png",
-                            "repository-tourismwms-banner.png",
-                          ][index],
-                        )}
+                        src={visual(projectBannerByHref[project.href])}
                         alt=""
                       />
                     )}
