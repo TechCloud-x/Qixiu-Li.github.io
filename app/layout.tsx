@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://techcloud-x.github.io/Qixiu-Li.github.io/"),
   title: "李奇烋 · Qixiu Li",
   description:
-    "The trilingual research homepage of Qixiu Li (李奇烋), focused on reinforcement-learning post-training for LMs, multimodal agents, and AI4Science (Physics-constrained spatiotemporal forecasting).",
+    "The trilingual research homepage of Qixiu Li (李奇烋), focused on reinforcement-learning post-training for LMs, multimodal agents, and physics-constrained spatiotemporal forecasting and understanding.",
   keywords: [
     "Qixiu Li",
     "李奇烋",
@@ -47,9 +47,9 @@ export const metadata: Metadata = {
     "LLM",
     "multimodal agents",
     "computer vision",
-    "AI4Science",
     "physics-constrained forecasting",
     "spatiotemporal forecasting",
+    "spatiotemporal understanding",
     "强化学习",
   ],
   authors: [{ name: "Qixiu Li", url: "https://github.com/TechCloud-x" }],
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     url: "https://techcloud-x.github.io/Qixiu-Li.github.io/",
     siteName: "LQX — Qixiu Li Research Homepage",
     title: "Qixiu Li — Reinforcement-Learning Post-Training & Multimodal Agents",
-    description: "Open research on reinforcement-learning post-training for LMs, multimodal agents, and AI4Science (Physics-constrained spatiotemporal forecasting).",
+    description: "Open research on reinforcement-learning post-training for LMs, multimodal agents, and physics-constrained spatiotemporal forecasting and understanding.",
     images: [
       {
         url: "/Qixiu-Li.github.io/visuals/social-card-4k.jpg",
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Qixiu Li — Reinforcement-Learning Post-Training & Multimodal Agents",
-    description: "Open research on reinforcement-learning post-training for LMs, multimodal agents, and AI4Science (Physics-constrained spatiotemporal forecasting).",
+    description: "Open research on reinforcement-learning post-training for LMs, multimodal agents, and physics-constrained spatiotemporal forecasting and understanding.",
     images: ["/Qixiu-Li.github.io/visuals/social-card-4k.jpg"],
   },
   icons: {

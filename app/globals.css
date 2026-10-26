@@ -557,7 +557,10 @@ main {
 .hero-sticky {
   position: sticky;
   top: 0;
+  display: grid;
+  align-items: center;
   min-height: 100svh;
+  padding-block: 128px 88px;
   overflow: hidden;
   background-color: var(--canvas);
 }
@@ -631,13 +634,11 @@ main {
 }
 
 .hero-content {
-  position: absolute;
-  top: 50%;
+  position: relative;
   left: var(--page-pad);
   z-index: 2;
   width: min(850px, 64vw);
   max-width: 1450px;
-  transform: translateY(-50%);
 }
 
 .eyebrow {
@@ -712,9 +713,8 @@ main {
 
 .hero-lower {
   display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(230px, 0.8fr);
-  align-items: end;
-  gap: 34px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 22px;
   margin-top: 38px;
 }
 
@@ -732,9 +732,14 @@ main {
 
 .hero-outreach {
   display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(150px, 0.42fr);
   min-width: 0;
   gap: 14px;
-  align-content: end;
+  align-items: stretch;
+}
+
+.hero-outreach > .hero-actions {
+  grid-column: 1 / -1;
 }
 
 .hero-phd-notice {
@@ -752,6 +757,38 @@ main {
 .hero-phd-notice strong {
   color: var(--ink);
   font-weight: 850;
+}
+
+.hero-review-note {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  gap: 9px;
+  padding: 14px 16px;
+  border: 1px solid var(--line-strong);
+  border-left: 3px solid var(--violet);
+  border-radius: 0 10px 10px 0;
+  background: var(--surface);
+  color: var(--ink);
+  overflow-wrap: anywhere;
+  transition:
+    background-color var(--theme-duration) var(--theme-ease),
+    border-color var(--theme-duration) var(--theme-ease),
+    color var(--theme-duration) var(--theme-ease);
+}
+
+.hero-review-label {
+  color: var(--ink-soft);
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+}
+
+.hero-review-note strong {
+  font-size: clamp(14px, 1.2vw, 18px);
+  font-weight: 850;
+  line-height: 1.5;
 }
 
 .hero-inline-link {
@@ -2431,11 +2468,10 @@ footer {
   }
 
   .hero-content {
-    width: min(760px, 72vw);
+    width: min(760px, calc(100vw - (var(--page-pad) * 2) - 282px));
   }
 
   .hero-lower {
-    grid-template-columns: minmax(0, 1.45fr) minmax(220px, 0.8fr);
     gap: 24px;
   }
 
@@ -3284,6 +3320,7 @@ footer {
   }
 
   .hero-outreach {
+    grid-template-columns: minmax(0, 1fr);
     gap: 12px;
   }
 
@@ -3291,6 +3328,10 @@ footer {
     padding: 10px 12px;
     font-size: clamp(13px, 3.5vw, 15px);
     line-height: 1.5;
+  }
+
+  .hero-review-note {
+    padding: 12px;
   }
 
   .hero-actions .button {
