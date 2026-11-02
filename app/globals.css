@@ -759,38 +759,6 @@ main {
   font-weight: 850;
 }
 
-.hero-review-note {
-  display: flex;
-  min-width: 0;
-  flex-direction: column;
-  justify-content: center;
-  gap: 9px;
-  padding: 14px 16px;
-  border: 1px solid var(--line-strong);
-  border-left: 3px solid var(--violet);
-  border-radius: 0 10px 10px 0;
-  background: var(--surface);
-  color: var(--ink);
-  overflow-wrap: anywhere;
-  transition:
-    background-color var(--theme-duration) var(--theme-ease),
-    border-color var(--theme-duration) var(--theme-ease),
-    color var(--theme-duration) var(--theme-ease);
-}
-
-.hero-review-label {
-  color: var(--ink-soft);
-  font-size: 11px;
-  font-weight: 750;
-  letter-spacing: 0.08em;
-}
-
-.hero-review-note strong {
-  font-size: clamp(14px, 1.2vw, 18px);
-  font-weight: 850;
-  line-height: 1.5;
-}
-
 .hero-inline-link {
   color: inherit;
   font-weight: 750;
@@ -3328,10 +3296,6 @@ footer {
     padding: 10px 12px;
     font-size: clamp(13px, 3.5vw, 15px);
     line-height: 1.5;
-  }
-
-  .hero-review-note {
-    padding: 12px;
   }
 
   .hero-actions .button {

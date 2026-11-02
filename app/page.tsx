@@ -129,8 +129,6 @@ const content = {
     },
     heroPhdNotice:
       "寻找 2027 Fall PhD 岗位。我很乐意在硕士最后一年探索博士相关方向，并与您合作，向顶级期刊或会议投稿。",
-    heroReviewLabel: "当前进度",
-    heroReviewStatus: "AAAI'27 Rebuttal 进行中...",
     explore: "探索我的工作",
     github: "GitHub",
     available: "欢迎研究交流与开源协作",
@@ -356,8 +354,6 @@ const content = {
     },
     heroPhdNotice:
       "I am seeking PhD opportunities for Fall 2027 and would be delighted to explore potential doctoral research directions with you during the final year of my master’s program, with the goal of collaborating on submissions to top journals and conferences.",
-    heroReviewLabel: "Current status",
-    heroReviewStatus: "AAAI'27 rebuttal ing...",
     explore: "Explore my work",
     github: "GitHub",
     available: "Open to research discussions and open-source collaboration",
@@ -591,8 +587,6 @@ const content = {
     },
     heroPhdNotice:
       "Je recherche une opportunité de doctorat pour l’automne 2027. Durant ma dernière année de master, je serais ravi d’explorer de nouvelles pistes de recherche en vue d’un doctorat et de collaborer avec vous afin de soumettre nos travaux à des revues ou conférences de premier plan.",
-    heroReviewLabel: "État actuel",
-    heroReviewStatus: "AAAI'27 — réponse aux évaluateurs en cours...",
     explore: "Découvrir mes travaux",
     github: "GitHub",
     available: "Ouvert aux échanges scientifiques et aux collaborations autour de projets open source",
@@ -1254,10 +1248,6 @@ export default function Home() {
                   <p className="hero-phd-notice">
                     <strong>{t.heroPhdNotice}</strong>
                   </p>
-                  <aside className="hero-review-note" aria-label={t.heroReviewLabel}>
-                    <span className="hero-review-label">{t.heroReviewLabel}</span>
-                    <strong>{t.heroReviewStatus}</strong>
-                  </aside>
                   <div className="hero-actions">
                     <a className="button button-primary" href="#projects">
                       {t.explore} <Arrow />
