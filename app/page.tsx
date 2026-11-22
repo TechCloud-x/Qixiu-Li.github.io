@@ -326,7 +326,7 @@ const content = {
     gmailAction: "Gmail 邮箱",
     contactAction: "在 GitHub 上联系我",
     footerLine: "为开放研究与好奇心而构建。",
-    lastUpdated: "最近更新 · 2026 年 10 月",
+    lastUpdated: "最近更新 · 2026 年 11 月",
   },
   en: {
     skip: "Skip to main content",
@@ -559,7 +559,7 @@ const content = {
     gmailAction: "Gmail",
     contactAction: "Connect on GitHub",
     footerLine: "Built for open research and curiosity.",
-    lastUpdated: "Last updated · October 2026",
+    lastUpdated: "Last updated · November 2026",
   },
   fr: {
     skip: "Aller au contenu principal",
@@ -792,7 +792,7 @@ const content = {
     gmailAction: "Gmail",
     contactAction: "Me contacter sur GitHub",
     footerLine: "Conçu pour la recherche ouverte et la curiosité.",
-    lastUpdated: "Dernière mise à jour · octobre 2026",
+    lastUpdated: "Dernière mise à jour · novembre 2026",
   },
 } as const;
 
