@@ -49,8 +49,8 @@ const publicationRecords: readonly PublicationRecord[] = [
     id: "slow-ocast",
     title:
       "Slow-OCast: Slow-Varying Motion Inspired Transfer Learning for Regional High-Resolution Ocean Environmental Forecasting",
-    venue: "SIGKDD'26",
-    venueName: "ACM SIGKDD Conference on Knowledge Discovery and Data Mining (SIGKDD'26)",
+    venue: "KDD'26",
+    venueName: "ACM KDD Conference on Knowledge Discovery and Data Mining (KDD'26)",
     authors: ["Qixiu Li", "Xiang Zhu", "Xiaoyong Li", "Haolong Xiang", "Xiaolong Xu"],
     image: "publication-architecture-slow-ocast.webp",
     href: "https://dl.acm.org/doi/abs/10.1145/3770855.3819036",
@@ -125,7 +125,7 @@ const content = {
         "你好，我是李奇烋，目前是国防科技大学硕士研究生，也是一名主要聚焦于大模型强化学习后训练、多模态智能体与物理约束的时空预报与理解的研究者和开发者。我拥有极强的自我约束与学习能力：两个月自学雅思并取得 6.5 分；在 ACM ICPC 亚洲赛区中连续 5 小时使用英文解题，并在不借助 AI 的情况下完成 13 题算法编程；也是 NVIDIA 的 17.7K-star GitHub 开源项目 ",
       linkLabel: "Megatron-LM",
       tail:
-        " 的贡献者；已在 CVPR、SIGKDD、AAAI 等顶级人工智能会议发表论文近 10 篇。我关注并整理前沿研究，也把想法转化为可复现、可交流的顶级论文与开放项目。",
+        " 的贡献者；已在 CVPR、KDD、AAAI 等顶级人工智能会议发表论文近 10 篇。我关注并整理前沿研究，也把想法转化为可复现、可交流的顶级论文与开放项目。",
     },
     heroPhdNotice:
       "寻找 2027 Fall PhD 岗位。我很乐意在硕士最后一年探索博士相关方向，并与您合作，向顶级期刊或会议投稿。",
@@ -216,7 +216,7 @@ const content = {
       ["2026.08.25", "我们的文章（EVEREST）已在 arXiv 上公开！"],
       ["2026.08.14", "公开 ICASSP 2025–2026 强化学习论文综述与可复核目录。"],
       ["2026.08.14", "发布 2026 强化学习顶会论文索引，覆盖 CVPR、AAAI 与 ACL。"],
-      ["2026.05.17", "一篇论文（Slow-OCast）被 SIGKDD'26 接收！感谢所有合作者！"],
+      ["2026.05.17", "一篇论文（Slow-OCast）被 KDD'26 接收！感谢所有合作者！"],
       ["2026.02.21", "一篇论文（PhyOceanCast）被 CVPR'26 接收！感谢所有合作者！"],
       ["2025.08.31", "一篇论文（DOLPHIN）被 ISPA'25 接收！感谢所有合作者！"],
       ["2025.06.10", "一篇论文（IFG-Net）被 UIC'25 接收！感谢所有合作者！"],
@@ -350,7 +350,7 @@ const content = {
         "Hi, I’m Qixiu Li, a master’s student at the National University of Defense Technology. I am a researcher and developer focused on reinforcement-learning post-training for LMs, multimodal agents, and physics-constrained spatiotemporal forecasting and understanding. I am highly self-disciplined and an effective learner: after 2 months of independent IELTS preparation, I earned a score of 6.5; at an ACM ICPC Asia Regional Contest, I spent 5 consecutive hours solving problems in English and completed 13 algorithmic programming problems without AI assistance. I am also a contributor to NVIDIA’s 17.7K-star open-source GitHub project ",
       linkLabel: "Megatron-LM",
       tail:
-        ". I have published nearly 10 papers at leading AI conferences, including CVPR, SIGKDD, and AAAI. I track and synthesize cutting-edge research, turning ideas into reproducible top-tier papers and open-source projects that foster open exchange.",
+        ". I have published nearly 10 papers at leading AI conferences, including CVPR, KDD, and AAAI. I track and synthesize cutting-edge research, turning ideas into reproducible top-tier papers and open-source projects that foster open exchange.",
     },
     heroPhdNotice:
       "I am seeking PhD opportunities for Fall 2027 and would be delighted to explore potential doctoral research directions with you during the final year of my master’s program, with the goal of collaborating on submissions to top journals and conferences.",
@@ -441,7 +441,7 @@ const content = {
       ["2026.08.25", "Our paper EVEREST is now available on arXiv."],
       ["2026.08.14", "Released a reproducible review and catalog of reinforcement-learning papers from ICASSP 2025–2026."],
       ["2026.08.14", "Released a 2026 index of reinforcement-learning papers from leading conferences, including CVPR, AAAI, and ACL."],
-      ["2026.05.17", "Our paper Slow-OCast was accepted at SIGKDD'26. Many thanks to all collaborators!"],
+      ["2026.05.17", "Our paper Slow-OCast was accepted at KDD'26. Many thanks to all collaborators!"],
       ["2026.02.21", "Our paper PhyOceanCast was accepted at CVPR'26. Many thanks to all collaborators!"],
       ["2025.08.31", "Our paper DOLPHIN was accepted at ISPA'25. Many thanks to all collaborators!"],
       ["2025.06.10", "Our paper IFG-Net was accepted at UIC'25. Many thanks to all collaborators!"],
@@ -583,7 +583,7 @@ const content = {
         "Bonjour, je suis Qixiu Li, étudiant en master à l’Université nationale de technologie de défense. Mes travaux de recherche et de développement portent principalement sur le post-entraînement des VLM et des LLM par apprentissage par renforcement, les agents multimodaux et la prévision et la compréhension spatio-temporelles sous contraintes physiques. Très autodiscipliné et doté d’une grande capacité d’apprentissage, j’ai obtenu 6,5 à l’IELTS après deux mois de préparation autonome. Lors d’une compétition régionale asiatique de l’ACM ICPC, j’ai résolu des problèmes en anglais pendant cinq heures consécutives et mené à bien 13 exercices de programmation algorithmique sans recourir à l’IA. Je contribue également au projet GitHub open source de NVIDIA ",
       linkLabel: "Megatron-LM",
       tail:
-        ", qui compte 17,7 k étoiles. J’ai publié près de dix articles dans des conférences majeures en intelligence artificielle, notamment CVPR, SIGKDD et AAAI. Je suis et synthétise les avancées de la recherche, puis transforme mes idées en articles de premier plan reproductibles et propices aux échanges scientifiques, ainsi qu’en projets open source.",
+        ", qui compte 17,7 k étoiles. J’ai publié près de dix articles dans des conférences majeures en intelligence artificielle, notamment CVPR, KDD et AAAI. Je suis et synthétise les avancées de la recherche, puis transforme mes idées en articles de premier plan reproductibles et propices aux échanges scientifiques, ainsi qu’en projets open source.",
     },
     heroPhdNotice:
       "Je recherche une opportunité de doctorat pour l’automne 2027. Durant ma dernière année de master, je serais ravi d’explorer de nouvelles pistes de recherche en vue d’un doctorat et de collaborer avec vous afin de soumettre nos travaux à des revues ou conférences de premier plan.",
@@ -674,7 +674,7 @@ const content = {
       ["25.08.2026", "Notre article EVEREST est désormais disponible sur arXiv."],
       ["14.08.2026", "Mise en ligne d’une revue et d’un catalogue vérifiables consacrés aux articles sur l’apprentissage par renforcement d’ICASSP 2025–2026."],
       ["14.08.2026", "Publication d’un index 2026 des articles sur l’apprentissage par renforcement issus de conférences de premier plan, notamment CVPR, AAAI et ACL."],
-      ["17.05.2026", "Notre article Slow-OCast a été accepté à SIGKDD'26. Merci à tous nos collaborateurs !"],
+      ["17.05.2026", "Notre article Slow-OCast a été accepté à KDD'26. Merci à tous nos collaborateurs !"],
       ["21.02.2026", "Notre article PhyOceanCast a été accepté à CVPR'26. Merci à tous nos collaborateurs !"],
       ["31.08.2025", "Notre article DOLPHIN a été accepté à ISPA'25. Merci à tous nos collaborateurs !"],
       ["10.06.2025", "Notre article IFG-Net a été accepté à UIC'25. Merci à tous nos collaborateurs !"],
@@ -863,8 +863,8 @@ function GiteeIcon({ className = "gitee-icon" }: { className?: string }) {
   );
 }
 
-const highlightedVenues = new Set(["SIGKDD'26", "CVPR'26", "ISPA'25", "UIC'25"]);
-const venuePattern = /(SIGKDD'26|CVPR'26|ISPA'25|UIC'25)/g;
+const highlightedVenues = new Set(["KDD'26", "CVPR'26", "ISPA'25", "UIC'25"]);
+const venuePattern = /(KDD'26|CVPR'26|ISPA'25|UIC'25)/g;
 
 function HighlightedNewsText({ text }: { text: string }) {
   return text.split(venuePattern).map((part, index) =>
